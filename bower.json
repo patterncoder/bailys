@@ -1,0 +1,25 @@
+{
+  "name": "bailys",
+  "version": "0.0.0",
+  "authors": [
+    "patterncoder <chris@oldtowndining.com>"
+  ],
+  "description": "new website for baily",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "http://baily.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

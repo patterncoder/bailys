@@ -1,0 +1,71 @@
+extends ../includes/layout
+
+block content
+    .container-fluid
+        .navbar.navbar-default
+            .container
+                .navbar-header
+                    button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-collapse")
+                .navbar-collapse.collapse
+                    ul#mine.nav.navbar-nav.navbar-right
+                        li.active
+                            a(href="#") Home
+                        li
+                            a(href="#") About
+                        li
+                            a(href="#") Contact
+                        li.dropdown
+                            a.dropdown-toggle(href="#" data-toggle="dropdown") Dropdown
+                            ul.dropdown-menu
+                                li
+                                    a(href="#") Action
+                                li
+                                    a(href="#") Another Action
+                                li
+                                    a(href="#") And Another Action
+                                li.dropdown-header
+                                    Nav Header
+                                li
+                                    a(href="#") Separated Link
+                                li
+                                    a(href="#") One More Separated
+            .jumbotron
+                .container
+                    h1 Baily's
+                    h4 Tonight's gonna be a good night
+        .container
+            .row
+                .col-md-2
+                    img(src="#" width="100%" height="100%")
+                    p Christopher Baily<br/>5th of July 2014 <br/>blah blah blah
+                .col-md-7
+                    h1.post-title Comforts of Life
+                    p Content goes here...
+                .col-md-3
+                    .widget
+                        h3 Search
+                        form.row
+                            .col-md-8
+                                input.form-control(type="text")
+                            .col-md-4
+                                input.btn.btn-default.form-conrol(type="submit")
+                    .widget
+                        h3 Latest Posts
+                        ul.list-group
+                            li.list-group-item
+                                a(href="#") Article 1
+                            li.list-group-item
+                                a(href="#") Article 2
+                            li.list-group-item
+                                a(href="#") Article 3
+                            li.list-group-item
+                                a(href="#") Article 4
+                            li.list-group-item
+                                a(href="#") Article 5
+            hr
+            p &#169; Baily's 2014
+
+
+
+
+

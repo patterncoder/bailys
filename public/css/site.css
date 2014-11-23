@@ -1,0 +1,12 @@
+body {
+  background-color: #111;
+  color: #fff;
+}
+#myNav {
+  border-radius: 0;
+}
+#myJumbo {
+  border-radius: 0;
+  margin-top: -20px;
+  padding: 0px;
+}

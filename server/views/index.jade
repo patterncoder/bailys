@@ -1,0 +1,32 @@
+extends ../includes/layout
+
+block content
+    include ../includes/nav
+    .row
+        .container-fluid
+            #myJumbo.jumbotron
+                img(src="/assets/umbrellas.png" width="100%" height="100%")
+    .row
+        .container-fluid
+            .col-md-12
+                h2.text-center Tonight's gonna be a good night
+            .col-md-3.col-sm-6
+                img.img-responsive.center-block(src="/assets/steak.png" )
+                h3.text-center Dining
+                p Some descriptive text here.  Some descriptive text here.  Some descriptive text here.  Some descriptive text here.  Some descriptive text here.
+            .col-md-3.col-sm-6
+                img.img-responsive.center-block(src="/assets/banquet.png" )
+                h3.text-center Banquets
+                p Some descriptive text here.  Some descriptive text here.  Some descriptive text here.  Some descriptive text here.  Some descriptive text here.
+            .col-md-3.col-sm-6
+                img.img-responsive.center-block(src="/assets/nightclub.png" )
+                h3.text-center Nightclub
+                p Some descriptive text here.  Some descriptive text here.  Some descriptive text here.  Some descriptive text here.  Some descriptive text here.
+            .col-md-3.col-sm-6
+                img.img-responsive.center-block(src="/assets/music.png" )
+                h3.text-center Live Music
+                p Some descriptive text here.  Some descriptive text here.  Some descriptive text here.  Some descriptive text here.  Some descriptive text here.
+    .row
+        include ../includes/footer
+
+

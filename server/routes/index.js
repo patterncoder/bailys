@@ -4,7 +4,7 @@ var controller = require('../controllers/myController');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: "Baily's" });
 });
 
 router.get('/users', controller.SendMessage);

@@ -6,7 +6,9 @@ var controller = require('../controllers/myController');
 router.get('/', function(req, res) {
   res.render('index', { title: "Baily's" });
 });
-
+router.get('/banquets', function (req, res) {
+    res.render('banquets');
+});
 router.get('/users', controller.SendMessage);
 
 

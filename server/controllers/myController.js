@@ -4,5 +4,6 @@
 };
 
 exports.SendMessage = function (req, res) {
-    res.render("index2", data);
+    res.render("users", data);
+    //res.send("hello");
 }

@@ -2,6 +2,11 @@ body {
   background-color: #111;
   color: #fff;
 }
+#logo {
+  font-family: Caslon;
+  src: url("/fonts/acaslonpro-regular.otf");
+  font-size: 2em;
+}
 #myNav {
   border-radius: 0;
   margin-bottom: 0px;

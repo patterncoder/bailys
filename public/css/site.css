@@ -2,9 +2,12 @@ body {
   background-color: #111;
   color: #fff;
 }
-#logo {
+@font-face {
   font-family: Caslon;
   src: url("/fonts/acaslonpro-regular.otf");
+}
+#logo {
+  font-family: Caslon;
   font-size: 2em;
 }
 #myNav {

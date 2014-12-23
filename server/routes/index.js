@@ -12,4 +12,4 @@ router.get('/banquets', function (req, res) {
 router.get('/users', controller.SendMessage);
 
 
-module.exports = router;
+module.exports = router; 

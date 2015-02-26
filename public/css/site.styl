@@ -1,10 +1,30 @@
-﻿body
+﻿lightGray = #cccccc
+mediumGray = #adadad
+darkGray = #777777
+darkestGray = #222222
+headingFont = adobe-caslon-pro
+
+body
     background-color #222222
-    color white
+    color mediumGray
+
+hr
+  border-color darkGray
 
 //@font-face
     //font-family: Caslon
     //src: url(../fonts/acaslonpro-regular.otf)
+a:hover
+  text-decoration none
+
+h1, h2, h3, h4, h5, h6
+  color darkGray
+  font-family headingFont
+  font-variant small-caps
+
+.captionJump
+  font-family adobe-caslon-pro
+  font-variant small-caps
 
 #logo
     font-family: adobe-caslon-pro
@@ -12,12 +32,12 @@
 
 #myNav
     border-radius 0
-    margin-bottom 0px
+    margin-bottom 0
 
 #myJumbo
     border-radius 0
     margin-top -20px
-    padding 0px
+    padding 0
 
 .navbar-brand
     padding 20px 15px

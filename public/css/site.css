@@ -1,6 +1,26 @@
 body {
   background-color: #222;
-  color: #fff;
+  color: #adadad;
+}
+hr {
+  border-color: #777;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #777;
+  font-family: adobe-caslon-pro;
+  font-variant: small-caps;
+}
+.captionJump {
+  font-family: adobe-caslon-pro;
+  font-variant: small-caps;
 }
 #logo {
   font-family: adobe-caslon-pro;
@@ -8,12 +28,12 @@ body {
 }
 #myNav {
   border-radius: 0;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 #myJumbo {
   border-radius: 0;
   margin-top: -20px;
-  padding: 0px;
+  padding: 0;
 }
 .navbar-brand {
   padding: 20px 15px;

@@ -18,6 +18,14 @@ h6 {
   font-family: adobe-caslon-pro;
   font-variant: small-caps;
 }
+.thumbnail {
+  background-color: #222;
+  border: none;
+  max-width: 300px;
+}
+.caption p {
+  color: #adadad;
+}
 .captionJump {
   font-family: adobe-caslon-pro;
   font-variant: small-caps;

@@ -23,7 +23,23 @@ h6 {
   border: none;
   max-width: 300px;
 }
+.thumbnail img {
+  border: solid 1px #777;
+  padding: 5px;
+}
+.row1 {
+  background-color: #adadad;
+}
+.row1 p {
+  color: #777;
+}
+.row2 {
+  background-color: #777;
+}
 .caption p {
+  color: #adadad;
+}
+.caption a h3 {
   color: #adadad;
 }
 .captionJump {

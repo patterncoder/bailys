@@ -1,4 +1,4 @@
 
 cd\
-cd\development\tipminer
+cd\development\bailys
 start cmd

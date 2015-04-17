@@ -16,6 +16,6 @@
     "stylus": "~0.49.3"
   },
   "devDependencies": {
-    "bower": "~1.3.12"
+    
   }
 }

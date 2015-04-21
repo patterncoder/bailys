@@ -23,6 +23,10 @@ h6 {
   border: none;
   max-width: 300px;
 }
+img {
+  border: solid 1px #777;
+  margin: 10px;
+}
 .thumbnail img {
   border: solid 1px #777;
   padding: 0px;

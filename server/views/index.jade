@@ -55,10 +55,10 @@ block content
             .modal-content
                 .modal-header
                     a.close(href="#", data-dismiss="modal")&times;
-                    h4 Thanks for clicking
+                    h2 Keep up to data with our happenings!
                 .modal-body
-                    p Join our mailing list for notifications.
-                    form.form-inline(name="signUpForm", id="signUpForm", action="http://localhost:3000/api/signup", method="post")
+                    p We do not share you email address with anyone.
+                    form.form-inline(name="signUpForm", id="signUpForm", action="/api/signup", method="post")
                         .form-group
                             label.sr-only(for="inputEmail") Email
                             input.form-control(id="email", type="email", placeholder="Email Address")

@@ -9,7 +9,7 @@ router.post('/', function (req, res) {
         if (err) return console.log(err);
         console.log('Hello World > helloworld.txt');
     });
-    res.send("hello");
+    res.send({success: true});
     
 
 });

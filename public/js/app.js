@@ -6,10 +6,13 @@
             url = $form.attr('action');
         var posting = $.post(url, { email: $('#email').val() });
         posting.done(function (data) {
-            if (data.success)
-            {
+            if (data.success) {
                 $('#modalResult').html('Your email was saved!');
-                
+
+            }
+            else {
+                $('#modalResult').html('That email already exists.');
+                $('#email').val('');
             }
             console.log(data);
         });

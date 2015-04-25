@@ -53,10 +53,10 @@ block content
     .modal.fade(id="signUpModal", tabindex="-1")
         .modal-dialog
             .modal-content
-                .modal-header
+                .modal-header.text-center
                     a.close(href="#", data-dismiss="modal")&times;
                     h2 Keep informed!
-                .modal-body(id="signUpModalBody")
+                .modal-body.text-center(id="signUpModalBody")
                     p We do not share you email address with anyone.
                     br
                     form.form-inline(name="signUpForm", id="signUpForm", action="/api/signup", method="post")

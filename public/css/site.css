@@ -18,12 +18,20 @@ h6 {
   font-family: adobe-caslon-pro;
   font-variant: small-caps;
 }
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  color: #555;
+}
 .thumbnail {
   background-color: #222;
   border: none;
   max-width: 300px;
 }
-img {
+.inParagraph {
   border: solid 1px #777;
   margin: 10px;
 }

@@ -7,20 +7,21 @@ block content
     .row
         .container-fluid
             .row
-                .container-fluid
-                    .col-xs-12
-                        hr
+                .col-md-2.col-md-offset-5
+                    br
+                    a.btn.btn-info.center-block(href="#signUpModal", data-toggle="modal") Join our club!
             .row
-                .col-md-3.col-sm-6
+                hr
+                .col-md-2.col-sm-3.col-md-offset-2
                     .thumbnail.center-block
                         a(href="/dining")
                             img.img-responsive.center-block(src="/assets/restaurant.png" )
                         .caption
                             p The art of hospitality...Unique offerings delivered with friendly and
-                                | knowledgeable service.  Choose to dine on the patio, the vibrant downstairts
+                                | knowledgeable service.  Choose to dine on the patio, the vibrant downstairs
                                 | or the more intimate upstairs.&nbsp;&nbsp;
 
-                .col-md-3.col-sm-6
+                .col-md-2.col-sm-3
                     .thumbnail.center-block
                         a(href="/banquets")
                             img.img-responsive.center-block(src="/assets/banquet3.png" )
@@ -28,8 +29,8 @@ block content
                             p Baily's was built from the ground up for private parties and banquets.
                                 | Secluded rooms, diverse menus and stellar service.&nbsp;&nbsp;
                         
-                .clearfix.visible-sm-block
-                .col-md-3.col-sm-6
+                //.clearfix.visible-sm-block
+                .col-md-2.col-sm-3
                     .thumbnail.center-block
                         a(href="/nightclub")
                             img.img-responsive.center-block(src="/assets/nightclub6.png" )
@@ -37,7 +38,7 @@ block content
                             p Full service nightclub boasting ample elbow room, three bars, two dance floors,
                                 | bottle service, and party packages.&nbsp;&nbsp;
 
-                .col-md-3.col-sm-6
+                .col-md-2.col-sm-3
                     .thumbnail.center-block
                         a(href="/music")
                             img.img-responsive.center-block(src="/assets/music3.png" )
@@ -48,5 +49,23 @@ block content
 
     .row
         include ../includes/footer
+
+    .modal.fade(id="signUpModal", tabindex="-1")
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    a.close(href="#", data-dismiss="modal")&times;
+                    h4 Thanks for clicking
+                .modal-body
+                    p Join our mailing list for notifications.
+                    form.form-inline(name="signUpForm", id="signUpForm", action="http://localhost:3000/api/signup", method="post")
+                        .form-group
+                            label.sr-only(for="inputEmail") Email
+                            input.form-control(id="email", type="email", placeholder="Email Address")
+                            button.btn.btn-success(type="submit") Join our club!
+                .modal-footer
+                    button.btn.btn-success(data-dismiss="modal") Close
+
+
 
 

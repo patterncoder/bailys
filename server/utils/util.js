@@ -1,9 +1,9 @@
 ﻿var fs = require('fs');
 var util = {};
 
-util.search = function (name) {
+util.search = function (filePath, name) {
    
-    var array = util.returnArray('list.txt');
+    var array = util.returnArray(filePath);
     for (i in array)
     {
        if (array[i] == name) return true;

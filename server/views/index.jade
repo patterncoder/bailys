@@ -56,7 +56,7 @@ block content
                 .modal-header
                     a.close(href="#", data-dismiss="modal")&times;
                     h2 Keep up to data with our happenings!
-                .modal-body
+                .modal-body(id="signUpModalBody")
                     p We do not share you email address with anyone.
                     form.form-inline(name="signUpForm", id="signUpForm", action="/api/signup", method="post")
                         .form-group

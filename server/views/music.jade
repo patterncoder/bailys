@@ -4,6 +4,15 @@ block content
     include ../includes/nav
     .row
         .container
-            .col-md-6.col-md-offset-3
-                h1 Music
+            .col-md-12
+                
+                h1= title
+                .list-group
+                    each val in data
+                        a.list-group-item(href="#")
+                            h4.list-group-item-heading= val.BandName
+                            p= val.Date
+                            p.list-group-item-text= val.RoomName
     include ../includes/footer
+
+    

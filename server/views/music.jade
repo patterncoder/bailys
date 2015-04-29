@@ -8,7 +8,7 @@ block content
                 
                 h1= title
                 .list-group
-                    each val in data
+                    each val in schedule.Schedule.ScheduleItem
                         a.list-group-item(href="#")
                             h4.list-group-item-heading= val.BandName
                             p= val.Date

@@ -1,0 +1,15 @@
+﻿extends ../includes/layout
+
+block content
+    include ../includes/nav
+    .row
+        .container
+            .col-md-12
+                h1= title
+                h2= menu.Menu.MenuName
+                .list-group
+                    each val in menu.Menu.Sections.Section
+                        h4= val.SectionTitle
+    include ../includes/footer
+
+    

@@ -1,15 +1,16 @@
 ﻿var request = require('request');
 
-var data;
 
-var getData = function () {
+
+var getData = function (req, res) {
     request('http://oldtowndining.com/api/entertainment.ashx', function (error, response, body) {
-        if (!error && response.statusCode == 200)
-        {
-            //console.log(body);
-            return body;
+        if (!error && response.statusCode == 200) {
+            var musicSchedule = JSON.parse(body);
+            console.log(body);
+            res.render('music', { title: "Music", schedule: musicSchedule });
         }
     });
+
 };
 
 

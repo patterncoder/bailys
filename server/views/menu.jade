@@ -5,11 +5,15 @@ block content
     .row
         .container
             .col-md-12
-                h1= title
-                h2= menu.Menu.MenuName
+                h1= title 
+                h2= menu.Menu.MenuTitle
                 .list-group
                     each val in menu.Menu.Sections.Section
                         h4= val.SectionTitle
+                        each item in val.MenuItems.MenuItem
+                            p= item.MenuLName
+                            p= item.MenuDescription
+                p= menu.Menu.Footer
     include ../includes/footer
 
     

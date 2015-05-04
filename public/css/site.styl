@@ -4,6 +4,9 @@ darkGray = #777777
 reallyGray = #555555
 darkestGray = #222222
 headingFont = adobe-caslon-pro
+screen-sm-min = 768px
+screen-md-min = 992px
+screen-lg-min = 1200px
 
 body
     background-color darkestGray
@@ -79,6 +82,48 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small
 
 .list-group-item
 	background-color reallyGray
+
+.text-xs-left
+    text-align left
+.text-xs-right
+    text-align right
+.text-xs-center
+    text-align center
+.text-xs-justify
+    text-align justify
+
+
+
+@media (min-width: screen-sm-min)
+    .text-sm-left
+      text-align left
+    .text-sm-right
+      text-align right
+    .text-sm-center
+      text-align center
+    .text-sm-justify
+      text-align justify
+
+@media (min-width: screen-md-min)
+    .text-md-left
+      text-align left
+    .text-md-right
+      text-align right
+    .text-md-center
+      text-align center
+    .text-md-justify
+      text-align justify
+
+@media (min-width: screen-lg-min)
+    .text-lg-left
+      text-align left
+    .text-lg-right
+      text-align right
+    .text-lg-center
+      text-align center
+    .text-lg-justify
+      text-align justify
+
 
 //.module-banquet
 	//margin 10px

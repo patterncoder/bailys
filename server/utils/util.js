@@ -17,6 +17,45 @@ util.getDateString = function (daysOffset) {
 
 };
 
+util.traverseJSONandFindKey = function (o,key,method) {
+    for (var i in o) {
+        if (typeof(o[i]==='[object array]')){
+            //for(var ai = 0; ai < o[i].length; ai++)
+            //{
+            //    util.traverseJSONandFindKey(o[i], key);
+            //}
+        }
+
+        if (typeof(o[i])=="object") {
+
+            util.traverseJSONandFindKey(o[i], key, method);
+
+        }
+        if (i === key){
+           o[i] = method(o[i]) ;
+        }
+    }
+}
+
+util.getPriceNoCents = function(price){
+    var num = parseFloat(price);
+    var newPrice;
+
+    if (parseInt(num) === 0){
+        return '$Market';
+    }
+    else if((num*100)%100===0 ){
+        newPrice = '$' + parseInt(num).toString();
+        return newPrice;
+    }
+    else{
+        newPrice = '$' + num.toFixed(2).toString();
+        return  newPrice;
+    }
+
+
+}
+
 util.search = function (filePath, name) {
    
     var array = util.returnArray(filePath);

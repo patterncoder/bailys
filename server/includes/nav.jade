@@ -10,8 +10,16 @@
                 span#logo BAILY'S
         #myNavbar.collapse.navbar-collapse
             ul.nav.navbar-nav
-                li
-                    a(href='/dining') Dining
+                li.dropdown
+                    a.dropdown-toggle(href="#" data-toggle="dropdown") Dining
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='/dining') Information
+                        li
+                            a(href='/dining/menu') Menu
+                        li
+                            a(href='/dining/beer') Beers & More
                 li
                     a(href='/nightclub') Nightclub
                 li
@@ -24,12 +32,4 @@
                     ul.dropdown-menu
                         li
                             a(href="/about/history") History
-            //ul.nav.navbar-nav.navbar-right
-                //li
-                    //a(href='#')
-                        //span.glyphicon.glyphicon-user
-                        //| Sign Up
-                //li
-                    //a(href='#')
-                        //span.glyphicon.glyphicon-log-in
-                        //| Login
+

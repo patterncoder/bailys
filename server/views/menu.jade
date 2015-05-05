@@ -1,19 +1,34 @@
 ﻿extends ../includes/layout
-
 block content
     include ../includes/nav
-    .row
-        .container
-            .col-md-12
-                h1= title 
-                h2= menu.Menu.MenuTitle
-                .list-group
-                    each val in menu.Menu.Sections.Section
-                        h4= val.SectionTitle
-                        each item in val.MenuItems.MenuItem
-                            p= item.MenuLName
-                            p= item.MenuDescription
-                p= menu.Menu.Footer
-    include ../includes/footer
+    .container-fluid
+        .row
+            //Image Head
+            .col-md-12.col-lg-8.col-lg-offset-2.text-center
+                .page-header
+                    h1 The Restaurant
+        .row
+            //Three column content
+            .col-md-12.col-lg-8.col-lg-offset-2
+                .col-sm-2.hidden-xs
+                    include ../includes/navDining
+                .col-sm-8
+                    h2= menu.Menu.MenuTitle
+                    .list-group
+                        each val in menu.Menu.Sections.Section
+                            h3= val.SectionTitle
+                            each item in val.MenuItems.MenuItem
+                                h4.MenuItem= item.MenuLName + ' ' + item.MenuPrice
+                                p= item.MenuDescription
+                    p= menu.Menu.Footer
+                .col-sm-2
+                    hr.visible-xs
+                    include ../includes/entSched
+                    hr.visible-xs
+                    include ../includes/eventSched
+        .row
+            include ../includes/footer
+
+
 
     

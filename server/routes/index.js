@@ -5,7 +5,8 @@ var request = require('request');
 var musicController = require('../controllers/musicController');
 var menuController = require('../controllers/menuController');
 
-/* GET home page. */
+
+/* GET index page. */
 router.get('/', function(req, res) {
   res.render('index', { title: "Baily's" });
 });
@@ -13,7 +14,9 @@ router.get('/dining', function (req, res) {
     res.render('dining', {title: "Dining"});
 });
 router.get('/dining/menu', menuController.getMenu);
-
+router.get('/dining/beer', function (req, res) {
+    res.render('beer', {title: "Beers & More"});
+});
 router.get('/nightclub', function (req, res) {
     res.render('nightclub', { title: "Nightclub" });
 });

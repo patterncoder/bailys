@@ -1,22 +1,28 @@
 ﻿lightGray = #cccccc
 mediumGray = #adadad
 darkGray = #777777
-reallyGray = #555555
-darkestGray = #222222
+level5Gray = #555555
+level7Gray = #292929
+level9Gray = #222222
+
 headingFont = adobe-caslon-pro
 screen-sm-min = 768px
 screen-md-min = 992px
 screen-lg-min = 1200px
 
 body
-    background-color darkestGray
+    background-color level7Gray
     color mediumGray
 
 hr
   border-color darkGray
 
+.footer
+    background-color level9Gray
+    border-top 2px solid lightGray
+
 .list-group-item
-	background-color darkestGray
+	background-color level9Gray
 	border-color mediumGray
 //@font-face
     //font-family: Caslon
@@ -30,10 +36,10 @@ h1, h2, h3, h4, h5, h6
   font-variant small-caps
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small
-  color reallyGray
+  color level5Gray
 
 .thumbnail
-  background-color darkestGray
+  background-color level9Gray
   border none
   max-width 300px
 
@@ -81,7 +87,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small
     padding 20px 15px
 
 .list-group-item
-	background-color reallyGray
+	background-color level5Gray
 
 .text-xs-left
     text-align left
@@ -123,6 +129,12 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small
       text-align center
     .text-lg-justify
       text-align justify
+
+  h4.MenuItem
+    padding-bottom 0px
+    margin-bottom 0px
+    line-height 1
+
 
 
 //.module-banquet

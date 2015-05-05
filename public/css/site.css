@@ -1,9 +1,13 @@
 body {
-  background-color: #222;
+  background-color: #292929;
   color: #adadad;
 }
 hr {
   border-color: #777;
+}
+.footer {
+  background-color: #222;
+  border-top: 2px solid #ccc;
 }
 .list-group-item {
   background-color: #222;
@@ -134,4 +138,9 @@ h6 small {
   .text-lg-justify {
     text-align: justify;
   }
+}
+h4.MenuItem {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  line-height: 1;
 }

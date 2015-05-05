@@ -35,7 +35,7 @@ h6 small {
   color: #555;
 }
 .thumbnail {
-  background-color: #222;
+  background-color: transparent;
   border: none;
   max-width: 300px;
 }

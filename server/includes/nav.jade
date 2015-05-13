@@ -20,12 +20,32 @@
                             a(href='/dining/menu') Menu
                         li
                             a(href='/dining/beer') Beers & More
-                li
-                    a(href='/nightclub') Nightclub
+                        li
+                            a(href='/dining/wine') Wine List
+                        li
+                            a(href='/dining/cocktails') Cocktails
+                        li
+                            a(href='/dining/spirits') Spirits
+                li.dropdown
+                    a.dropdown-toggle(href="#" data-toggle="dropdown") Nightclub
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='/nightclub') Nightclub
+                        li
+                            a(href='/nightclub/nightclubmenu') Club Menu
+                        li
+                            a(href='/nightclub/bottleservice') VIP Bottle Service
+                        li
+                            a(href='/nightclub/partypackage') Party Packages
                 li
                     a(href='/music') Music
-                li
-                    a(href='/banquets') Banquets
+                li.dropdown
+                    a.dropdown-toggle(href="#" data-toggle="dropdown") Banquets
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='/banquets') Banquets
                 li.dropdown
                     a.dropdown-toggle(href='#' data-toggle="dropdown") About
                         span.caret

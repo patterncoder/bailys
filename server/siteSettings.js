@@ -6,7 +6,8 @@ var siteSettings = {};
 
 // integers correspond to menuID
 siteSettings.apis = {baseUrl: "http://oldtowndining.com/api/",
-    otdMenus: "menu.ashx?menuID="}
+    otdMenus: "menu.ashx?menuID=",
+    otdEntertainment: "entertainment.ashx?date="}
 siteSettings.menus = {main: 602}
 
 module.exports = siteSettings;

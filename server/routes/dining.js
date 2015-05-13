@@ -6,24 +6,24 @@ var router = express.Router();
 var menuController = require('../controllers/menuController');
 
 router.get('/', function (req, res) {
-    res.render('dining', {title: "Dining"});
+    res.render('dining/dining', {title: "Dining"});
 });
 
 router.get('/menu', menuController.getMenu);
 
 router.get('/beer', function (req, res) {
-    res.render('beer', {title: "Beers & More"});
+    res.render('dining/beer', {title: "Beers & More"});
 });
 
 router.get('/wine', function (req, res) {
-    res.render('wine', {title: "Wine List"});
+    res.render('dining/wine', {title: "Wine List"});
 });
 
 router.get('/cocktails', function (req, res) {
-    res.render('cocktails', {title: "Cocktails"});
+    res.render('dining/cocktails', {title: "Cocktails"});
 });
 router.get('/spirits', function (req, res) {
-    res.render('spirits', {title: "Distilled Spirits"});
+    res.render('dining/spirits', {title: "Distilled Spirits"});
 });
 
 module.exports = router;

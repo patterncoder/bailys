@@ -1,18 +1,26 @@
 ﻿var users = require('../routes/users');
-var index = require('../routes/index');
+var indexRoutes = require('../routes/index');
 var signUpRoutes = require('../routes/signup');
 var diningRoutes = require('../routes/dining');
 var nightclubRoutes = require('../routes/nightclub');
+var musicRoutes = require('../routes/music');
 var banquetRoutes = require('../routes/banquets');
+var aboutRoutes = require('../routes/about');
 
 module.exports = function (app) {
 
-    app.use('/', index);
+    app.use('/', indexRoutes);
+
     app.use('/api/signup', signUpRoutes);
+
     //app.use('/users', users);
+
     app.use('/dining', diningRoutes);
     app.use('/nightclub', nightclubRoutes);
+    app.use('/music', musicRoutes);
     app.use('/banquets', banquetRoutes);
+    app.use('/about', aboutRoutes);
+
     app.all('/api/*', function (req, res) {
         res.send(404);
     });

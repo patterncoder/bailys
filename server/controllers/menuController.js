@@ -14,7 +14,7 @@ var getData = function (req, res) {
             util.traverseJSONandFindKey(menu, 'MenuPrice', util.getPriceNoCents);
 
             //console.log(body);
-            res.render('menu', { title: "Menu", menu: menu });
+            res.render('dining/menu', { title: "Menu", menu: menu });
         }
     });
 

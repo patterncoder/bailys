@@ -1,8 +1,8 @@
-﻿extends ../includes/layout
+﻿extends ../../includes/layout
 
 block content
 
-    include ../includes/nav
+    include ../../includes/nav
     .container-fluid.wrapper
         .row
             //Image Head
@@ -13,7 +13,7 @@ block content
             //Three column content
             .col-md-12.col-lg-8.col-lg-offset-2
                 .col-sm-2.hidden-xs
-                    include ../includes/navDining
+                    include ../../includes/navDining
                 .col-sm-8
                     h4 Hours
                     p Open Daily at 11AM
@@ -22,8 +22,8 @@ block content
                     p The Menu is here
                 .col-sm-2
                     hr.visible-xs
-                    include ../includes/entSched
+                    include ../../includes/entSched
                     hr.visible-xs
-                    include ../includes/eventSched
+                    include ../../includes/eventSched
         .row
-            include ../includes/footer
+            include ../../includes/footer

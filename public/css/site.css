@@ -2,12 +2,23 @@ html {
   position: relative;
   min-height: 100%;
 }
+.modal-content {
+  background-color: #e5e5e5;
+}
+.modal-content p,
+.modal-content h2 {
+  color: #000;
+}
+.well {
+  background-color: #333;
+  border-color: #555;
+}
 body {
   background-color: #292929;
   color: #adadad;
 }
 hr {
-  border-color: #777;
+  border-color: #7a7a7a;
 }
 /*@media (min-width: screen-sm-min)
     .footer
@@ -21,11 +32,11 @@ hr {
         position absolute
         //right 0*/
 .footer {
-  background-color: #222;
+  background-color: #212121;
   border-top: 2px solid #ccc;
 }
 .list-group-item {
-  background-color: #222;
+  background-color: #212121;
   border-color: #adadad;
 }
 a:hover {
@@ -37,7 +48,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #777;
+  color: #7a7a7a;
   font-family: adobe-caslon-pro;
   font-variant: small-caps;
 }
@@ -55,21 +66,21 @@ h6 small {
   max-width: 300px;
 }
 .inParagraph {
-  border: solid 1px #777;
+  border: solid 1px #7a7a7a;
   margin: 10px;
 }
 .thumbnail img {
-  border: solid 1px #777;
+  border: solid 1px #7a7a7a;
   padding: 0px;
 }
 .row1 {
   background-color: #adadad;
 }
 .row1 p {
-  color: #777;
+  color: #7a7a7a;
 }
 .row2 {
-  background-color: #777;
+  background-color: #7a7a7a;
 }
 .caption p {
   color: #adadad;

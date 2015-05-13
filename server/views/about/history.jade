@@ -1,7 +1,7 @@
-﻿extends ../includes/layout
+﻿extends ../../includes/layout
 
 block content
-    include ../includes/nav
+    include ../../includes/nav
     .container-fluid
         .row
             .col-lg-8.col-lg-offset-2
@@ -11,7 +11,7 @@ block content
                             a(href="/") Home
                         li About
                         li.active History
-                    h1 Our Story
+                    h1= title
                         br
                         small The never-ending party!
         .row
@@ -44,4 +44,4 @@ block content
                     | the art visitor center with a rich and luxurious tasting room, gift shop and a wonderful restaurant 
                     | named Carol's.
         .row
-            include ../includes/footer
+            include ../../includes/footer

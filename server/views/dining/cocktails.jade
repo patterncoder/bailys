@@ -1,23 +1,4 @@
-extends ../../includes/layout
-block content
-    include ../../includes/nav
-    .container-fluid.wrapper
-        .row
-            //Image Head
-            .col-md-12.col-lg-8.col-lg-offset-2.text-center
-                .page-header
-                    h1 Specialty Cocktails
-        .row
-            //Three column content
-            .col-md-12.col-lg-8.col-lg-offset-2
-                .col-sm-2.hidden-xs
-                    include ../../includes/navDining
-                .col-sm-8
-                    p main content
-                .col-sm-2
-                    hr.visible-xs
-                    include ../../includes/entSched
-                    hr.visible-xs
-                    include ../../includes/eventSched
-        .row
-            include ../../includes/footer
+extends ../../includes/layoutDining
+block diningContent
+    p Here is our specialty cocktails list!
+

@@ -10,10 +10,13 @@ var getData = function (req, res) {
     console.log(url);
     request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
-            
+            var viewBag = {};
+            viewBag.title = "Entertainment Schedule";
             var musicSchedule = JSON.parse(body);
+
+            viewBag.schedule = musicSchedule;
             //console.log(body);
-            res.render('music', { title: "Music", schedule: musicSchedule });
+            res.render('music/schedule', {viewBag: viewBag});
         }
     });
 

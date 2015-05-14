@@ -33,13 +33,21 @@
                         li
                             a(href='/nightclub') Nightclub
                         li
-                            a(href='/nightclub/nightclubmenu') Club Menu
+                            a(href='/nightclub/menu') Club Menu
                         li
                             a(href='/nightclub/bottleservice') VIP Bottle Service
                         li
                             a(href='/nightclub/partypackage') Party Packages
-                li
-                    a(href='/music') Music
+                li.dropdown
+                    a.dropdown-toggle(href="#" data-toggle="dropdown") Music
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='/music') Information
+                        li
+                            a(href='/music/schedule') Music Schedule
+                        li
+                            a(href='/music/booking') Booking Information
                 li.dropdown
                     a.dropdown-toggle(href="#" data-toggle="dropdown") Banquets
                         span.caret
@@ -49,7 +57,7 @@
                         li
                             a(href='/banquets/venues') Venues
                         li
-                            a(href='/banquets/menu') Menus
+                            a(href='/banquets/menus') Menus
                         li
                             a(href='/banquets/beveragepackages') Beverage Packages
                 li.dropdown
@@ -60,4 +68,6 @@
                             a(href="/about") General Information
                         li
                             a(href="/about/history") History
+                        li
+                            a(href="/about/employment") Employment
 

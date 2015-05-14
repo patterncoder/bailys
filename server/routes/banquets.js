@@ -5,19 +5,19 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res) {
-    res.render('banquets/banquets', {title: "Banquets"});
+    res.render('banquets/banquets', {viewBag:{title: "Banquet Information"}});
 });
 
 router.get('/venues', function (req, res) {
-    res.render('banquets/venues', {title: "Venues"});
+    res.render('banquets/venues', {viewBag:{title: "Venues"}});
 });
 
-router.get('/menu', function (req, res) {
-    res.render('banquets/banquetMenus', {title: "Banquet Menus"});
+router.get('/menus', function (req, res) {
+    res.render('banquets/banquetmenus', {viewBag:{title: "Menus"}});
 });
 
 router.get('/beveragepackages', function (req, res) {
-    res.render('banquets/beveragepackages', { title: "Beverage Packages" });
+    res.render('banquets/beveragepackages', {viewBag:{title: "Beverage Packages"}});
 });
 
 

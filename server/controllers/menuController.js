@@ -10,11 +10,13 @@ var getData = function (req, res) {
 
     request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
+            var viewBag = {};
+            viewBag.title = "The Menu";
             var menu = JSON.parse(body);
             util.traverseJSONandFindKey(menu, 'MenuPrice', util.getPriceNoCents);
-
+            viewBag.menu = menu;
             //console.log(body);
-            res.render('dining/menu', { title: "Menu", menu: menu });
+            res.render('dining/menu', { title: "Menu", viewBag: viewBag });
         }
     });
 

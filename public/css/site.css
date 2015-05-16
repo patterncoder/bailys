@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+}
+html {
+  height: 100%;
+}
 .modal-content {
   background-color: #e5e5e5;
 }
@@ -21,6 +27,7 @@ hr {
   min-height: 100%;
   height: auto !important;
   height: 100%;
+  margin: 0 auto -210px;
 }
 /*@media (min-width: screen-sm-min)
     .footer
@@ -33,6 +40,9 @@ hr {
         //left 0
         position absolute
         //right 0*/
+.push {
+  height: 210px;
+}
 .footer {
   background-color: #212121;
   border-top: 2px solid #ccc;

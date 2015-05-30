@@ -46,7 +46,12 @@ hr {
 .footer {
   background-color: #212121;
   border-top: 2px solid #ccc;
-  height: 210px;
+  height: 420px;
+}
+@media (min-width: 768px) {
+  .footer {
+    height: 210px;
+  }
 }
 .list-group-item {
   background-color: #212121;

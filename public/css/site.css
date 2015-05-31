@@ -27,21 +27,10 @@ hr {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -210px;
+  margin: 0 auto -240px;
 }
-/*@media (min-width: screen-sm-min)
-    .footer
-        height 210px
-        background-color level9Gray
-        border-top 2px solid lightGray
-        bottom 0
-        width 100%
-        height 1000px
-        //left 0
-        position absolute
-        //right 0*/
 .push {
-  height: 210px;
+  height: 240px;
 }
 .footer {
   background-color: #212121;
@@ -50,7 +39,7 @@ hr {
 }
 @media (min-width: 768px) {
   .footer {
-    height: 210px;
+    height: 240px;
   }
 }
 .list-group-item {

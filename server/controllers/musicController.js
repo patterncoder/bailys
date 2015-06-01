@@ -7,7 +7,7 @@ var siteSettings = require('../siteSettings.js');
 var getData = function (req, res) {
     // pull together settings for url and util to get a sqlserver date string
     var url = siteSettings.apis.baseUrl + siteSettings.apis.otdEntertainment + util.getDateString(-2);
-    console.log(url);
+
     request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             var viewBag = {};

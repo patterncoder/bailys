@@ -35,7 +35,7 @@ hr {
 .footer {
   background-color: #212121;
   border-top: 2px solid #ccc;
-  height: 420px;
+  height: 480px;
 }
 @media (min-width: 768px) {
   .footer {

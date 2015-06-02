@@ -1,2 +1,5 @@
-start cmd "c:\development\bailys"
+cd\
+cd\development\bailys
+
+start cmd 
 

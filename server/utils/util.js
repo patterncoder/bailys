@@ -26,11 +26,12 @@ util.traverseJSONandFindKey = function (o,key,method) {
             //}
         }
 
-        if (typeof(o[i])=="object") {
+        if (typeof(o[i])==="object") {
 
             util.traverseJSONandFindKey(o[i], key, method);
 
         }
+
         if (i === key){
            o[i] = method(o[i]) ;
         }

@@ -3,27 +3,23 @@
  */
 var express = require('express');
 var router = express.Router();
-var menuController = require('../controllers/menuController');
+var menuController = require('../controllers/dining/menuController');
+var beerController = require('../controllers/dining/beerController');
+var cocktailsController = require('../controllers/dining/cocktailsController');
+var winelistController = require('../controllers/dining/winelistController');
+var spiritsController = require('../controllers/dining/spiritsController');
+var diningController = require('../controllers/dining/diningController');
 
-router.get('/', function (req, res) {
-    res.render('dining/dining', {viewBag: {title: "The Restaurant"}});
-});
+router.get('/', diningController.getView);
 
-router.get('/menu', menuController.getMenu);
+router.get('/menu', menuController.getView);
 
-router.get('/beer', function (req, res) {
-    res.render('dining/beer', {viewBag: {title: "Beers & More"}});
-});
+router.get('/beer', beerController.getView);
 
-router.get('/wine', function (req, res) {
-    res.render('dining/wine', {viewBag: {title: "Wine List"}});
-});
+router.get('/wine', winelistController.getView);
 
-router.get('/cocktails', function (req, res) {
-    res.render('dining/cocktails', {viewBag: {title: "Specialty Cocktails"}});
-});
-router.get('/spirits', function (req, res) {
-    res.render('dining/spirits', {viewBag: {title: "Distilled Spirits"}});
-});
+router.get('/cocktails', cocktailsController.getView);
+
+router.get('/spirits', spiritsController.getView);
 
 module.exports = router;

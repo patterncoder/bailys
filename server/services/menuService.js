@@ -1,28 +1,31 @@
-﻿var request = require('request');
+var request = require('request');
 var siteSettings = require('../siteSettings.js');
 var util = require('../utils/util');
+var Q = require('q');
 
+var getCurrentMenu = function(){
 
-
-var getData = function (req, res) {
-
+    var deferred = Q.defer();
     var url = siteSettings.apis.baseUrl + siteSettings.apis.otdMenus + siteSettings.menus.main;
 
     request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
-            var viewBag = {};
-            viewBag.title = "The Menu";
+
+
             var menu = JSON.parse(body);
+
             util.traverseJSONandFindKey(menu, 'MenuPrice', util.getPriceNoCents);
-            viewBag.menu = menu;
-            //console.log(body);
-            res.render('dining/menu', { title: "Menu", viewBag: viewBag });
+
+            deferred.resolve(menu);
+        }
+        else
+        {
+            deferred.reject(new Error(error));
         }
     });
+    return deferred.promise;
 
 };
 
 
-
-exports.getMenu = getData;
-
+exports.getCurrentMenu = getCurrentMenu;

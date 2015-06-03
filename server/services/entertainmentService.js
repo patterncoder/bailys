@@ -5,24 +5,17 @@ var Q = require('q');
 
 var getFutureMusic = function () {
     // pull together settings for url and util to get a sqlserver date string
-    var url = siteSettings.apis.baseUrl + siteSettings.apis.otdEntertainment + util.getDateString(-20);
+    var url = siteSettings.apis.baseUrl + siteSettings.apis.otdEntertainment + util.getDateString(siteSettings.utilDateBack);
     var deferred = Q.defer();
     request(url, function (error, response, body) {
 
-
         if (!error && response.statusCode == 200) {
-
-            var viewBag = {};
-            viewBag.title = "Entertainment Schedule";
             var musicSchedule = JSON.parse(body);
-            if(musicSchedule.Schedule.ScheduleItems)
-                viewBag.schedule = musicSchedule;
-            //console.log(body);
-            //res.render('music/schedule', {viewBag: viewBag});
-            deferred.resolve(viewBag);
+            if(musicSchedule.Schedule.ScheduleItems){
+                    deferred.resolve(musicSchedule);
+                }
         }
-        else
-        {
+        else{
             deferred.reject(new Error(error));
         }
     });
@@ -31,23 +24,18 @@ var getFutureMusic = function () {
 };
 
 var getFutureMusicTop3 = function(){
-    var url = siteSettings.apis.baseUrl + siteSettings.apis.otdEntertainment + util.getDateString(-20);
+    var url = siteSettings.apis.baseUrl + siteSettings.apis.otdEntertainment + util.getDateString(siteSettings.utilDateBack);
 
     var deferred = Q.defer();
 
     request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
-
-
-
             var musicSchedule = JSON.parse(body);
             var top3List = { Schedule: { ScheduleItems: [] } };
             for (var i = 0; i < 3; i++) {
                 top3List.Schedule.ScheduleItems[i] = musicSchedule.Schedule.ScheduleItems[i]
             }
-
             deferred.resolve(top3List);
-
         }
         else
         {

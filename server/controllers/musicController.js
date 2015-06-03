@@ -7,8 +7,11 @@ var entertainmentService = require('../services/entertainmentService');
 
 var getData = function (req, res) {
 
+    var viewBag = {};
+    viewBag.title = "Entertainment Schedule";
     entertainmentService.getFutureMusic()
-        .then(function(viewBag){
+        .then(function(musicSchedule){
+            viewBag.schedule = musicSchedule;
             res.render('music/schedule', {viewBag: viewBag})
         });
 

@@ -1,18 +1,8 @@
 .text-sm-right
-    h4 Upcoming DJs
-    ul.list-group
-        li.list-group-item
-            p
-                strong Event 1 <br>
-                small Date and Time
-        li.list-group-item
-            p
-                strong Event 2 <br>
-                small Date and Time
-        li.list-group-item
-            p
-                strong Event 3 <br>
-                small Date and Time
+    h3 Reserved Dates
+    each val in viewBag.banquets.BanquetSchedule.Bookings
+       p #{val.Date} &nbsp; &nbsp; #{val.Time}
+       p &nbsp; &nbsp; #{val.RoomName}
 
 
 

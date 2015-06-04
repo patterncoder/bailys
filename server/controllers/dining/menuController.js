@@ -1,6 +1,7 @@
 ﻿
 var entertainmentService = require('../../services/entertainmentService');
 var menuService = require('../../services/menuService');
+var eventsService = require('../../services/eventsService');
 
 
 
@@ -17,6 +18,10 @@ var getData = function (req, res) {
         })
         .then(function(menu){
             viewBag.menu = menu;
+            return eventsService.getEventsTopX();
+        })
+        .then(function(events){
+            viewBag.events = events;
             res.render('dining/menu', { title: "Menu", viewBag: viewBag })
         });
 

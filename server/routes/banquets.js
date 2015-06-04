@@ -3,10 +3,9 @@
  */
 var express = require('express');
 var router = express.Router();
+var banquetsController = require('../controllers/banquets/banquetsController');
 
-router.get('/', function (req, res) {
-    res.render('banquets/banquets', {viewBag:{title: "Banquet Information"}});
-});
+router.get('/', banquetsController.getView);
 
 router.get('/venues', function (req, res) {
     res.render('banquets/venues', {viewBag:{title: "Venues"}});

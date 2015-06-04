@@ -2,6 +2,7 @@
  * Created by patterncoder on 6/2/2015.
  */
 var entertainmentService = require('../../services/entertainmentService');
+var eventsService = require('../../services/eventsService');
 
 
 
@@ -15,7 +16,11 @@ var getData = function (req, res) {
     entertainmentService.getFutureMusicTop3()
         .then(function(music) {
             viewBag.schedule = music;
-            res.render('dining/dining', {  viewBag: viewBag })
+            return eventsService.getEventsTopX();
+        })
+        .then(function(events){
+            viewBag.events = events;
+            res.render('dining/dining', {  viewBag: viewBag });
         })
 
 

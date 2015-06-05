@@ -4,20 +4,17 @@
 var express = require('express');
 var router = express.Router();
 var banquetsController = require('../controllers/banquets/banquetsController');
+var banquetMenusController = require('../controllers/banquets/banquetMenusController');
+var beveragePackageController = require('../controllers/banquets/beveragePackageController');
+var venuesController = require('../controllers/banquets/venuesController');
 
 router.get('/', banquetsController.getView);
 
-router.get('/venues', function (req, res) {
-    res.render('banquets/venues', {viewBag:{title: "Venues"}});
-});
+router.get('/venues', venuesController.getView);
 
-router.get('/menus', function (req, res) {
-    res.render('banquets/banquetmenus', {viewBag:{title: "Menus"}});
-});
+router.get('/menus', banquetMenusController.getView);
 
-router.get('/beveragepackages', function (req, res) {
-    res.render('banquets/beveragepackages', {viewBag:{title: "Beverage Packages"}});
-});
+router.get('/beveragepackages', beveragePackageController.getView);
 
 
 

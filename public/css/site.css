@@ -32,10 +32,15 @@ hr {
 .push {
   height: 240px;
 }
+.contentModule {
+  background-color: #212121;
+  padding: 10px;
+}
 .footer {
   background-color: #212121;
   border-top: 2px solid #ccc;
   height: 480px;
+  margin-top: 20px;
 }
 @media (min-width: 768px) {
   .footer {

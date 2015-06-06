@@ -16,8 +16,8 @@ var getData = function (req, res) {
     banquetsService.getFutureBookings()
         .then(function(banquets){
             viewBag.banquets = banquets;
-            res.render('banquets/banquets', {  viewBag: viewBag })
-        })
+            res.render('banquets/banquets', {  viewBag: viewBag });
+        });
 
 
 };

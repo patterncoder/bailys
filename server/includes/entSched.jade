@@ -1,10 +1,12 @@
-.text-sm-right
-    h3 Live Music
-    each val in viewBag.schedule.Schedule.ScheduleItems
-        h4= val.BandName
-        p #{val.Date}
-            | <br/>
-            | #{val.RoomName}
+.contentModule
+    .text-sm-right
+        h3 Live Music
+        each val in viewBag.schedule.Schedule.ScheduleItems
+            h4= val.BandName
+            p #{val.Date}
+                | <br/>
+                | #{val.RoomName}
+            hr
 
 
 

@@ -3,10 +3,10 @@ var siteSettings = require('../siteSettings.js');
 var util = require('../utils/util');
 var Q = require('q');
 
-var getCurrentMenu = function(){
+var getMenuById = function(menuId){
 
     var deferred = Q.defer();
-    var url = siteSettings.apis.baseUrl + siteSettings.apis.otdMenus + siteSettings.menus.main;
+    var url = siteSettings.apis.baseUrl + siteSettings.apis.otdMenus + menuId;
 
     request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
@@ -28,4 +28,4 @@ var getCurrentMenu = function(){
 };
 
 
-exports.getCurrentMenu = getCurrentMenu;
+exports.getMenuById = getMenuById;

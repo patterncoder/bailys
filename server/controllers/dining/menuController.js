@@ -2,6 +2,7 @@
 var entertainmentService = require('../../services/entertainmentService');
 var menuService = require('../../services/menuService');
 var eventsService = require('../../services/eventsService');
+var siteSettings = require('../../siteSettings.js');
 
 
 
@@ -14,7 +15,7 @@ var getData = function (req, res) {
     entertainmentService.getFutureMusicTop3()
         .then(function(music) {
             viewBag.schedule = music;
-            return menuService.getCurrentMenu()
+            return menuService.getMenuById(siteSettings.menus.main);
         })
         .then(function(menu){
             viewBag.menu = menu;

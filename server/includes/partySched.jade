@@ -1,8 +1,9 @@
-.text-sm-right
-    h3 Reserved Dates
-    each val in viewBag.banquets.BanquetSchedule.Bookings
-       p #{val.Date} &nbsp; &nbsp; #{val.Time}
-       p &nbsp; &nbsp; #{val.RoomName}
+.contentModule
+    .text-sm-right
+        h3 Reserved Dates
+        each val in viewBag.banquets.BanquetSchedule.Bookings
+           p #{val.Date} &nbsp; &nbsp; #{val.Time}
+           p &nbsp; &nbsp; #{val.RoomName}
 
 
 

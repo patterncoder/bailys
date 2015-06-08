@@ -7,10 +7,12 @@ var banquetsController = require('../controllers/banquets/banquetsController');
 var banquetMenusController = require('../controllers/banquets/banquetMenusController');
 var beveragePackageController = require('../controllers/banquets/beveragePackageController');
 var venuesController = require('../controllers/banquets/venuesController');
+var bookingController = require('../controllers/banquets/bookingController');
 
 router.get('/', banquetsController.getView);
 
 router.get('/venues', venuesController.getView);
+router.get('/booking', bookingController.getView);
 
 router.get('/menus', banquetMenusController.getView);
 

@@ -17,7 +17,7 @@ var getData = function (req, res) {
         .then(function(banquets){
             viewBag.banquets = banquets;
             res.render('banquets/banquets', {  viewBag: viewBag })
-        })
+        });
 
 
 };

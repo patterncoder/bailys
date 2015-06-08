@@ -12,11 +12,11 @@ var banquetsService = require('../../services/banquetsService');
 var getData = function (req, res) {
 
     var viewBag = {};
-    viewBag.title = "Banquets Venues";
+    viewBag.title = "Booking Banquets";
     banquetsService.getFutureBookings()
         .then(function(banquets){
             viewBag.banquets = banquets;
-            res.render('banquets/banquets', {  viewBag: viewBag })
+            res.render('banquets/booking', {  viewBag: viewBag })
         });
 
 

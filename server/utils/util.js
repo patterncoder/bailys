@@ -1,6 +1,87 @@
 ﻿var fs = require('fs');
 var util = {};
 
+util.removeLeadingZeroFromTime = function(time){
+    while(time.charAt(0)==='0'){
+        time = time.substr(1);
+
+    }
+    return time;
+};
+
+util.shortenDate = function(date){
+    var newDate;
+    var parts = date.split(' ');
+    switch(parts[0]){
+        case "Monday":
+            newDate = "Mon, ";
+            break;
+        case "Tuesday":
+            newDate = "Tue, ";
+            break;
+        case "Wednesday":
+            newDate = "Wed, ";
+            break;
+        case "Thursday":
+            newDate = "Thu, ";
+            break;
+        case "Friday":
+            newDate = "Fri, ";
+            break;
+        case "Saturday":
+            newDate = "Sat, ";
+            break;
+        case "Sunday":
+            newDate = "Sun, ";
+            break;
+    }
+
+    switch(parts[1]){
+        case "January":
+            newDate += "Jan ";
+            break;
+        case "February":
+            newDate += "Feb ";
+            break;
+        case "March":
+            newDate += "Mar ";
+            break;
+        case "April":
+            newDate += "Apr ";
+            break;
+        case "May":
+            newDate += "May ";
+            break;
+        case "June":
+            newDate += "Jun ";
+            break;
+        case "July":
+            newDate += "Jul ";
+            break;
+        case "August":
+            newDate += "Aug ";
+            break;
+        case "September":
+            newDate += "Sep ";
+            break;
+        case "October":
+            newDate += "Oct ";
+            break;
+        case "November":
+            newDate += "Nov ";
+            break;
+        case "December":
+            newDate += "Dec ";
+            break;
+
+
+    }
+
+    newDate += parts[2];
+    return newDate;
+
+};
+
 util.getDateString = function (daysOffset) {
     
     var offset = daysOffset || 0;
@@ -36,7 +117,7 @@ util.traverseJSONandFindKey = function (o,key,method) {
            o[i] = method(o[i]) ;
         }
     }
-}
+};
 
 util.getPriceNoCents = function(price){
     var num = parseFloat(price);
@@ -55,7 +136,7 @@ util.getPriceNoCents = function(price){
     }
 
 
-}
+};
 
 util.search = function (filePath, name) {
    

@@ -2,8 +2,9 @@
     .text-sm-right
         h3 Reserved Dates
         each val in viewBag.banquets.BanquetSchedule.Bookings
-           p #{val.Date} &nbsp; &nbsp; #{val.Time}
-           p &nbsp; &nbsp; #{val.RoomName}
-
+            p
+                | #{val.Date}, #{val.Time} <br>
+                | &nbsp; &nbsp; #{val.RoomName}
+            hr.contentModuleList
 
 

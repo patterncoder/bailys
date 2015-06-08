@@ -1,18 +1,10 @@
-.text-sm-right
-    h3 Upcoming DJs
-    ul.list-group
-        li.list-group-item
-            p
-                strong Entertainer 1 <br>
-                small Date and Time
-        li.list-group-item
-            p
-                strong Entertainer 2 <br>
-                small Date and Time
-        li.list-group-item
-            p
-                strong Entertainer 3 <br>
-                small Date and Time
-
-
+.contentModule
+    .text-sm-right
+        h3 Who's Spinnin'
+        each val in viewBag.schedule.Schedule.ScheduleItems
+            h4= val.BandName
+            p #{val.Date} @ #{val.Time}
+                | <br/>
+                | #{val.RoomName}
+            hr
 

@@ -9,7 +9,8 @@ siteSettings.apis = {baseUrl: "http://oldtowndining.com/api/",
     otdMenus: "menu.ashx?menuID=",
     otdEntertainment: "entertainment.ashx?date=",
     otdEvents: "events.ashx?date=",
-    otdBanquets: "banquets.ashx?date="
+    otdBanquets: "banquets.ashx?date=",
+    otdDjs: "djSchedule.ashx?date="
 }
 siteSettings.menus = {main: 602}
 siteSettings.utilDateBack = -20;

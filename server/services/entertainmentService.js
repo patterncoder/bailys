@@ -6,7 +6,9 @@ var Q = require('q');
 var getFutureMusic = function () {
     // pull together settings for url and util to get a sqlserver date string
     var url = siteSettings.apis.baseUrl + siteSettings.apis.otdEntertainment + util.getDateString(siteSettings.utilDateBack);
+    
     var deferred = Q.defer();
+    
     request(url, function (error, response, body) {
 
         if (!error && response.statusCode == 200) {

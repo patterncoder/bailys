@@ -1,17 +1,15 @@
 var express = require('express');
 var router = express.Router();
-var musicController = require('../controllers/musicController');
+var musicScheduleController = require('../controllers/music/scheduleController');
+var musicInfoController = require('../controllers/music/musicHomeController');
+var musicBookingController = require('../controllers/music/bookingInfoController');
 
-router.get('/', function (req, res) {
-    res.render('music/music', {viewBag: {title: "Music at Baily's"}});
-});
+router.get('/', musicInfoController.getView);
 
 
-router.get('/schedule', musicController.getMusic);
+router.get('/schedule', musicScheduleController.getView);
 
-router.get('/booking', function (req, res) {
-    res.render('music/booking', {viewBag: {title: "Booking Information"}});
-});
+router.get('/booking', musicBookingController.getView);
 
 
 

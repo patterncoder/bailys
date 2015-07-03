@@ -16,6 +16,7 @@ var getFutureBookings = function(){
             var banquetsSchedule = JSON.parse(body);
             //iterate over schedule and strip leading 0 from time
             banquetsSchedule.BanquetSchedule.Bookings.map(function(booking){
+                    
                     booking.Date = util.shortenDate(booking.Date);
                     booking.Time = util.removeLeadingZeroFromTime(booking.Time);
 

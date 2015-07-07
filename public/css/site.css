@@ -4,6 +4,32 @@
 html {
   height: 100%;
 }
+table.MenuItem {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+td.MenuName {
+  width: 1px;
+}
+td.MenuName span {
+  white-space: nowrap;
+  font-weight: bold;
+}
+div.Leader {
+  background: repeat-x url("/assets/leader.png");
+}
+td.MenuItemPrice {
+  text-align: right;
+  width: 1px;
+}
+td.MenuItemPrice span {
+  white-space: nowrap;
+  font-weight: bold;
+}
+td.Description {
+  padding-bottom: 5px;
+}
 .modal-content {
   background-color: #e5e5e5;
 }

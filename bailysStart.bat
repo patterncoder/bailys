@@ -1,4 +1,4 @@
 
 cd\
-cd C:\Users\Michael\Documents\development\bailys
+cd\development\bailys
 start nodemon .\bin\www

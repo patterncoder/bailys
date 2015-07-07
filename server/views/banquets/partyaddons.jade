@@ -1,6 +1,8 @@
 extends ../../includes/layoutBanquet
 block banquetContent
 	h1 Here is the add on information -- MORE IN COMMENTS
+	h2= viewBag.menu.Menu.MenuTitle
+	script var data = !{JSON.stringify(viewBag.menu)}; console.log(data);
 	
 // 	Party Add-Ons
 

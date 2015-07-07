@@ -7,7 +7,7 @@ var siteSettings = require('../../siteSettings.js');
 
 
 
-var getData = function (req, res) {
+var getView = function (req, res) {
 
     //var url = siteSettings.apis.baseUrl + siteSettings.apis.otdMenus + siteSettings.menus.main;
     var viewBag = {};
@@ -30,5 +30,5 @@ var getData = function (req, res) {
 
 
 
-exports.getView = getData;
+exports.getView = getView;
 

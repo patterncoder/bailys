@@ -1,7 +1,26 @@
 extends ../../includes/layoutBanquet
 block banquetContent
-	h1 Here is the add on information -- MORE IN COMMENTS
-	
+
+     h1= viewBag.menu.Menu.MenuTitle
+     p= viewBag.menu.Menu.SubTitle
+     script var data = !{JSON.stringify(viewBag.menu)}; console.log(data);
+     .list-group
+        each val in viewBag.menu.Menu.Sections.Section
+            h3= val.SectionTitle
+            p= val.SectionHeaderText
+            each item in val.MenuItems.MenuItem
+                table.MenuItem
+                    tr
+                        td.MenuName
+                            span= item.MenuLName + '  '
+                        td.Leader 
+                            div.Leader &nbsp;
+                        td.MenuItemPrice= ' ' + item.MenuPrice
+                    tr
+                        td.Description(colspan="3")= item.MenuDescription
+
+
+
 // 	Party Add-Ons
 
 // We offer a variety of hors d' oeuvres and desserts to further enhance your banquet.  Addtionally, we make avaialable several frequently requested rental items.  The sections below describe each.

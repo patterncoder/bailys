@@ -20,7 +20,15 @@ var getView = function (req, res) {
         })
         .then(function(menu){
             viewBag.menu = menu;
-            console.log(menu);
+            return menuService.getMenuById(siteSettings.menus.partyDessert);
+        })
+        .then(function(partyDesserts){
+            viewBag.partyDesserts = partyDesserts;
+            return menuService.getMenuById(siteSettings.menus.partyRental);
+        })
+        .then(function(partyRentals){
+            viewBag.partyRentals = partyRentals;
+            
             res.render('banquets/partyaddons', {  viewBag: viewBag })
         });
 

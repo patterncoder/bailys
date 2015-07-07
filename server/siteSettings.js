@@ -12,7 +12,10 @@ siteSettings.apis = {baseUrl: "http://oldtowndining.com/api/",
     otdBanquets: "banquets.ashx?date=",
     otdDjs: "djSchedule.ashx?date="
 }
-siteSettings.menus = {main: 602, partyHors: 374}
+siteSettings.menus = {main: 602, 
+                        partyHors: 374,
+                        partyDessert: 373,
+                        partyRental: 375}
 siteSettings.utilDateBack = -20;
 
 module.exports = siteSettings;

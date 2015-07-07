@@ -3,11 +3,12 @@ var siteSettings = require('../siteSettings.js');
 var util = require('../utils/util');
 var Q = require('q');
 
-var getMenuById = function(menuId){
-
+var getMenuById = function(menuId, options){
+    options = options || {};
+    
     var deferred = Q.defer();
     var url = siteSettings.apis.baseUrl + siteSettings.apis.otdMenus + menuId;
-
+    
     request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
 

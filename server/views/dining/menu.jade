@@ -1,19 +1,19 @@
 ﻿extends ../../includes/layoutDining
 block diningContent
     //h2= viewBag.menu.Menu.MenuTitle
-    .list-group
-        each val in viewBag.menu.Menu.Sections.Section
-            h3= val.SectionTitle
-            each item in val.MenuItems.MenuItem
-                table.MenuItem
-                    tr
-                        td.MenuName
-                            span= item.MenuLName + '  '
-                        td.Leader 
-                            div.Leader &nbsp;
-                        td.MenuItemPrice= ' ' + item.MenuPrice
-                    tr
-                        td.Description(colspan="3")= item.MenuDescription
+    //.list-group
+    each val in viewBag.menu.Menu.Sections.Section
+        h3= val.SectionTitle
+        each item in val.MenuItems.MenuItem
+            table.MenuItem
+                tr
+                    td.MenuName
+                        span= item.MenuLName + '  '
+                    td.Leader 
+                        div.Leader &nbsp;
+                    td.MenuItemPrice= ' ' + item.MenuPrice
+                tr
+                    td.Description(colspan="3")= item.MenuDescription
                 
     p= viewBag.menu.Menu.Footer
     

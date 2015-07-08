@@ -1,0 +1,85 @@
+extends ../includes/layout
+
+block content
+   .container-fluid
+      .row
+         //Image Head
+         .col-md-12.col-lg-8.col-lg-offset-2.text-center
+            .page-header
+               h1= viewBag.title
+      .row
+         //Three column content
+         .col-md-12.col-lg-8.col-lg-offset-2
+            .col-sm-9
+                // Main Content goes here from jade views rendered by express
+                p *** See code...below this p tag is an example of nested columns that split the main content into
+                    | two .col-sm-6 columns.  
+                .col-sm-6
+                    h1 This is an h1 tag
+                    h2 This is an h2 tag
+                    h3 This is an h3 tag
+                    h4 This is an h4 tag
+                    h5 This is an h5 tag
+                    h6 This is an h6 tag
+                    p This is some text with some <em>italics</em> and some <strong>bold</strong>
+                .col-sm-6
+                    p This is a p tag with an unordered list below
+                    ul
+                        li List item 1 
+                        li List item 2 
+                        li List item 3 
+                    p This is another p tag with a ordered list below
+                    ol
+                        li List item 1 
+                        li List item 2 
+                        li List item 3 
+                    p This is one more list with .list-unstyled
+                    ul.list-unstyled
+                        li List item 1 
+                        li List item 2 
+                        li List item 3 
+                .clearfix
+                hr
+                p Now we are out of the two column layout and back to the standard nine column layout
+                    | notice in the code we used a .clearfix to clear the css floats that are in play with the 
+                    | two column split.  without .clearfix things break
+                h3 Here is an h3 title
+                p And some text I copied from another page.
+                p Join us every Friday and Saturday late night for Old Town’s most happening spot.  
+                    | The transformation from restaurant to nightclub is a sight to behold and for those of you 
+                    | that join us for dinner prior to the club, your $5 cover charge is waived.  
+                    | Started in 2008, the nightclub has grown from its Top 40/Party Rock format on the first 
+                    | floor to include the second floor where Latin music plays throughout the night.  
+                    | Bottle service is available with reservations.  
+                    | Call 951-676-9567 for reservations or download our new phone app!
+                
+            .col-sm-3
+                // Side bar content redered as an include like: include ./navAbout
+                // this horizontal rule only shows on mobile size view to separate side bar content 
+                // from main content when cols collapse
+                hr.visible-xs
+                .contentModule
+                    h3 h3 Heading
+                    p This is a p tag within a .contentModule div which gives the darker background styling
+                    p Below is a list of links...note that the ul has a class of list-unstyled to remove bullets
+                        ul.list-unstyled
+                            li
+                                a(href="#") Link 1 
+                            li
+                                a(href="#") Link 2
+                hr.visible-xs
+                .contentModule
+                    h3 2nd div
+                    p This .contentModule div is a sibling of the first.  It appears as one on sm size and above
+                        | but stacked on size xs.  See code for example add  and the module will split
+                        | with a horizontal line to separate them.
+                    .text-sm-right
+                        h3 Align Rt/Lft
+                        p enclosing a chunk of text in a .text-sm-right div will right align the text used in 
+                            | many of the event lists but on xs size it will align left
+                        h4 Event 1 
+                        p event descprition
+                        h4 Event 2 
+                        p event description
+
+      .push

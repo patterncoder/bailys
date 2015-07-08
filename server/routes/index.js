@@ -13,7 +13,7 @@ router.get('/', function(req, res) {
 
 // unpublicized page for demonstrating the styles for the website
 router.get('/styleguide', function(req, res){
-    res.render('styleguide');
+    res.render('styleguide', { title: "Style Guide", viewBag: {title: "Style Guide"} });
 });
 
 

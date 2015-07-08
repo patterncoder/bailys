@@ -1,22 +1,54 @@
 extends ../../includes/layoutBanquet
 block banquetContent
-     h1= viewBag.menu.Menu.MenuTitle
-     p= viewBag.menu.Menu.SubTitle
-     script var data = !{JSON.stringify(viewBag.menu)}; console.log(data);
-     .list-group
-        each val in viewBag.menu.Menu.Sections.Section
-            h3= val.SectionTitle
-            p= val.SectionHeaderText
-            each item in val.MenuItems.MenuItem
-                table.MenuItem
-                    tr
-                        td.MenuName
-                            span= item.MenuLName + '  '
-                        td.Leader 
-                            div.Leader &nbsp;
-                        td.MenuItemPrice= ' ' + item.MenuPrice
-                    tr
-                        td.Description(colspan="3")= item.MenuDescription
+    h1= viewBag.menu.Menu.MenuTitle
+    p= viewBag.menu.Menu.SubTitle
+    script var data = !{JSON.stringify(viewBag.menu)}; console.log(data);
+    each val in viewBag.menu.Menu.Sections.Section
+        h3= val.SectionTitle
+        p= val.SectionHeaderText
+        each item in val.MenuItems.MenuItem
+            table.MenuItem
+                tr
+                    td.MenuName
+                        span= item.MenuLName + '  '
+                    td.Leader 
+                        div.Leader &nbsp;
+                    td.MenuItemPrice= ' ' + item.MenuPrice
+                tr
+                    td.Description(colspan="3")= item.MenuDescription
+                    
+    h1= viewBag.partyDesserts.Menu.MenuTitle
+    p= viewBag.partyDesserts.Menu.SubTitle
+    each val in viewBag.partyDesserts.Menu.Sections.Section
+        h3= val.SectionTitle
+        p= val.SectionHeaderText
+        each item in val.MenuItems.MenuItem
+            table.MenuItem
+                tr
+                    td.MenuName
+                        span= item.MenuLName + '  '
+                    td.Leader 
+                        div.Leader &nbsp;
+                    td.MenuItemPrice= ' ' + item.MenuPrice
+                tr
+                    td.Description(colspan="3")= item.MenuDescription
+                    
+                    
+    h1= viewBag.partyRentals.Menu.MenuTitle
+    p= viewBag.partyRentals.Menu.SubTitle
+    each val in viewBag.partyRentals.Menu.Sections.Section
+        h3= val.SectionTitle
+        p= val.SectionHeaderText
+        each item in val.MenuItems.MenuItem
+            table.MenuItem
+                tr
+                    td.MenuName
+                        span= item.MenuLName + '  '
+                    td.Leader 
+                        div.Leader &nbsp;
+                    td.MenuItemPrice= ' ' + item.MenuPrice
+                tr
+                    td.Description(colspan="3")= item.MenuDescription
 
 
 

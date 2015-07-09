@@ -90,6 +90,9 @@ hr {
   background-color: #212121;
   border-color: #adadad;
 }
+.bailys-10pxPadBott li {
+  padding-bottom: 10px;
+}
 a:hover {
   text-decoration: none;
 }
@@ -112,6 +115,15 @@ h4 small,
 h5 small,
 h6 small {
   color: #555;
+}
+.btn {
+  border-radius: 0;
+}
+.modal-content {
+  border-radius: 0;
+}
+.form-control {
+  border-radius: 0;
 }
 .thumbnail {
   background-color: transparent;

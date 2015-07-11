@@ -116,6 +116,9 @@ h5 small,
 h6 small {
   color: #555;
 }
+.well {
+  border-radius: 0;
+}
 .btn {
   border-radius: 0;
 }

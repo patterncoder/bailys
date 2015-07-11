@@ -15,7 +15,8 @@ siteSettings.apis = {baseUrl: "http://oldtowndining.com/api/",
 siteSettings.menus = {main: 602, 
                         partyHors: 374,
                         partyDessert: 373,
-                        partyRental: 375}
+                        partyRental: 375,
+                        beersAndMore: 611}
 siteSettings.utilDateBack = -20;
 
 module.exports = siteSettings;

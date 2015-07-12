@@ -3,7 +3,7 @@
         h3 Reserved Dates
         each val in viewBag.banquets.BanquetSchedule.Bookings
             p
-                | #{val.Date}, #{val.Time} <br>
+                | #{utils.shortenDate(val.Date)}, #{utils.removeLeadingZeroFromTime(val.Time)} <br>
                 | &nbsp; &nbsp; #{val.RoomName}
             hr.contentModuleList
 

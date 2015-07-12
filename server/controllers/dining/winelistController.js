@@ -3,13 +3,15 @@
  */
 var entertainmentService = require('../../services/entertainmentService');
 var eventsService = require('../../services/eventsService');
+var menuService = require('../../services/menuService');
+var siteSettings = require('../../siteSettings');
 
 
 
 
 var getData = function (req, res) {
 
-    //var url = siteSettings.apis.baseUrl + siteSettings.apis.otdMenus + siteSettings.menus.main;
+    
     var viewBag = {};
     viewBag.title = "Wine List";
     entertainmentService.getFutureMusicTop3()
@@ -19,8 +21,12 @@ var getData = function (req, res) {
         })
         .then(function(events){
             viewBag.events = events;
-            res.render('dining/wine', {  viewBag: viewBag });
+            return menuService.getWineListById(siteSettings.menus.wineList)
         })
+        .then(function(menu){
+            viewBag.menu = menu;
+            res.render('dining/wine', {  viewBag: viewBag });
+        });
 
 
 };

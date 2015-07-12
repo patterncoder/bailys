@@ -22,7 +22,7 @@ block diningContent
                         span= item.MenuLName + '  '
                     td.Leader 
                         div.Leader &nbsp;
-                    td.MenuItemPrice= ' ' + item.MenuPrice
+                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true)
                 tr
                     td.Description(colspan="3")= item.MenuDescription
                 

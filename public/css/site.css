@@ -75,7 +75,7 @@ h4,
 h5,
 h6 {
   color: #7a7a7a;
-  font-family: adobe-caslon-pro;
+  font-family: Times New Roman;
   font-variant: small-caps;
   margin-bottom: 2px;
   margin-top: 12px;
@@ -133,8 +133,8 @@ h6 small {
   font-variant: small-caps;
 }
 #logo {
-  font-family: adobe-caslon-pro;
-  font-size: 2em;
+  font-family: Times New Roman;
+  font-size: 1.75em;
 }
 #myNav {
   border-radius: 0;

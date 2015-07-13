@@ -8,38 +8,6 @@ html {
   background-size: cover;
   background-position: center;
 }
-table.MenuItem {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-td.MenuName {
-  width: 1px;
-}
-td.MenuName span {
-  white-space: nowrap;
-  font-weight: bold;
-}
-div.Leader {
-  background: repeat-x url("/assets/leader.png");
-}
-td.MenuItemPrice {
-  text-align: right;
-  width: 1px;
-  padding-left: 5px;
-}
-td.MenuItemPrice span,
-td.MenuName {
-  padding-right: 5px;
-}
-td.MenuItemPrice span {
-  white-space: nowrap;
-  font-weight: bold;
-}
-td.Description {
-  padding-bottom: 5px;
-  padding-right: 10px;
-}
 .modal-content {
   background-color: #e5e5e5;
 }
@@ -86,9 +54,9 @@ hr {
   .footer {
     height: 240px;
   }
-  td.Description {
-    padding-right: 100px;
-  }
+}
+td.Description {
+  padding-right: 100px;
 }
 .list-group-item {
   background-color: #212121;
@@ -241,4 +209,57 @@ h4.MenuItem {
   padding-bottom: 0px;
   margin-bottom: 0px;
   line-height: 1;
+}
+table.MenuItem2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  width: 100%;
+}
+td.MenuName2 {
+  text-align: left;
+  font-weight: bold;
+}
+td.MenuItemPrice2 {
+  text-align: right;
+  white-space: nowrap;
+  padding-left: 5px;
+  vertical-align: top;
+  font-weight: bold;
+}
+td.MenuItemDescription2 {
+  padding-right: 30px;
+  padding-bottom: 5px;
+}
+table.MenuItem {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+td.MenuName {
+  width: 1px;
+}
+td.MenuName span {
+  white-space: nowrap;
+  font-weight: bold;
+}
+div.Leader {
+  background: repeat-x url("/assets/leader.png");
+}
+td.MenuItemPrice {
+  text-align: right;
+  width: 1px;
+  padding-left: 5px;
+}
+td.MenuItemPrice span,
+td.MenuName {
+  padding-right: 5px;
+}
+td.MenuItemPrice span {
+  white-space: nowrap;
+  font-weight: bold;
+}
+td.Description {
+  padding-bottom: 5px;
+  padding-right: 10px;
 }

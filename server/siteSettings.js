@@ -18,7 +18,9 @@ siteSettings.menus = {main: 602,
                         partyDessert: 373,
                         partyRental: 375,
                         beersAndMore: 611,
-                        wineList: 613}
+                        wineList: 613,
+                        spirits: 601}
+                        
 siteSettings.utilDateBack = -20;
 
 module.exports = siteSettings;

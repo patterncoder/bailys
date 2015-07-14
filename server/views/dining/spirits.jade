@@ -20,7 +20,7 @@ block diningContent
         ul
         each item in val.MenuItems.MenuItem
             li= item.MenuLName + '  '
-                strong= utils.getPriceNoCents(item.MenuPrice,false)
+                strong= utils.getPriceNoCents(item.MenuPrice,false,{replaceZero: ''})
                 
     p= viewBag.menu.Menu.Footer
     

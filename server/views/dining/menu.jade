@@ -30,7 +30,7 @@ block diningContent
                         span= item.MenuLName + '  '
                     td.Leader 
                         div.Leader &nbsp;
-                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true)
+                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true,{replaceZero:'$Market'})
                 tr
                     td.Description(colspan="3")= item.MenuDescription
     p= viewBag.menu.Menu.Footer

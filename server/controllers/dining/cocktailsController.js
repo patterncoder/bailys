@@ -3,6 +3,8 @@
  */
 var entertainmentService = require('../../services/entertainmentService');
 var eventsService = require('../../services/eventsService');
+var menuService = require('../../services/menuService');
+var siteSettings = require('../../siteSettings.js');
 
 
 
@@ -15,6 +17,13 @@ var getData = function (req, res) {
     entertainmentService.getFutureMusicTop3()
         .then(function(music) {
             viewBag.schedule = music;
+            return menuService.getMenuById(605);
+            //return eventsService.getEventsTopX();
+        })
+        .then(function(menu){
+            viewBag.menu = menu;
+            
+            console.log(viewBag.menu);
             return eventsService.getEventsTopX();
         })
         .then(function(events){

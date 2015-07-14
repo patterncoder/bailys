@@ -1,12 +1,20 @@
 extends ../../includes/layoutDining
 block diningContent
     h2 About our Mixologists
+    p.lead All of our bartenders
+    h2= viewBag.menu.Menu.MenuTitle
     
-    table.MenuItem2
-        tr
-            td.MenuName2 MenuItem here...Now the title is getting bigger and biggger will it wrap?
-            td.MenuItemPrice2 $5.50  $4.40
-        tr
-            td.MenuItemDescription2(colspan='2') This is a description of the menu item and now it has a larger description. to see if it will push past the text
-            td
+    //This code is a little different from other menus becuase the retured json only has one
+    //menu section and comes in as an object instead of an array.
+    each item in viewBag.menu.Menu.Sections.Section.MenuItems.MenuItem
+        table.MenuItem
+            tr
+                td.MenuName
+                    span= item.MenuLName + '  '
+                td.Leader 
+                    div.Leader &nbsp;
+                td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,false)
+            tr
+                td.Description(colspan="3")= item.MenuDescription
+    p= viewBag.menu.Menu.Footer
     

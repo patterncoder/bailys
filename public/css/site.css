@@ -23,6 +23,18 @@ html {
   background-color: #333;
   border-color: #555;
 }
+.sideBarHeader {
+  background-color: #333;
+  border: 1px solid #555;
+  padding: 10px;
+}
+.sideBarHeader h3 {
+  padding: 0;
+  margin: 0;
+}
+.contentModule ul {
+  margin-top: 10px;
+}
 body {
   background-color: #292929;
   color: #adadad;
@@ -215,6 +227,7 @@ table.MenuItem2 {
   padding: 0;
   margin-bottom: 5px;
   width: 100%;
+  max-width: 400px;
 }
 td.MenuName2 {
   text-align: left;
@@ -223,7 +236,7 @@ td.MenuName2 {
 td.MenuItemPrice2 {
   text-align: right;
   white-space: nowrap;
-  padding-left: 5px;
+  padding-left: 50px;
   vertical-align: top;
   font-weight: bold;
 }

@@ -19,7 +19,8 @@ siteSettings.menus = {main: 602,
                         partyRental: 375,
                         beersAndMore: 611,
                         wineList: 613,
-                        spirits: 601}
+                        spirits: 601,
+                        cocktails: 605}
                         
 siteSettings.utilDateBack = -20;
 

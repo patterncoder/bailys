@@ -4,15 +4,23 @@ block diningContent
     each val in viewBag.beersAndMore.Menu.Sections.Section
         h3= val.SectionTitle
         each item in val.MenuItems.MenuItem
-            table.MenuItem
+            table.MenuItem2
                 tr
-                    td.MenuName
-                        span= item.MenuLName + '  '
-                    td.Leader 
-                        div.Leader &nbsp;
-                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,false)
-                //tr
-                    //td.Description(colspan="3")= item.MenuDescription
+                    td.MenuName2= item.MenuLName
+                    td.MenuItemPrice2= utils.getPriceNoCents(item.MenuPrice,false)
+                // tr
+                //     td.MenuItemDescription2(colspan="2")= item.MenuDescription
+                //     td
+        // each item in val.MenuItems.MenuItem
+        //     table.MenuItem
+        //         tr
+        //             td.MenuName
+        //                 span= item.MenuLName + '  '
+        //             td.Leader 
+        //                 div.Leader &nbsp;
+        //             td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,false)
+        //         //tr
+        //             //td.Description(colspan="3")= item.MenuDescription
                 
     p= viewBag.beersAndMore.Menu.Footer
 

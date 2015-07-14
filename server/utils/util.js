@@ -135,13 +135,16 @@ util.traverseJSONandFindKey = function (o,key,method) {
 
 
 
-util.getPriceNoCents = function(price, removeCents){
+util.getPriceNoCents = function(price, removeCents, options){
     removeCents = removeCents || false;
+    options = options || {replaceZero: "$Market"};
     var num = parseFloat(price);
     var newPrice;
-
+    
     if (parseInt(num) === 0){
-        return '$Market';
+        
+        return options.replaceZero;
+        
     }
     else if((num*100)%100===0 ){
         if(removeCents){

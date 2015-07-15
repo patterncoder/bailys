@@ -30,7 +30,10 @@ module.exports = function (app, config) {
                 }
             ));
 
-
+    // add our utils library for use in jade templates
+    app.locals.utils = require('../utils/util.js');
+    
+    
     // uncomment after placing your favicon in /public
     //app.use(favicon(__dirname + '/public/favicon.ico'));
     app.use(logger('dev'));

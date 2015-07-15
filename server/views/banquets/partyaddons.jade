@@ -1,24 +1,64 @@
 extends ../../includes/layoutBanquet
 block banquetContent
+<<<<<<< HEAD
+=======
+    h1= viewBag.menu.Menu.MenuTitle
+    p= viewBag.menu.Menu.SubTitle
+    script var data = !{JSON.stringify(viewBag.menu)}; console.log(data);
+    each val in viewBag.menu.Menu.Sections.Section
+        h3= val.SectionTitle
+        p= val.SectionHeaderText
+        each item in val.MenuItems.MenuItem
+            table.MenuItem
+                tr
+                    td.MenuName
+                        span= item.MenuLName + '  '
+                    td.Leader 
+                        div.Leader &nbsp;
+                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true)
+                tr
+                    td.Description(colspan="3")= item.MenuDescription
+                    
+    h1= viewBag.partyDesserts.Menu.MenuTitle
+    p= viewBag.partyDesserts.Menu.SubTitle
+    each val in viewBag.partyDesserts.Menu.Sections.Section
+        h3= val.SectionTitle
+        p= val.SectionHeaderText
+        each item in val.MenuItems.MenuItem
+            table.MenuItem
+                tr
+                    td.MenuName
+                        span= item.MenuLName + '  '
+                    td.Leader 
+                        div.Leader &nbsp;
+                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true)
+                tr
+                    td.Description(colspan="3")= item.MenuDescription
+                    
+                    
+    h1= viewBag.partyRentals.Menu.MenuTitle
+    p= viewBag.partyRentals.Menu.SubTitle
+    each val in viewBag.partyRentals.Menu.Sections.Section
+        h3= val.SectionTitle
+        p= val.SectionHeaderText
+        each item in val.MenuItems.MenuItem
+            table.MenuItem
+                tr
+                    td.MenuName
+                        span= item.MenuLName + '  '
+                    td.Leader 
+                        div.Leader &nbsp;
+                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true)
+                tr
+                    td.Description(colspan="3")= item.MenuDescription
+>>>>>>> 2f6cb989d20e8e0b91be182e4c20c4585b58b30f
 
-     h1= viewBag.menu.Menu.MenuTitle
-     p= viewBag.menu.Menu.SubTitle
-     script var data = !{JSON.stringify(viewBag.menu)}; console.log(data);
-     .list-group
-        each val in viewBag.menu.Menu.Sections.Section
-            h3= val.SectionTitle
-            p= val.SectionHeaderText
-            each item in val.MenuItems.MenuItem
-                table.MenuItem
-                    tr
-                        td.MenuName
-                            span= item.MenuLName + '  '
-                        td.Leader 
-                            div.Leader &nbsp;
-                        td.MenuItemPrice= ' ' + item.MenuPrice
-                    tr
-                        td.Description(colspan="3")= item.MenuDescription
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2f6cb989d20e8e0b91be182e4c20c4585b58b30f
 // 	Party Add-Ons
 
 // We offer a variety of hors d' oeuvres and desserts to further enhance your banquet.  Addtionally, we make avaialable several frequently requested rental items.  The sections below describe each.

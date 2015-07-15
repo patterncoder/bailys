@@ -1,12 +1,13 @@
 .contentModule
     .text-sm-right
-        h3 Live Music
+        .sideBarHeader
+            h3 Live Music
         each val in viewBag.schedule.Schedule.ScheduleItems
             h4= val.BandName
-            p #{val.Date}
+            p #{utils.shortenDate(val.Date)}, #{utils.removeLeadingZeroFromTime(val.Time)}
                 | <br/>
                 | #{val.RoomName}
-            hr
+            hr.contentModuleList
 
 
 

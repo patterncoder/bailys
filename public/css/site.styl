@@ -15,7 +15,7 @@ blueGray30 = #708090
 blueGray40 = #536878
 blueGray50 = #36454f
 
-headingFont = adobe-caslon-pro
+headingFont = Times New Roman, Georgia, Serif //adobe-caslon-pro
 screen-sm-min = 768px
 screen-md-min = 992px
 screen-lg-min = 1200px
@@ -26,33 +26,11 @@ screen-lg-min = 1200px
 html
   height 100%
   
-table.MenuItem
-  margin 0
-  padding 0
-  width 100%
-  
-td.MenuName
-  width 1px
+.fill-screen
+  background-size cover
+  background-position center
 
-td.MenuName span
-  white-space nowrap
-  font-weight bold
 
-  
-  
-div.Leader
-  background repeat-x url('/assets/leader.png')
-
-td.MenuItemPrice
-  text-align right
-  width 1px
-
-td.MenuItemPrice span
-  white-space nowrap
-  font-weight bold
-
-td.Description
-  padding-bottom 5px
 
 
 .modal-content
@@ -69,6 +47,18 @@ td.Description
 .well
   background-color gray20
   border-color gray33
+
+.sideBarHeader
+  background-color gray20
+  border 1px solid gray33
+  padding 10px
+  
+.sideBarHeader h3
+    padding 0
+    margin 0
+    
+.contentModule ul
+    margin-top 10px
 
 body
     background-color gray16
@@ -109,9 +99,15 @@ hr
   .footer
     height 240px
 
+td.Description
+    padding-right 100px
+
 .list-group-item
-	background-color gray13
-	border-color gray68
+    background-color gray13
+    border-color gray68
+
+.bailys-10pxPadBott li
+    padding-bottom 10px
 
 a:hover
     text-decoration none
@@ -125,6 +121,18 @@ h1, h2, h3, h4, h5, h6
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small
     color gray33
+
+.well
+    border-radius 0
+
+.btn
+    border-radius 0
+    
+.modal-content
+    border-radius 0
+    
+.form-control
+    border-radius 0
 
 .thumbnail
     background-color transparent
@@ -159,8 +167,8 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small
     font-variant small-caps
 
 #logo
-    font-family: adobe-caslon-pro
-    font-size: 2em
+    font-family: Times New Roman//adobe-caslon-pro
+    font-size: 1.75em
 
 #myNav
     border-radius 0
@@ -224,8 +232,93 @@ h4.MenuItem
     padding-bottom 0px
     margin-bottom 0px
     line-height 1
+    
 
+// MenuExperimentsHere
 
+table.MenuItem2
+  margin 0
+  padding 0
+  margin-bottom 5px
+  width 100%
+  max-width 400px
+  
+  
+td.MenuName2
+  text-align left
+  font-weight bold
+  
+td.MenuItemPrice2
+  text-align right
+  white-space nowrap
+  padding-left 50px
+  vertical-align top
+  font-weight bold
+  
+td.MenuItemDescription2
+  //border-bottom 1px solid #696969
+  padding-right 30px
+  padding-bottom 5px
+  
+  
 
+table.MenuItem
+  margin 0
+  padding 0
+  width 100%
+  
+td.MenuName
+  width 1px
 
+td.MenuName span
+  white-space nowrap
+  font-weight bold
+
+div.Leader
+  background repeat-x url('/assets/leader.png')
+
+td.MenuItemPrice
+  text-align right
+  width 1px
+  padding-left 5px
+  
+td.MenuItemPrice span
+  
+td.MenuName
+  padding-right 5px
+
+td.MenuItemPrice span
+  white-space nowrap
+  font-weight bold
+  
+
+td.Description
+  padding-bottom 5px
+  padding-right 10px
+
+@media (min-width: screen-sm-min)
+  .twoColumns
+    -webkit-column-gap 20px
+    -moz-column-gap 20px
+    column-gap 20px
+    -webkit-column-count 2
+    -moz-column-count 2
+    column-count 2
+  
+.twoColumns section
+  -webkit-column-break-inside avoid
+  page-break-inside avoid
+  break-inside avoid-column
+  display table
+  
+ul.wineList li
+  //list-style-type disc
+  list-style-position inside
+  text-indent -3em
+  padding-left 3em
+
+section.wines h3
+  padding-bottom 0px
+  margin-bottom 0px
+  
 

@@ -9,6 +9,20 @@ util.removeLeadingZeroFromTime = function(time){
     return time;
 };
 
+util.wrapLine = function(text){
+    if (text.length > 50)
+    {
+        var words = text.split(' ');
+        words.splice(5,0,"<br/>");
+        text = words.join(' ');
+        return text;
+    }
+    else
+    {
+        return text
+    }
+}
+
 util.shortenDate = function(date){
     var newDate;
     var parts = date.split(' ');
@@ -119,16 +133,29 @@ util.traverseJSONandFindKey = function (o,key,method) {
     }
 };
 
-util.getPriceNoCents = function(price){
+
+
+util.getPriceNoCents = function(price, removeCents, options){
+    removeCents = removeCents || false;
+    options = options || {replaceZero: "$Market"};
     var num = parseFloat(price);
     var newPrice;
-
+    
     if (parseInt(num) === 0){
-        return '$Market';
+        
+        return options.replaceZero;
+        
     }
     else if((num*100)%100===0 ){
-        newPrice = '$' + parseInt(num).toString();
-        return newPrice;
+        if(removeCents){
+            newPrice = '$' + parseInt(num).toString();
+            return newPrice;
+        }
+        else{
+            newPrice = '$' + num.toFixed(2).toString();
+            return newPrice;
+        }
+        
     }
     else{
         newPrice = '$' + num.toFixed(2).toString();
@@ -137,6 +164,8 @@ util.getPriceNoCents = function(price){
 
 
 };
+
+
 
 util.search = function (filePath, name) {
    

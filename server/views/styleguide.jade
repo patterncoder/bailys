@@ -1,0 +1,146 @@
+extends ../includes/layout
+
+block content
+   .container-fluid
+      .row
+         //Image Head
+         .col-md-12.col-lg-8.col-lg-offset-2.text-center
+            .page-header
+               h1= viewBag.title
+      .row
+         //Three column content
+         .col-md-12.col-lg-8.col-lg-offset-2
+            .col-sm-9
+                // Main Content goes here from jade views rendered by express
+                p *** See code...below this p tag is an example of nested columns that split the main content into
+                    | two .col-sm-6 columns.  
+                .col-sm-6
+                    h1 This is an h1 tag
+                    h2 This is an h2 tag
+                    h3 This is an h3 tag
+                    h4 This is an h4 tag
+                    h5 This is an h5 tag
+                    h6 This is an h6 tag
+                    p This is some text with some <em>italics</em> and some <strong>bold</strong>
+                .col-sm-6
+                    p This is a p tag with an unordered list below
+                    ul
+                        li List item 1 
+                        li List item 2 
+                        li List item 3 
+                    p This is another p tag with a ordered list below
+                    ol
+                        li List item 1 
+                        li List item 2 
+                        li List item 3 
+                    p This is one more list with .list-unstyled
+                    ul.list-unstyled
+                        li List item 1 
+                        li List item 2 
+                        li List item 3 
+                    Button.btn.btn-info(href="#") Button
+                .clearfix
+                hr
+                p Now we are out of the two column layout and back to the standard nine column layout
+                    | notice in the code we used a .clearfix to clear the css floats that are in play with the 
+                    | two column split.  without .clearfix things break
+                h3 Here is an h3 title
+                img.inParagraph.pull-right.img-responsive(src="/assets/bailywinery.png")
+                p The image to the right has three classes attached to it: .inParagraph which I made to set the
+                    | padding a little higher than the default;  .pull-right which is a bootstrap class to 
+                    | make it float to the right of it's containing element; and .img-responsive which resizes the
+                    | image based on available space.
+                p Join us every Friday and Saturday late night for Old Town’s most happening spot.  
+                    | The transformation from restaurant to nightclub is a sight to behold and for those of you 
+                    | that join us for dinner prior to the club, your $5 cover charge is waived.  
+                    | Started in 2008, the nightclub has grown from its Top 40/Party Rock format on the first 
+                    | floor to include the second floor where Latin music plays throughout the night.  
+                    | Bottle service is available with reservations.  
+                    | Call 951-676-9567 for reservations or download our new phone app!
+                .thumbnail.pull-left
+                    img.inParagraph.img-responsive(src="/assets/bailywinery.png" )
+                    .caption
+                        p This is a caption under an image that is wrapped in div.thumbnail.  I have overridden
+                            | the bootstrap implementation of this class and I shouldn't have
+                .clearfix
+                hr
+                h2.text-center Resources
+                
+                hr
+                h3 Architecture 
+                p For the Baily's site we are implementing mostly a server side rendered website.  This will be accessable 
+                    | to search engines that have some difficuties with client rendered html.  We are striving to optimize
+                    | for performance and will run our site through the google site analyzer on a regular basis and follow 
+                    | the tools recommendations.  <a href="https://developers.google.com/speed/pagespeed/insights/">
+                    | Here is the test</a>
+                .col-sm-6
+                    h3 Backend
+                    p The backend is where most of the work gets done in our architecture.
+                    ul.bailys-10pxPadBott
+                        li <strong>node.js</strong> - runtime environment; written in c++ uses chrome v8 javascript
+                            | engine to execute the javascript and a library called libuv to abstract os functionality and thus make node cross
+                            | platform <a href="https://nodejs.org/">node site</a>
+                        li <strong>Express.js</strong> - a web framework built on top of node's core functionality
+                            | it allows for an easy implementation of the MVC pattern; remember express/node sit
+                            | and wait for incoming http requests, parse the request url, and route the request
+                            | to a controller that will take some action and pass a model to the express view engine
+                            | in our case views are written in jade.  <a href="http://expressjs.com/">Express site</a>
+                        li <strong>Jade</strong> - our template engine for rendering html.  Jade can be passed an object
+                            | via express when we use the res.render('templateFileName', {ojbect: data}).  This object, to copy
+                            | a microsoft term, we call viewBag and we can stick anything we want into it.  Generally we
+                            | stuff data returned from an http request.  You will also notice that we pass the title of the page
+                            | to view bag, so that we could put the page title in the layout template and not have to worry
+                            | about putting the title on our pages. <a href="http://jade-lang.com/">Jade site</a>
+                        li <strong>Stylus</strong> - a CSS pre processor.  CSS doesn't support variables...stylus does.  Stylus 
+                            | is also similar to Jade in that it relies on indentation to remove a whole bunch of syntax.
+                            | Express handles changes to the .styl files and compiles new .css files.  We are using one file called 
+                            | site.styl to manage our "overides" of bootstrap and custom css for the bailys website.  This file gets
+                            | sent up to the client from the layout.jade file.  <a href="https://learnboost.github.io/stylus/">Stylus site</a>
+                .col-sm-6
+                    h3 Frontend
+                    p The front end is whatever initiates requests to our server and process our response.  We have 
+                        | used bootstrap as our responsive framework so the site works on mobile and desktop equally well.
+                    ul.bailys-10pxPadBott
+                        li <strong>Twitter Bootstrp 3</strong> is a CSS framework.  Basically a .css file and 
+                            | and a javascript file work in conjuction to give us a pallet of pre-designed 
+                            | components that are tested across all browsers.  Becuase of the different implementations
+                            | of css and javascript in the various browsers it is really difficult and time consuming
+                            | to make css work the same.  Bootstrap simplifies the process a lot! 
+                            | <a href="http://getbootstrap.com/">Bootstrap site</a>
+                        li <strong>HTML5</strong> Because of jade and to a certain extent bootstrap we don't write
+                            | html5 directly...it is more what jade outputs and express sends as a response to http 
+                            | requests.  You see on this page there is html sprinkled amongst the jade syntax
+                            | and this is valid in jade.  <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a>
+                        li <strong>Ecmascript 5</strong> also known as JavaScript!!!  As is linked above a lot of 
+                            | developers are turning to MDN for a trusted resource. <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a>
+                
+            .col-sm-3
+                // Side bar content redered as an include like: include ./navAbout
+                // this horizontal rule only shows on mobile size view to separate side bar content 
+                // from main content when cols collapse
+                hr.visible-xs
+                .contentModule
+                    h3 h3 Heading
+                    p This is a p tag within a .contentModule div which gives the darker background styling
+                    p Below is a list of links...note that the ul has a class of list-unstyled to remove bullets
+                        ul.list-unstyled
+                            li
+                                a(href="#") Link 1 
+                            li
+                                a(href="#") Link 2
+                hr.visible-xs
+                .contentModule
+                    h3 2nd div
+                    p This .contentModule div is a sibling of the first.  It appears as one on sm size and above
+                        | but stacked on size xs.  See code for example add  and the module will split
+                        | with a horizontal line to separate them.
+                    .text-sm-right
+                        h3 Align Rt/Lft
+                        p enclosing a chunk of text in a .text-sm-right div will right align the text used in 
+                            | many of the event lists but on xs size it will align left
+                        h4 Event 1 
+                        p event descprition
+                        h4 Event 2 
+                        p event description
+
+      .push

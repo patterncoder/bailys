@@ -2,8 +2,35 @@
    Created by patterncoder on 5/12/2015.
 extends ../../includes/layoutDining
 block diningContent
-    h1 Here is our spirits list! -- MORE IN COMMENTS
+    h2 About our well...
+    p.lead For those of you that are unfamiliar with the term well,
+        | here is a brief explanation.  When you order a gin and tonic
+        | from a bar you will be served the 'default' gin from the 'well'.
+        | The spirits served from the well are generally of lower quality
+        | than the 'call' spirits found on the 'back bar' or the 'top shelf'.
+        | Now this practice is generally fair as the well drinks are priced 
+        | lower than a drink made with call spirits.  Baily's well during 
+        | restaurant hours serves a premium well while charging normal well 
+        | prices.  In some ways this makes every hour a HAPPY HOUR!
+    p We challenge you to look at the well brands served around town and how 
+        | much you pay for the beverage.  And next time think about what you 
+        | would pay at our place.  We believe we offer a great value!
+    each val in viewBag.menu.Menu.Sections.Section
+        h3= val.SectionTitle
+        ul
+        each item in val.MenuItems.MenuItem
+            li= item.MenuLName + '  '
+                strong= utils.getPriceNoCents(item.MenuPrice,false,{replaceZero: ''})
+                
+    p= viewBag.menu.Menu.Footer
     
+    // table(style="width: 100%")
+    //     tr
+    //         td(style="font-weight: bold; valign: bottom; width: 120px; padding-bottom: 0px") Menu Item with a longer name
+    //         td(style="border-bottom: dotted white 1px; padding-bottom: 0px")&nbsp
+    //         td(style="font-weight: bold; text-align: right; valign: bottom; width: 60px") $45.00
+    //     tr
+    //         td(colspan="3") This is the description
 <!--
 Liquor
 

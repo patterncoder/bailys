@@ -11,6 +11,11 @@ router.get('/', function(req, res) {
   res.render('index', { title: "Baily's" });
 });
 
+// unpublicized page for demonstrating the styles for the website
+router.get('/styleguide', function(req, res){
+    res.render('styleguide', { title: "Style Guide", viewBag: {title: "Style Guide"} });
+});
+
 
 
 //router.get('/banquets', function (req, res) {

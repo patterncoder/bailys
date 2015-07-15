@@ -14,8 +14,8 @@ var getView = function (req, res) {
     banquetsService.getFutureBookings()
         .then(function(banquets){
             viewBag.banquets = banquets;
-            console.log(viewBag.banquets);
-            //hard coded menuid here
+            
+            
             return menuService.getMenuById(siteSettings.menus.partyHors);
         })
         .then(function(menu){

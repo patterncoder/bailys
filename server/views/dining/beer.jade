@@ -1,168 +1,27 @@
 extends ../../includes/layoutDining
 block diningContent
 
-    h1 Beers and More - MORE IN COMMENTS
+    each val in viewBag.beersAndMore.Menu.Sections.Section
+        h3= val.SectionTitle
+        each item in val.MenuItems.MenuItem
+            table.MenuItem2
+                tr
+                    td.MenuName2= item.MenuLName
+                    td.MenuItemPrice2= utils.getPriceNoCents(item.MenuPrice,false)
+                // tr
+                //     td.MenuItemDescription2(colspan="2")= item.MenuDescription
+                //     td
+        // each item in val.MenuItems.MenuItem
+        //     table.MenuItem
+        //         tr
+        //             td.MenuName
+        //                 span= item.MenuLName + '  '
+        //             td.Leader 
+        //                 div.Leader &nbsp;
+        //             td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,false)
+        //         //tr
+        //             //td.Description(colspan="3")= item.MenuDescription
+                
+    p= viewBag.beersAndMore.Menu.Footer
 
-<!--
-Draught Beers - Lagers
-Coldest taps in town, ordered lighter to heavier in style and body. Draught sold by the 12 and 20 ounce glass.
-Dos Equis - Lager	
- 
-$4.50  $6.50
-Stella Artois	
- 
-$5.50  $7.50
-
-Draught Beer - Ales
-Shock Top - Belgian White	
- 
-$4.50  $6.00
-Ballast Point - Pale Ale	
- 
-$4.50  $6.50
-Elysian Superfuzz - Blood Orange Pale Ale	
- 
-$4.50  $6.50
-Ironfire 51/50 IPA - India Pale Ale	
- 
-$5.00  $7.00
-Ballast Point - Grapefruit Sculpin - West Coast IPA with Grapefruit	
- 
-$6.50  $9.50
-Ironfire - Death Row Triple Chocolate Stout On Nitro - 12oz only	
- 
-$7.00
-
-Lagers
-Bud Light	
- 
-$5.50 16oz
-Bud Light Lime	
- 
-$5.50 16oz
-Coors Light	
- 
-$5.50 16oz
-Miller Lite	
- 
-$5.50 16oz
-//Budweiser	 <-- Still causes and error for some reason
- 
-$5.50 16oz
-Bud Light Platinum	
- 
-$4.50
-Montejo - Czech Pilsener	
- 
-$4.00
-Corona - Extra	
- 
-$4.00
-Ironfire Nuhell - Helles Lager with New Zealand Hops	
- 
-$13.50 22oz
-
-Ales
-Blue Moon	
- 
-$4.50
-Fat Tire Amber Ale	
- 
-$9.00 22oz
-Kona Fire Rock Pale Ale	
- 
-$4.00
-Chimay Triple White	
- 
-$19.00 750ml
-Leffe Brown - Belgian Abbey Beer	
- 
-$4.50
-Omission - Northwest Style IPA - Gluten Free	
- 
-$5.00
-Ballast Point Sculpin IPA	
- 
-$16.00 22oz
-Green Flash - Hop Head Red	
- 
-$4.50
-Ironfire DOA (Dead On Arrival) - Double IPA	
- 
-$15.00 22oz
-Ironfire Judge, Jury, and Executioner - Triple IPA	
- 
-$15.00 22oz
-Chimay Premier Red	
- 
-$17.00 750ml
-Chimay Grand Reserve Blue	
- 
-$20.00 750ml
-Ironfire Vicious Disposition - Imperial Porter w local avocado honey	
- 
-$16.00 22oz
-Ironfire Six Killer - Arabica coffee bean & Hazelnut Stout	
- 
-$12.00 22oz
-
-Ciders & Lambics - Fruit Beers
-Angry Orchard - Crisp Apple	
- 
-$5.00
-Lindemans Framboise (Raspberry) Lambic	
- 
-$13.50
-Lindemans Peche (Peach) Lambic	
- 
-$13.50
-
-Non-Alcoholic Beer
-Beck's N/A	
- 
-$3.50
-Buckler N/A	
- 
-$3.50
-St. Pauli Girl N/A	
- 
-$3.50
-
-Drinks for All Ages
-Bottomless Soft Drinks	
- 
-$2.50
-Shirley Temple, Roy Rodgers	
- 
-$2.95
-Red Bull	
- 
-$4.50
-San Pelligrino Water (Sparkling)	
- 
-$4.95 500ml
-Juice (Cranberry, Orange, Lemonade and Apple)	
- 
-$2.95
-Strawberry Lemonade	
- 
-$3.95
-Root Beer Float	
- 
-$4.75
-Milk, Chocolate Milk, Hot Chocolate	
- 
-$3.50
-
-Tea and Coffee
-Bottomless Iced Tea (Regular or Tropical)	
- 
-$2.50
-Hot Tea (Assorted Varieties)	
- 
-$2.95
-//Coffee <-- Still causes and error for some reason	
- 
-$2.95
---!>
 

@@ -1,68 +1,153 @@
 ﻿extends ../../includes/layoutBanquet
 block banquetContent
-    h2 Venues -- MORE IN COMMENTS
-    div#dataHere
-block scripts
-    script(type="text/javascript", src="/js/banquets.js")
-    
-//     Venues
+    h3 Venues
+    p Have you visited our restaurants before?
+    p If not, we strongly encourage you to do so as soon as possible so you can determine whether our dining rooms or 
+        |patios will serve your needs.
+    p Upstairs in Baily’s, we offer four separate rooms. The largest, the North Dining Room, is a well appointed room 
+        |perfect for up to 50 people with facilities for audio visual presentations. The elegant Rotunda Dining Room 
+        |offers an intimate setting with a double sided fireplace, high ceiling with a grand chandelier and draping 
+        |curtains; it is perfect for parties up to 38 guests. The cozy South Dining Room is an excellent venue for parties 
+        |up to 18 guests. Finally, the airy Balcony Dining Room overlooks Old Town Front Street and features the second 
+        |side of the double sided fireplace and ceiling fans; the balcony seats up to 30 people. The rooms may be booked 
+        |separately or together, and when the entire floor is booked, Baily’s can accommodate 136 guests.
 
-// Have you visited our restaurants before?
+    p For a more casual dining experience Front Street Bar & Grill, on the ground floor, makes the Patio available 
+        |for private parties for up 70 guests. The outdoor venue has brick lined planters, ceramic pots and an eclectic 
+        |fountain. Suspended umbrellas keep the sun off your guests. On cooler nights numerous patio heaters provide warmth.
 
-// If not, we strongly encourage you to do so as soon as possible so you can determine whether our dining rooms or patios will serve your needs.
+    p Daily each venue is open to the public. When you book an event we stop taking reservations and begin to turn 
+        |business away. Food and beverage minimums are based on the amount of business that would be generated on a 
+        |normal business day.
 
-// Upstairs in Baily’s, we offer four separate rooms. The largest, the North Dining Room, is a well appointed room perfect for up to 50 people with facilities for audio visual presentations. The elegant Rotunda Dining Room offers an intimate setting with a double sided fireplace, high ceiling with a grand chandelier and draping curtains; it is perfect for parties up to 38 guests. The cozy South Dining Room is an excellent venue for parties up to 18 guests. Finally, the airy Balcony Dining Room overlooks Old Town Front Street and features the second side of the double sided fireplace and ceiling fans; the balcony seats up to 30 people. The rooms may be booked separately or together, and when the entire floor is booked, Baily’s can accommodate 136 guests.
+    p On page 19 are several options to further enhance the decor of your event, including candles and audio/visual 
+        |equipment.
 
-// For a more casual dining experience Front Street Bar & Grill, on the ground floor, makes the Patio available for private parties for up 70 guests. The outdoor venue has brick lined planters, ceramic pots and an eclectic fountain. Suspended umbrellas keep the sun off your guests. On cooler nights numerous patio heaters provide warmth.
+    p Our goal is to provide an environment that appeals to all senses. By doing so we are confident you will have 
+        |a memorable event.
 
-// Daily each venue is open to the public. When you book an event we stop taking reservations and begin to turn business away. Food and beverage minimums are based on the amount of business that would be generated on a normal business day.
+    p Below are images of our different dining rooms and event venues. Each location can accomodate a different 
+        |number of people.
 
-// On page 19 are several options to further enhance the decor of your event, including candles and audio/visual equipment.
+    p * December Holiday Pricing
 
-// Our goal is to provide an environment that appeals to all senses. By doing so we are confident you will have a memorable event.
+    table#venuesTable
+        tr
+            td
+                img(src="/assets/NorthDininglowres.jpg")
+            td
+                h3 North Dining Room
+                h4 Capacity: 50 People
+                table
+                    tr
+                        td
+                        td.venuesNH Normal
+                        td.venuesNH Holiday
+                    tr
+                        td Lunch:
+                        td $800
+                        td $1000
+                    tr
+                        td Dinner:
+                        td $1500
+                        td $1800
+                    tr
+                        td Dinner Fri & sat:
+                        td $1800
+                        td $2200
+        tr
+            td
+                img(src="/assets/rotunda2.jpg")
+            td
+                h3 The Rotunda
+                h4 Capacity: 38 People
+                table
+                    tr
+                        td
+                        td.venuesNH Normal
+                        td.venuesNH Holiday
+                    tr
+                        td Lunch:
+                        td $750
+                        td $1000
+                    tr
+                        td Dinner:
+                        td $1800
+                        td $2200
+                    tr
+                        td Dinner Fri & sat:
+                        td $2100
+                        td $2500
+        tr
+            td
+                img(src="/assets/BalconyLowRes.jpg")
+            td
+                h3 Balcony
+                h4 Capacity: 30 People
+                table
+                    tr
+                        td
+                        td.venuesNH Normal
+                        td.venuesNH Holiday
+                    tr
+                        td Lunch:
+                        td $500
+                        td $600
+                    tr
+                        td Dinner:
+                        td $800
+                        td $1000
+                    tr
+                        td Dinner Fri & sat:
+                        td $1100
+                        td $1300
+        tr
+            td
+                img(src="/assets/south.jpg")
+            td
+                h3 South Dining Room
+                h4 Capacity: 18 People
+                table
+                    tr
+                        td
+                        td.venuesNH Normal
+                        td.venuesNH Holiday
+                    tr
+                        td Lunch:
+                        td $300
+                        td $400
+                    tr
+                        td Dinner:
+                        td $400
+                        td $500
+                    tr
+                        td Dinner Fri & sat:
+                        td $500
+                        td $600
+        tr
+            td
+                img(src="/assets/Patio.jpg")
+            td
+                h3 Front Street Bar & Grill Patio
+                h4 Capacity: 70 People
+                table
+                    tr
+                        td
+                        td.venuesNH Normal
+                        td.venuesNH Holiday
+                    tr
+                        td Lunch:
+                        td $1000
+                        td $1200
+                    tr
+                        td Dinner:
+                        td $1500
+                        td $1800
+                    tr
+                        td Dinner Fri & sat:
+                        td $2200
+                        td $2500
 
-// Below are images of our different dining rooms and event venues. Each location can accomodate a different number of people.
-
-// *  December Holiday Pricing
-
-// North Dining Room	
-// North Dining Room
-// Capacity: 50 People
-//  	Normal	Holiday
-// Lunch:	$800	$1000
-// Dinner:	$1500	$1800
-// Dinner
-// Fri & Sat:	$1800	$2200
-// The Rotunda	
-// Rotunda
-// Capacity: 38 People
-//  	Normal	Holiday
-// Lunch:	$750	$1000
-// Dinner:	$1800	$2200
-// Dinner
-// Fri & Sat:	$2100	$2500
-// The Balcony	
-// Balcony
-// Capacity: 30 People
-//  	Normal	Holiday
-// Lunch:	$500	$600
-// Dinner:	$800	$1000
-// Dinner
-// Fri & Sat:	$1100	$1300
-// South Dining Room	
-// South Dining Room
-// Capacity: 18 People
-//  	Normal	Holiday
-// Lunch:	$300	$400
-// Dinner:	$400	$500
-// Dinner
-// Fri & Sat:	$500	$600
-// Front Street Bar & Grill Patio	
-// Front Street Bar & Grill Patio
-// Capacity: 70 People
-//  	Normal	Holiday
-// Lunch:	$1000	$1200
-// Dinner:	$1500	$1800
-// Dinner
-// Fri & Sat:	$2200	
-// $2500
+// div#dataHere
+// block scripts
+//     script(type="text/javascript", src="/js/banquets.js")

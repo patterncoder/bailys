@@ -8,6 +8,9 @@ html {
   background-size: cover;
   background-position: center;
 }
+/********************************
+*syles for Banquets/Booking Pages
+********************************/
 #bookingTable {
   width: 100%;
   border: solid 1px #fff;
@@ -15,6 +18,15 @@ html {
 #bookingTable td {
   padding: 5px;
   border: solid 1px #fff;
+}
+/********************************
+*syles for Banquets/Venues Pages
+********************************/
+#venuesTable td {
+  padding: 5px;
+}
+.venuesNH {
+  border-bottom: 1pt solid #000;
 }
 .modal-content {
   background-color: #e5e5e5;

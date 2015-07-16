@@ -15,15 +15,15 @@ var getFutureDJs = function () {
         if (!error && response.statusCode == 200) {
             var djSchedule = JSON.parse(body);
 
-
-            if(djSchedule.Schedule.ScheduleItems){
-                djSchedule.Schedule.ScheduleItems.map(function(booking){
-                    booking.Date = util.shortenDate(booking.Date);
-                    booking.Time = util.removeLeadingZeroFromTime(booking.Time);
-                });
-
-                deferred.resolve(djSchedule);
-            }
+            deferred.resolve(djSchedule);
+//             if(djSchedule.Schedule.ScheduleItems){
+//                 djSchedule.Schedule.ScheduleItems.map(function(booking){
+//                     booking.Date = util.shortenDate(booking.Date);
+//                     booking.Time = util.removeLeadingZeroFromTime(booking.Time);
+//                 });
+// 
+//                 
+//             }
         }
         else{
             deferred.reject(new Error(error));

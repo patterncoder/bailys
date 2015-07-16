@@ -8,7 +8,7 @@ var Q = require('q');
 
 var getEventsTopX = function(topX){
 
-    var url = siteSettings.apis.baseUrl + siteSettings.apis.otdEvents + '20150101';
+    var url = siteSettings.apis.baseUrl + siteSettings.apis.otdEvents + util.getDateString(siteSettings.utilDateBack);
     var deferred = Q.defer();
     request(url, function (error, response, body) {
 

@@ -15,12 +15,15 @@ block diningContent
     p We challenge you to look at the well brands served around town and how 
         | much you pay for the beverage.  And next time think about what you 
         | would pay at our place.  We believe we offer a great value!
-    each val in viewBag.menu.Menu.Sections.Section
-        h3= val.SectionTitle
-        ul
-        each item in val.MenuItems.MenuItem
-            li= item.MenuLName + '  '
-                strong= utils.getPriceNoCents(item.MenuPrice,false,{replaceZero: ''})
+    .twoColumns
+        each val in viewBag.menu.Menu.Sections.Section
+            section.wines
+                h3= val.SectionTitle
+                hr(style="padding: 0px; margin: 0px")
+                ul.list-unstyled.wineList
+                    each item in val.MenuItems.MenuItem
+                        li= item.MenuLName + '  '
+                            strong= utils.getPriceNoCents(item.MenuPrice,false,{replaceZero: ''})
                 
     p= viewBag.menu.Menu.Footer
     

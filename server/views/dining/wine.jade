@@ -5,7 +5,7 @@ block diningContent
     
     .twoColumns
         each val in viewBag.menu.Menu.Sections.Section
-            section.wines
+            .sectionWines
                 h3= val.SectionTitle
                 hr(style="padding: 0px; margin: 0px")
                 ul.list-unstyled.wineList

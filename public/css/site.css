@@ -39,6 +39,9 @@ html {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.btn-toolbar .btn {
+  margin-bottom: 5px;
+}
 .well {
   background-color: #333;
   border-color: #555;
@@ -54,6 +57,10 @@ body {
 hr {
   border-color: #7a7a7a;
 }
+.breadcrumb {
+  background-color: #212121;
+  border-radius: 0px;
+}
 .wrapper {
   min-height: 100%;
   height: auto !important;
@@ -62,6 +69,7 @@ hr {
 }
 .border {
   border: solid 1px #7a7a7a;
+  margin-bottom: 10px;
 }
 .push {
   height: 240px;

@@ -2,8 +2,8 @@
 block diningContent
     //h2= viewBag.menu.Menu.MenuTitle
     //.list-group
-    img.pull-right.inParagraph.img-responsive(src="/assets/bailywinery.png" )
-    p.lead Chef Blucher and his staff work every day preparing the menu from scratch.
+    img.pull-right.img-responsive.border(src="/assets/chixPicatta.png" )
+    p Chef Blucher and his staff work every day preparing the menu from scratch.
         | This includes baking bread, making pasta, dressings, stocks, soups, sauces
         | and more. We are proud of our food and we encourage you to try every menu item...
         | of course not in one sitting!
@@ -12,7 +12,8 @@ block diningContent
         | you the recipe. Also, if you have special dietary requirements be sure to ask you server for 
         | assistance in making your selection and many time we can make adjustments to an existing
         | item or make one up just for you!
-    .clearfix
+
+    
     each val in viewBag.menu.Menu.Sections.Section
         h3= val.SectionTitle
         // each item in val.MenuItems.MenuItem

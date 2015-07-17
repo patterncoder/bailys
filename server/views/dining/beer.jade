@@ -1,6 +1,6 @@
 extends ../../includes/layoutDining
 block diningContent
-
+    img.img-responsive.border(src='/assets/barSign2.png')
     each val in viewBag.beersAndMore.Menu.Sections.Section
         h3= val.SectionTitle
         table.MenuItem2

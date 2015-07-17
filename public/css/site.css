@@ -1,9 +1,6 @@
 * {
   margin: 0;
 }
-p {
-  text-indent: 15px;
-}
 html {
   height: 100%;
 }
@@ -46,15 +43,6 @@ html {
   background-color: #333;
   border-color: #555;
 }
-.sideBarHeader {
-  background-color: #333;
-  border: 1px solid #555;
-  padding: 10px;
-}
-.sideBarHeader h3 {
-  padding: 0;
-  margin: 0;
-}
 .contentModule ul {
   margin-top: 10px;
 }
@@ -71,6 +59,9 @@ hr {
   height: auto !important;
   height: 100%;
   margin: 0 auto -240px;
+}
+.border {
+  border: solid 1px #7a7a7a;
 }
 .push {
   height: 240px;

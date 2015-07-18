@@ -28,6 +28,11 @@ html {
 .venuesNH {
   border-bottom: 1pt solid #000;
 }
+.breadcrumb li + li:before {
+  color: #ccc;
+  content: ">> ";
+  padding: 0 5px;
+}
 .modal-content {
   background-color: #e5e5e5;
 }

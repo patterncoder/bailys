@@ -5,7 +5,14 @@ block diningContent
             a(href="/") Home 
             &nbsp;
         li.active  Restaurant Info
-
+    .visible-xs.hidden-sm
+        .btn-toolbar(style="margin-bottom: 15px")
+            a.btn.btn-info(href="/dining/menu" ) Menu
+            a.btn.btn-info(href="/dining/beer" ) Beers & More
+            a.btn.btn-info(href="/dining/wine" ) Wine List
+            a.btn.btn-info(href="/dining/cocktails" ) Specialty Cocktails
+            a.btn.btn-info(href="/dining/spirits" ) Distilled Spirits
+    
     img.img-responsive.border(src="/assets/filetMignon2.png")
     
     h3 Cuisine
@@ -14,12 +21,7 @@ block diningContent
         | Appetizers, Soup & Salads, Entrees and Desserts.  In late 2014, Baily's
         | teamed up with Robin McCoy of Robin's Nest Desserts to bring you an 
         | amazing array of fresh baked pastries.
-    .btn-toolbar
-        a.btn.btn-info(href="/dining/menu" ) Menu
-        a.btn.btn-info(href="/dining/beer" ) Beers & More
-        a.btn.btn-info(href="/dining/wine" ) Wine List
-        a.btn.btn-info(href="/dining/cocktails" ) Specialty Cocktails
-        a.btn.btn-info(href="/dining/spirits" ) Distilled Spirits
+    
 
     h3 Hours
     ul

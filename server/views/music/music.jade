@@ -1,5 +1,15 @@
 ﻿extends ../../includes/layoutMusic
 block musicContent
+    ol.breadcrumb
+        li
+            a(href="/") Home
+        li.active  Live Music Info
+    .visible-xs.hidden-sm
+        .btn-toolbar(style="margin-bottom: 15px")
+            a.btn.btn-info(href="/music/schedule" ) Music Schedule
+            a.btn.btn-info(href="/music/booking" ) Book Your Band
+
+            
     p This is the music home page. -- COULD NOT FIND RELATABLE PAGE
 
 

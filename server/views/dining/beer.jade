@@ -1,5 +1,11 @@
 extends ../../includes/layoutDining
 block diningContent
+    ol.breadcrumb
+        li
+            a(href="/") Home
+        li
+            a(href="/dining") Restaurant Info
+        li.active  Beers & More
     img.img-responsive.border(src='/assets/barSign2.png')
     each val in viewBag.beersAndMore.Menu.Sections.Section
         h3= val.SectionTitle

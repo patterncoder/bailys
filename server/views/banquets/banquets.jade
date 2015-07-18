@@ -1,5 +1,17 @@
 ﻿extends ../../includes/layoutBanquet
 block banquetContent
+    ol.breadcrumb
+        li
+            a(href="/") Home
+        li.active  Banquet Info
+    .visible-xs.hidden-sm
+        .btn-toolbar(style="margin-bottom: 15px")
+            a.btn.btn-info(href="/banquets/booking" ) Booking Info
+            a.btn.btn-info(href="/banquets/venues" ) Venues
+            a.btn.btn-info(href="/banquets/menus" ) Menus
+            a.btn.btn-info(href="/banquets/beveragepackages" ) Beverage Packages
+            a.btn.btn-info(href="/banquets/partyaddons" ) Party Add-ons
+    
     img.pull-right.inParagraph(src="/assets/chrisandkim.jpg")
     p
         strong Dear Prospective Guest,

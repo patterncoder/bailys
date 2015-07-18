@@ -2,7 +2,12 @@
    Created by patterncoder on 5/12/2015.
 extends ../../includes/layoutDining
 block diningContent
-    
+    ol.breadcrumb
+        li
+            a(href="/") Home
+        li
+            a(href="/dining") Restaurant Info
+        li.active  Wine List
     .twoColumns
         img.img-responsive.border(src="/assets/bottleOfBaily.png")
         each val in viewBag.menu.Menu.Sections.Section

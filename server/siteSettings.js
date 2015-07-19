@@ -20,7 +20,14 @@ siteSettings.menus = {main: 602,
                         beersAndMore: 611,
                         wineList: 613,
                         spirits: 601,
-                        cocktails: 605}
+                        cocktails: 605,
+                        banqBreakPreComp: 376,
+                        banqBreakCustom: 371,
+                        banqLunchPreComp: 377,
+                        banqLunchCustom: 369
+                        
+                        
+                        }
                         
 siteSettings.utilDateBack = -2;
 

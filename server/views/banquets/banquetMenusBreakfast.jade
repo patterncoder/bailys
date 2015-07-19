@@ -1,0 +1,53 @@
+﻿extends ../../includes/layoutBanquet
+block banquetContent
+    ol.breadcrumb
+        li
+            a(href="/") Home
+        li
+            a(href="/banquets") Banquet Welcome
+        li
+            a(href="/banquets/menus") Banquet Menus
+        li.active  Breakfast Menus
+    h2= viewBag.banqBreakPreComp.Menu.MenuTitle
+    // p
+    //     em= h2= viewBag.banqBreakCustom.Menu.SubTitle 
+    each val in viewBag.banqBreakPreComp.Menu.Sections.Section
+        h3= val.SectionTitle
+        p
+            em= val.SectionHeaderText
+        each item in val.MenuItems.MenuItem
+            table.MenuItem
+                tr
+                    td.MenuName
+                        span= item.MenuLName + '  '
+                    td.Leader 
+                        div.Leader &nbsp;
+                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true,{replaceZero:'$Market'})
+                tr
+                    td.Description(colspan="3")= item.MenuDescription
+        p
+            em= val.SectionFooterText
+    p= viewBag.banqBreakPreComp.Menu.Footer
+    
+    hr
+    
+    h2= viewBag.banqBreakCustom.Menu.MenuTitle
+    // p
+    //     em= h2= viewBag.banqBreakCustom.Menu.SubTitle
+    each val in viewBag.banqBreakCustom.Menu.Sections.Section
+        h3= val.SectionTitle
+        p
+            em= val.SectionHeaderText
+        each item in val.MenuItems.MenuItem
+            table.MenuItem
+                tr
+                    td.MenuName
+                        span= item.MenuLName + '  '
+                    td.Leader 
+                        div.Leader &nbsp;
+                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,false,{replaceZero:'included'})
+                tr
+                    td.Description(colspan="3")= item.MenuDescription
+        p
+            em= val.SectionFooterText
+    p= viewBag.banqBreakCustom.Menu.Footer

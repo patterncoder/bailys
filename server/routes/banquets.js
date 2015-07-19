@@ -16,6 +16,9 @@ router.get('/venues', venuesController.getView);
 router.get('/booking', bookingController.getView);
 
 router.get('/menus', banquetMenusController.getView);
+router.get('/menus/breakfast', banquetMenusController.getViewBreakfast );
+router.get('/menus/lunch', banquetMenusController.getViewLunch );
+router.get('/menus/dinner', banquetMenusController.getViewDinner );
 
 router.get('/beveragepackages', beveragePackageController.getView);
 

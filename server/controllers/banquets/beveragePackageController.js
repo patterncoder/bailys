@@ -12,7 +12,7 @@ var banquetsService = require('../../services/banquetsService');
 var getData = function (req, res) {
 
     var viewBag = {};
-    viewBag.title = "Banquet Beverage Packages";
+    viewBag.title = "Banquet Beverage Service";
     banquetsService.getFutureBookings()
         .then(function(banquets){
             viewBag.banquets = banquets;

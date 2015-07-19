@@ -1,6 +1,11 @@
 .contentModule
     .text-sm-right
         h3 Reserved Dates
+        p The dates and rooms below are unavailable due to prior bookings. 
+            | If your desired time and room are unavailable Please call our 
+            | Events Director to discuss other options. Also, book your room as 
+            | soon as possible to avoid disappointment.
+        hr.contentModuleList
         each val in viewBag.banquets.BanquetSchedule.Bookings
             p
                 | #{utils.shortenDate(val.Date)}, #{utils.removeLeadingZeroFromTime(val.Time)} <br>

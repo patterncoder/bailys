@@ -20,7 +20,7 @@ router.get('/menus/breakfast', banquetMenusController.getViewBreakfast );
 router.get('/menus/lunch', banquetMenusController.getViewLunch );
 router.get('/menus/dinner', banquetMenusController.getViewDinner );
 
-router.get('/beveragepackages', beveragePackageController.getView);
+router.get('/beverageservice', beveragePackageController.getView);
 
 router.get('/partyAddons', partyAddonsController.getView);
 

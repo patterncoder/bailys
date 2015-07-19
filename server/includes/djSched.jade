@@ -5,7 +5,7 @@
         if (utils.objKeysLength(viewBag.schedule) > 0)
             each val in viewBag.schedule.Schedule.ScheduleItems
                 h4= val.BandName
-                p #{val.Date} @ #{val.Time}
+                p #{utils.shortenDate(val.Date)}, #{utils.removeLeadingZeroFromTime(val.Time)}
                     | <br/>
                     | #{val.RoomName}
                 hr.contentModuleList

@@ -13,13 +13,14 @@ var getFutureMusic = function () {
 
         if (!error && response.statusCode == 200) {
             var musicSchedule = JSON.parse(body);
-            musicSchedule.Schedule.ScheduleItems.map(function(item){
-                
-            });
+            deferred.resolve(musicSchedule);
+            // musicSchedule.Schedule.ScheduleItems.map(function(item){
+            //     
+            // });
             
-            if(musicSchedule.Schedule.ScheduleItems){
-                    deferred.resolve(musicSchedule);
-                }
+            // if(musicSchedule.Schedule.ScheduleItems){
+            //         
+            //     }
         }
         else{
             deferred.reject(new Error(error));

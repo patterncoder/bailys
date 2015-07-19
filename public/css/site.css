@@ -1,6 +1,10 @@
 * {
   margin: 0;
 }
+a h4 {
+  text-decoration: none;
+  color: #337ab7;
+}
 html {
   height: 100%;
 }

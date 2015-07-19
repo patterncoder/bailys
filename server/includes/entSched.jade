@@ -3,7 +3,11 @@
         .sideBarHeader
             h3 Live Music
         each val in viewBag.schedule.Schedule.ScheduleItems
-            h4= val.BandName
+            if(val.Website.length > 0)
+                a(href"="#{val.Website}"")
+                    h4.bandLink= val.BandName
+            else
+                h4= val.BandName
             p #{utils.shortenDate(val.Date)}, #{utils.removeLeadingZeroFromTime(val.Time)}
                 | <br/>
                 | #{val.RoomName}

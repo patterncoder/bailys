@@ -1,5 +1,9 @@
 ﻿extends ../../includes/layoutBanquet
 block banquetContent
+    script(type='text/javascript').
+        var data = !{JSON.stringify(viewBag)}
+        console.log(data)
+        
     ol.breadcrumb
         li
             a(href="/") Home
@@ -8,4 +12,66 @@ block banquetContent
         li
             a(href="/banquets/menus") Banquet Menus
         li.active  Lunch Menus
-    p Content Here...
+    p Old Town Temecula is a bustling downtown environment seven days 
+        | a week. Lunch parties tap into this energy. Whether 
+        | business or pleasure, the downtown setting provides a 
+        | unique environment to entertain your guests.  
+        | Before or after your event, stroll the old style timber 
+        | sidewalks, shop in the stores and more.
+    p Lunch banquets may start as early as 11:00am and must end by 
+        | 4:00pm. To make rooms private, food and beverage minimums 
+        | apply.
+    p Buffet and Plate Service luncheons make ordering easy. 
+        | Just tell us the number of people in the party and your 
+        | event is planned. Custom menus allow more flexibility 
+        | and creativity on your part. Remember, upgrade selections, 
+        | including audio/visual equipment, can be found 
+        | <a href="/banquets/partyaddons#rental"> here</a> if you 
+        | would like to enhance your party.
+    hr
+    h2= viewBag.banqLunchPreComp.Menu.MenuTitle
+    // p
+    //     em= h2= viewBag.banqLunchCustom.Menu.SubTitle 
+    each val in viewBag.banqLunchPreComp.Menu.Sections.Section
+        h3= val.SectionTitle
+        p
+            em= val.SectionHeaderText
+        each item in val.MenuItems.MenuItem
+            table.MenuItem
+                tr
+                    td.MenuName
+                        span= item.MenuLName + '  '
+                    td.Leader 
+                        div.Leader &nbsp;
+                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true,{replaceZero:'$Market'})
+                tr
+                    td.Description(colspan="3")= item.MenuDescription
+        p
+            em= val.SectionFooterText
+    p= viewBag.banqLunchPreComp.Menu.Footer
+    
+    hr
+    h2= viewBag.banqLunchCustom.Menu.MenuTitle
+    p
+        em= h2= viewBag.banqLunchCustom.Menu.SubTitle
+    each val in viewBag.banqLunchCustom.Menu.Sections.Section
+        h3= val.SectionTitle
+        p
+            em= val.SectionHeaderText
+        if (val.hasOwnProperty(MenuItems))
+            p I am here
+            // each item in val.MenuItems.MenuItem
+            //     table.MenuItem
+            //         tr
+            //             td.MenuName
+            //                 span= item.MenuLName + '  '
+            //             td.Leader 
+            //                 div.Leader &nbsp;
+            //             td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,false,{replaceZero:'included'})
+            //         tr
+            //             td.Description(colspan="3")= item.MenuDescription
+        p
+            em= val.SectionFooterText
+    p= viewBag.banqLunchCustom.Menu.Footer
+    
+    

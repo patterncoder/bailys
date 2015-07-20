@@ -1,8 +1,9 @@
 /**
- * Created by patterncoder on 6/8/2015.
+ * Created by Mr.74 on 7/15/2015.
  */
 var djService = require('../../services/djService');
-
+var menuService = require('../../services/menuService');
+var siteSettings = require('../../siteSettings.js');
 
 
 
@@ -16,6 +17,10 @@ var getData = function (req, res) {
     djService.getFutureDJs()
         .then(function(djSchedule) {
             viewBag.schedule = djSchedule;
+            return menuService.getMenuById(siteSettings.menus.bottles);
+        })
+        .then(function(bottles) {
+            viewBag.bottles = bottles;
             res.render('nightclub/bottleservice', {  viewBag: viewBag });
 
         });

@@ -1,5 +1,6 @@
 ﻿extends ../../includes/layoutNightclub
 block nightclubContent
+
     ol.breadcrumb
         li
             a(href="/") Home
@@ -8,86 +9,41 @@ block nightclubContent
         li.active  VIP Bottle Service
     p Here is the nightclub bottle service information! -- MORE IN COMMENTS
     
-//     VIP Bottle Service Menu
 
-// Unless noted, bottle service includes a 750ml bottle with appropriate garnishes and mixers. Energy drinks are available for an addtional charge. Price includes cover charge for six people. Each addtional person is $5.00. Second price listed is for New Year's Eve and includes cover charge for six people, each additional person is $20. Call 951-676-9567 to make reservations.
-// Vodka
-// Kettle One	
- 
-// $180.00  $280.00 NYE
-// Belvedere	
- 
-// $175.00  $275.00 NYE
-// Ciroc 1000ml	
- 
-// $225.00  $325.00 NYE
-// Grey Goose	
- 
-// $230.00  $330.00 NYE
-// Purity	
- 
-// $235.00  $335.00 NYE
 
-// Cognac
-// Hennessy Black	
- 
-// $195.00  $295.00 NYE
-// Hennessy VS 1000ml	
- 
-// $235.00  $335.00 NYE
-// Hennessy VSOP	
- 
-// $245.00  $345.00 NYE
 
-// Whiskey
-// Crown Royal 1000ml	
- 
-// $205.00  $305.00 NYE
-// Jack Daniel's 1000ml	
- 
-// $210.00  $310.00 NYE
+    h3 VIP Bottle Service Menu
+    p Unless noted, bottle service includes a 750ml bottle with appropriate garnishes and mixers. Energy drinks 
+        |are available for an addtional charge. Price includes cover charge for six people. Each addtional person 
+        |is $5.00. Second price listed is for New Year's Eve and includes cover charge for six people, each additional 
+        |person is $20. Call 951-676-9567 to make reservations.
+        
+    script var data = !{JSON.stringify(viewBag.bottles)}; console.log(data);
+    each val in viewBag.bottles.Menu.Sections.Section
+        h3= val.SectionTitle
+          //If case for when the data at MenuItems.MenuItem is a single object > create a table entry for that one object
+        if val.MenuItems.MenuItem.MenuLName
+            table.MenuItem
+                tr
+                        td.MenuName
+                            span= val.MenuItems.MenuItem.MenuLName + '  '
+                        td.Leader 
+                            div.Leader &nbsp;
+                        td.MenuItemPrice= utils.getPriceNoCents(val.MenuItems.MenuItem.MenuPrice,true,{replaceZero:'$Market'})
+                        td.MenuItemPrice= utils.getPriceNoCents(val.MenuItems.MenuItem.MenuPrice2,true,{replaceZero:'$Market'})
+            //if there is an array of objects at MenuItem.menuItem > Iterate though each object, creating a table for each
+        else
+            each item in val.MenuItems.MenuItem
+                table.MenuItem
+                    tr
+                        if item
+                            td.MenuName
+                                span= item.MenuLName + '  '
+                            td.Leader 
+                                div.Leader &nbsp;
+                            td.MenuItemPrice= utils.getPriceNoCents(item.MenuPrice,true,{replaceZero:'$Market'})
+                            td.MenuItemPrice= utils.getPriceNoCents(item.MenuPrice2,true,{replaceZero:'$Market'})
+    p= viewBag.bottles.Menu.Footer
 
-// Scotch Whiskey
-// Buchanan's 12 Year	
- 
-// $200.00  $300.00 NYE
-// Johnnie Walker Black 1000ml	
- 
-// $220.00  $320.00 NYE
-
-// Rum
-// Captain Morgan Spiced	
- 
-// $175.00  $275.00 NYE
-
-// Gin
-// Tanqueray Gin 1000ml	
- 
-// $195.00  $295.00 NYE
-
-// Tequila
-// Don Julio Anejo	
- 
-// $245.00  $345.00 NYE
-// Don Julio Blanco	
- 
-// $210.00  $310.00 NYE
-// Don Julio Reposado	
- 
-// $230.00  $330.00 NYE
-
-// Sparkling Wine
-// Domaine Chandon - Sparkling Wine - Blanc de Noir - California - NV	
- 
-// $170.00  $270.00 NYE
-// Domaine Chandon - Sparkling Wine - Brut Classic - NV	
- 
-// $170.00  $270.00 NYE
-// Veuve Clicquot - Yellow Label Brut - Reims, France - NV	
- 
-// $220.00  $320.00 NYE
-// Moet & Chandon - Cuvee Dom Perignon - Epernay, France - 2000	
- 
-// $450.00  $550.00 NYE
-
+//p=viewBag.bottles.Menu.Sections.Section[0].MenuItems.MenuItem[0].MenuLName
 

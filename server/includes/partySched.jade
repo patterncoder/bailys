@@ -5,11 +5,12 @@
             | If your desired time and room are unavailable Please call our 
             | Events Director to discuss other options. Also, book your room as 
             | soon as possible to avoid disappointment.
-        hr.contentModuleList
-        each val in viewBag.banquets.BanquetSchedule.Bookings
-            p
-                | #{utils.shortenDate(val.Date)}, #{utils.removeLeadingZeroFromTime(val.Time)} <br>
-                | &nbsp; &nbsp; #{val.RoomName}
-            hr.contentModuleList
+        a.btn.btn-info(role="button" data-toggle="collapse" href="#collapseDates") Toggle Dates
+        .collapse#collapseDates(style="margin-top: 20px")
+            each val in viewBag.banquets.BanquetSchedule.Bookings
+                p
+                    | #{utils.shortenDate(val.Date)}, #{utils.removeLeadingZeroFromTime(val.Time)} <br>
+                    | &nbsp; &nbsp; #{val.RoomName}
+                hr.contentModuleList
 
 

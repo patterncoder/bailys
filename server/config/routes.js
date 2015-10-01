@@ -24,5 +24,8 @@ module.exports = function (app) {
     app.all('/api/*', function (req, res) {
         res.send(404);
     });
+    
+    
+    
 
 };

@@ -1,9 +1,30 @@
 #!/usr/bin/env node
 var debug = require('debug')('bailys');
 var app = require('../app');
+// var path = require('path');
+// var rootPath = path.normalize(__dirname + '/../');
+// var mapper = require('express-sitemap');
+// 
+// 
+// 
+// var sitemap = mapper({
+//     sitemap: rootPath + '/public/all.xml',
+//     generate: app,
+//     route: {
+//         'ALL': {
+//             lastmod: '2015-07-20',
+//             changefreq: 'always',
+//             priority: 1.0
+//         }
+//     }
+// });
+// 
+// sitemap.generate4(app);
+// sitemap.XMLtoFile();
 
 app.set('port', process.env.PORT || 3000);
 
 var server = app.listen(app.get('port'), function() {
   debug('Express server listening on port ' + server.address().port);
+  
 });

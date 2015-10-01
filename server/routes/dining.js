@@ -22,4 +22,5 @@ router.get('/cocktails', cocktailsController.getView);
 
 router.get('/spirits', spiritsController.getView);
 
+
 module.exports = router;

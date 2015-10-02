@@ -2,6 +2,7 @@ var request = require('request');
 var siteSettings = require('../siteSettings.js');
 var util = require('../utils/util');
 var Q = require('q');
+var json_parse = require('../utils/jsonParse');
 
 var getMenuById = function(menuId){
     
@@ -12,9 +13,9 @@ var getMenuById = function(menuId){
     request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
 
-
             var menu = JSON.parse(body);
-
+            
+            console.log(menu.Menu.Sections.Section[1]);
             //util.traverseJSONandFindKey(menu, 'MenuPrice', util.getPriceNoCents);
 
             deferred.resolve(menu);

@@ -1,5 +1,9 @@
 ﻿extends ../../includes/layoutBanquet
 block banquetContent
+    // script(type='text/javascript').
+    //     var data = !{JSON.stringify(viewBag)}
+    //     console.log(data)
+        
     ol.breadcrumb
         li
             a(href="/") Home
@@ -8,4 +12,63 @@ block banquetContent
         li
             a(href="/banquets/menus") Banquet Menus
         li.active  Dinner Menus
-    p Content Here...
+    p Old Town Temecula is a tremendous location for the dinner hour.  Whether business or pleasure, 
+        | there is a lot to do before or after your event including live performances at the Old Town 
+        | Temecula Community Theater, window shopping amongst the numerous retail stores, or catching 
+        | a live music performance at one of the many bars/restaurants that feature live entertainment. 
+        | You can stay on property as our facility features live entertainment every Friday and Saturday 
+        | night and a full service nightclub for after dinner fun.
+    p Dinner banquets may start as early as 4:00pm and must end by 10:00pm. To make rooms private, 
+        | food and beverage minimums apply (view here).
+    p Buffet and Plate Service dinners make ordering easy. Just tell us the number of people in the 
+        | party and your event is planned. Custom menus allow more flexibility and creativity on your part. 
+        | Remember, upgrade selections, including audio/visual equipment, can be found here if you would 
+        | like to enhance your party.
+    hr
+    h2= viewBag.banqDinnerPreComp.Menu.MenuTitle
+    // p
+    //     em= h2= viewBag.banqLunchCustom.Menu.SubTitle 
+    each val in viewBag.banqDinnerPreComp.Menu.Sections.Section
+        h3= val.SectionTitle
+        p
+            em= val.SectionHeaderText
+        each item in val.MenuItems.MenuItem
+            table.MenuItem
+                tr
+                    td.MenuName
+                        span= item.MenuLName + '  '
+                    td.Leader 
+                        div.Leader &nbsp;
+                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true,{replaceZero:'$Market'})
+                tr
+                    td.Description(colspan="3")= item.MenuDescription
+        p
+            em= val.SectionFooterText
+    p= viewBag.banqDinnerPreComp.Menu.Footer
+    
+    script(type='text/javascript').
+        var data = !{JSON.stringify(viewBag)}
+        console.log(data)
+    
+    hr
+    h2= viewBag.banqDinnerCustom.Menu.MenuTitle
+    p
+        em= h2= viewBag.banqDinnerCustom.Menu.SubTitle
+    each val in viewBag.banqDinnerCustom.Menu.Sections.Section
+        h3= val.SectionTitle
+        p
+            em= val.SectionHeaderText
+        if ("MenuItems" in val)
+            each item in val.MenuItems.MenuItem
+                table.MenuItem
+                    tr
+                        td.MenuName
+                            span= item.MenuLName + '  '
+                        td.Leader 
+                            div.Leader &nbsp;
+                        td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,false,{replaceZero:'included'})
+                    tr
+                        td.Description(colspan="3")= item.MenuDescription
+        p
+            em= val.SectionFooterText
+    p= viewBag.banqDinnerCustom.Menu.Footer

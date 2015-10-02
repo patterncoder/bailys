@@ -61,8 +61,18 @@ var getViewDinner = function(req, res){
     banquetsService.getFutureBookings()
         .then(function(banquets){
             viewBag.banquets = banquets;
+            return menuService.getMenuById(siteSettings.menus.banqDinnerPreComp);
+        })
+        .then(function(banqDinnerPreComp){
+            viewBag.banqDinnerPreComp = banqDinnerPreComp;
+            return menuService.getMenuById(siteSettings.menus.banqDinnerCustom);
+        })
+        .then(function(banqDinnerCustom){
+            
+            viewBag.banqDinnerCustom = banqDinnerCustom;
+            console.log(banqDinnerCustom.Menu.Sections.Section[0]);
             res.render('banquets/banquetMenusDinner', {  viewBag: viewBag });
-        });
+        });;
 };
 
 

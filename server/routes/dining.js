@@ -7,6 +7,7 @@ var menuController = require('../controllers/dining/menuController');
 var beerController = require('../controllers/dining/beerController');
 var cocktailsController = require('../controllers/dining/cocktailsController');
 var winelistController = require('../controllers/dining/winelistController');
+var wineByGlassController = require('../controllers/dining/wineByGlassController');
 var spiritsController = require('../controllers/dining/spiritsController');
 var diningController = require('../controllers/dining/diningController');
 
@@ -17,6 +18,7 @@ router.get('/menu', menuController.getView);
 router.get('/beer', beerController.getView);
 
 router.get('/wine', winelistController.getView);
+router.get('/wineByGlass', wineByGlassController.getView);
 
 router.get('/cocktails', cocktailsController.getView);
 

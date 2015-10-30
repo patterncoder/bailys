@@ -70,7 +70,7 @@ var getViewDinner = function(req, res){
         .then(function(banqDinnerCustom){
             
             viewBag.banqDinnerCustom = banqDinnerCustom;
-            console.log(banqDinnerCustom.Menu.Sections.Section[0]);
+            // console.log(banqDinnerCustom.Menu.Sections.Section[0]);
             res.render('banquets/banquetMenusDinner', {  viewBag: viewBag });
         });;
 };

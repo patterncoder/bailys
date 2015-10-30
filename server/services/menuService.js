@@ -15,7 +15,7 @@ var getMenuById = function(menuId){
 
             var menu = JSON.parse(body);
             
-            console.log(menu.Menu.Sections.Section[1]);
+            //console.log(menu.Menu.Sections.Section[1]);
             //util.traverseJSONandFindKey(menu, 'MenuPrice', util.getPriceNoCents);
 
             deferred.resolve(menu);

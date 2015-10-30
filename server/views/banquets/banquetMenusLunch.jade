@@ -58,18 +58,17 @@ block banquetContent
         h3= val.SectionTitle
         p
             em= val.SectionHeaderText
-        if (val.hasOwnProperty(MenuItems))
-            p I am here
-            // each item in val.MenuItems.MenuItem
-            //     table.MenuItem
-            //         tr
-            //             td.MenuName
-            //                 span= item.MenuLName + '  '
-            //             td.Leader 
-            //                 div.Leader &nbsp;
-            //             td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,false,{replaceZero:'included'})
-            //         tr
-            //             td.Description(colspan="3")= item.MenuDescription
+        if ("MenuItems" in val)
+            each item in val.MenuItems.MenuItem
+                table.MenuItem
+                    tr
+                        td.MenuName
+                            span= item.MenuLName + '  '
+                        td.Leader 
+                            div.Leader &nbsp;
+                        td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,false,{replaceZero:'included'})
+                    tr
+                        td.Description(colspan="3")= item.MenuDescription
         p
             em= val.SectionFooterText
     p= viewBag.banqLunchCustom.Menu.Footer

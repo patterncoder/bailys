@@ -185,6 +185,7 @@ util.returnArray = function (file) {
 };
 
 util.objKeysLength = function (obj){
+    
     return Object.keys(obj).length;
 };
 

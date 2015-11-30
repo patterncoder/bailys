@@ -4,7 +4,7 @@
             h3 Live Music
         if (utils.objKeysLength(viewBag.schedule) > 0)
             each val in viewBag.schedule.Schedule.ScheduleItems
-                if(val.Website.length > 0)
+                if(val.Website && val.Website.length > 0)
                     a(href"="#{val.Website}"")
                         h4.bandLink= val.BandName
                 else

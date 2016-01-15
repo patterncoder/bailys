@@ -2,6 +2,9 @@
 var util = {};
 
 util.removeLeadingZeroFromTime = function(time){
+    if(typeof time === 'undefined') {
+        return '';
+    }
     while(time.charAt(0)==='0'){
         time = time.substr(1);
 
@@ -24,6 +27,10 @@ util.wrapLine = function(text){
 }
 
 util.shortenDate = function(date){
+    if(typeof date === 'undefined') {
+        return '';
+    }
+        
     var newDate;
     var parts = date.split(' ');
     switch(parts[0]){

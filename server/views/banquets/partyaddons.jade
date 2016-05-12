@@ -39,152 +39,20 @@ block banquetContent
                 tr
                     td.Description(colspan="3")= item.MenuDescription
                     
-    <a id="rental"></a>
-    h1= viewBag.partyRentals.Menu.MenuTitle
-    p= viewBag.partyRentals.Menu.SubTitle
-    each val in viewBag.partyRentals.Menu.Sections.Section
-        h3= val.SectionTitle
-        p= val.SectionHeaderText
-        each item in val.MenuItems.MenuItem
-            table.MenuItem
-                tr
-                    td.MenuName
-                        span= item.MenuLName + '  '
-                    td.Leader 
-                        div.Leader &nbsp;
-                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true)
-                tr
-                    td.Description(colspan="3")= item.MenuDescription
+    // <a id="rental"></a>
+    // h1= viewBag.partyRentals.Menu.MenuTitle
+    // p= viewBag.partyRentals.Menu.SubTitle
+    // each val in viewBag.partyRentals.Menu.Sections.Section
+    //     h3= val.SectionTitle
+    //     p= val.SectionHeaderText
+    //     each item in val.MenuItems.MenuItem
+    //         table.MenuItem
+    //             tr
+    //                 td.MenuName
+    //                     span= item.MenuLName + '  '
+    //                 td.Leader 
+    //                     div.Leader &nbsp;
+    //                 td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true)
+    //             tr
+    //                 td.Description(colspan="3")= item.MenuDescription
 
-// 	Party Add-Ons
-
-// We offer a variety of hors d' oeuvres and desserts to further enhance your banquet.  Addtionally, we make avaialable several frequently requested rental items.  The sections below describe each.
- 
-// Hors d' Oeuvres Receptions
-// When booking an entire room hors d’ oeuvres will be presented as an elegant self serve buffet available at the designated start time for your party. Receptions last approximately 20 minutes depending on your guest’s arrival. As alternate options, h
-// Samplers
-// Select no more than two.
-// Vegetable Fruit and Cheese (not available for plated course)	
- 
-// $6.95
-// Crudite platter with herbed ranch dip, served with assorted cheeses and crackers and fresh seasonal fruit
-// Appetizer Sampler	
- 
-// $8.95
-// Asparagus Bruschetta, Mushroom Drops, Chicken Satay
-// Canape Sampler	
- 
-// $8.95
-// Assortment of Tenderloin, Smoked Salmon, Curry Chicken Canapes (see a la carte menu for full description)
-
-// Canapes and Small Bites
-// The items below are sold by the piece. We recommend 4-6 pieces per person. Select no more than three.
-// Shrimp Cocktail	
- 
-// $1.65
-// Fresh tiger shrimp poached in court bouillon served with homemade cocktail sauce
-// Caprese Skewers	
- 
-// $1.70
-// Cherry tomatoes and fresh mozzarella skewered with basil leaves and drizzled with balsamic reduction
-// Tenderloin Canape	
- 
-// $1.75
-// Bruschetta topped with herb roasted tenderloin and finished with a gorgonzola and mascarpone mousse
-// Smoked Salmon Canapes	
- 
-// $1.65
-// Smoked salmon mousse served on a toast point garnished with a caper and a sprig of dill
-// Curry Chicken Salad Canape	
- 
-// $1.35
-// Grilled chicken tossed with a light curry mayonnaise, red seedless grapes and cashews served on a sour dough toast point
-// Mushroom Drops	
- 
-// $1.65
-// Crimini mushrooms stuffed with jalapeno and cream cheese, wrapped in a won ton and fried, served with a Teriyaki dipping sauce
-// Chicken Satay	
- 
-// $1.75
-// Skewered and grilled chicken breast, served with a Thai peanut sauce
-// Tempura Artichoke Hearts	
- 
-// $1.50
-// Tender artichoke hearts dipped in tempura batter and deep fried, served with a soy aioli
-// Smoked Duck Spring Rolls	
- 
-// $1.75
-// Sautéed vegetables and smoked duck wrapped in an egg roll wrapper, fried and finished with a honey wasabi mustard
-// Shrimp Turnover	
- 
-// $1.65
-// Tiger shrimp wrapped in puff pastry and finished with an herbed lemon tartar sauce
-// Asparagus Bruschetta	
- 
-// $1.75
-// Grilled asparagus on toasted ciabatta with melted smoked mozzarella cheese, tomato concasse and balsamic reduction
-
- 
-// Desserts
-// Plate Service Desserts
-// Select 1 item for entire party.
-// Creme Brulee	
- 
-// $6.95
-// One of our most famous desserts, a rich custard topped with caramelized sugar
-// Fresh Fruit Napoleon	
- 
-// $6.95
-// Puff Pastry with pastry cream and seasonal fruit
-// Two Chocolate Mousse	
- 
-// $6.95
-// White and Dark chocolate mousse with a raspberry coulis
-// White Chocolate Cheesecake	
- 
-// $6.95
-// A lighter style of cheesecake with white chocolate finished with a raspberry coulis
-// Flourless Chocolate Torte	
- 
-// $6.95
-// Homemade flourless chocolate torte served with raspberry puree and crème anglaise
-
-// Cakes
-// Cake Cutting Charge	
- 
-// $1.95 Per Person
-// If we can't tempt you with our homemade desserts, we do allow your own cake to be served for the above person service charge.
-// Personalized Cake	
- 
-// $39.95
-// 5 day lead time required (chocolate or white)
-// Wedding Cakes	
- 
-//  Call
-
- 
-// Rental Items
-// Decorations
-// Enhance the decor of your event with any of the following items.
-// Balloon Bouquet	
- 
-// $12.95
-// Choose from Happy Anniversary, Happy Birthday or Generic
-// Candle Package	
- 
-//  Call
-// Call for options
-// Flowers Bouquet	
- 
-//  Call
-// Call for options
-
-// Audio/Visual Equipment
-// LCD Projector	
- 
-// $50.00
-// InFocus 800x600 pixel
-// Projection Screen	
- 
-// $35.00
-// Ceiling/Wall mount in specific locations (Outside retal required for tripod mounting)

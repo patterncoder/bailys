@@ -11,7 +11,9 @@ var getView = function (req, res) {
 
     var viewBag = {};
     viewBag.title = "Party Add-ons";
+    
     banquetsService.getFutureBookings()
+        
         .then(function(banquets){
             viewBag.banquets = banquets;
             
@@ -28,7 +30,7 @@ var getView = function (req, res) {
         })
         .then(function(partyRentals){
             viewBag.partyRentals = partyRentals;
-            
+            console.log(viewBag);
             res.render('banquets/partyaddons', {  viewBag: viewBag })
         });
 

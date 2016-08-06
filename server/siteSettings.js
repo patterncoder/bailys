@@ -3,7 +3,7 @@
  */
 
 var siteSettings = {};
-
+// http://oldtowndining.com/api/menu.ashx?menuID=375
 // integers correspond to menuID
 siteSettings.apis = {baseUrl: "http://oldtowndining.com/api/",
     otdMenus: "menu.ashx?menuID=",
@@ -17,7 +17,7 @@ siteSettings.menus = {main: 602,
                         partyHors: 374,
                         partyDessert: 373,
                         partyRental: 375,
-                        beersAndMore: 620,
+                        beersAndMore: 647,
                         wineList: 627,
                         spirits: 601,
                         cocktails: 626,

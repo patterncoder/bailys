@@ -15,7 +15,7 @@ router.get('/menu', nightclubMenuController.getView);
 
 router.get('/bottleservice', bottleServiceController.getView);
 
-router.get('/partypackage', partyPackageController.getView);
+// router.get('/partypackage', partyPackageController.getView);
 
 
 

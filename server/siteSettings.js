@@ -13,7 +13,7 @@ siteSettings.apis = {baseUrl: "http://oldtowndining.com/api/",
     otdBanquets: "banquets.ashx?date=",
     otdDjs: "djSchedule.ashx?date="
 }
-siteSettings.menus = {main: 602, 
+siteSettings.menus = {main: 2686, 
                         partyHors: 374,
                         partyDessert: 373,
                         partyRental: 375,

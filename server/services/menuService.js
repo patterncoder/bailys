@@ -1,6 +1,7 @@
 var request = require('request');
 var siteSettings = require('../siteSettings.js');
 var util = require('../utils/util');
+var menuFix = require('../utils/singleMenuItemFix');
 var Q = require('q');
 var json_parse = require('../utils/jsonParse');
 
@@ -14,7 +15,15 @@ var getMenuById = function(menuId){
         if (!error && response.statusCode == 200) {
 
             var menu = JSON.parse(body);
-            
+
+            // this fixes the issue where one of the objects did not have the MenuItems property.
+            for(var i = 0; i < menu.Menu.Sections.Section.length; ++i) {
+                var section = menu.Menu.Sections.Section[i];
+                if(!menu.Menu.Sections.Section[i].hasOwnProperty("MenuItems")) {
+                    menu.Menu.Sections.Section[i].MenuItems = {MenuItem: []}; //fix!
+                }
+            }
+
             //console.log(menu.Menu.Sections.Section[1]);
             //util.traverseJSONandFindKey(menu, 'MenuPrice', util.getPriceNoCents);
 

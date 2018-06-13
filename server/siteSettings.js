@@ -29,7 +29,7 @@ siteSettings.menus = {main: 2686,
                         banqLunchCustom: 369,
                         banqDinnerPreComp: 378,
                         banqDinnerCustom: 368,
-                        bottles: 610}
+                        bottles: 2688}
 
 siteSettings.utilDateBack = 2;
 

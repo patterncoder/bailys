@@ -12,14 +12,15 @@ block diningContent
                 h3= val.SectionTitle
                 hr(style="padding: 0px; margin: 0px")
                 ul.list-unstyled.wineList
-                    if(!Array.isArray(val.MenuItems.MenuItem))
-                        - var singleItem = val.MenuItems.MenuItem
-                        li= singleItem.WineVintage + '  ' + singleItem.WineryName + ' - ' + singleItem.WineName + '  ' 
-                                strong= utils.getPriceNoCents(singleItem.MenuPrice,false)
-                    else
-                        each item in val.MenuItems.MenuItem
-                            li= item.WineVintage + '  ' + item.WineryName + ' - ' + item.WineName + '  ' 
-                                strong= utils.getPriceNoCents(item.MenuPrice,false)
+                    if(val.hasOwnProperty("MenuItems"))
+                        if(!Array.isArray(val.MenuItems.MenuItem))
+                            - var singleItem = val.MenuItems.MenuItem
+                            li= singleItem.WineVintage + '  ' + singleItem.WineryName + ' - ' + singleItem.WineName + '  ' 
+                                    strong= utils.getPriceNoCents(singleItem.MenuPrice,false)
+                        else
+                            each item in val.MenuItems.MenuItem
+                                li= item.WineVintage + '  ' + item.WineryName + ' - ' + item.WineName + '  ' 
+                                    strong= utils.getPriceNoCents(item.MenuPrice,false)
                 
     p= viewBag.wineByGlass.Menu.Footer
 

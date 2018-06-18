@@ -6,7 +6,7 @@ block diningContent
         li
             a(href="/dining") Restaurant Info
         li.active  Wine by the Glass
-    img.img-responsive.border(src='/assets/barSign2.png')
+    img.radiusBorder5px.img-responsive.border(src='/assets/barSign2.png')
     each val in viewBag.wineByGlass.Menu.Sections.Section
             section.wines
                 h3= val.SectionTitle

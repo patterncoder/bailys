@@ -331,3 +331,9 @@ section.wines h3 {
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
+.radiusBorder5px {
+  border-radius: 5px;
+}
+.imgBlurHover:hover {
+  filter: drop-shadow(0px 0px 10px gray);
+}

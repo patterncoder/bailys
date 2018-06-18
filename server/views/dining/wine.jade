@@ -9,7 +9,7 @@ block diningContent
             a(href="/dining") Restaurant Info
         li.active  Wine List
     .twoColumns
-        img.img-responsive.border(src="/assets/bottleOfBaily.png")
+        img.radiusBorder5px.img-responsive.border(src="/assets/bottleOfBaily.png")
         each val in viewBag.menu.Menu.Sections.Section
             section.wines
                 h3= val.SectionTitle

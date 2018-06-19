@@ -331,15 +331,8 @@ section.wines h3 {
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
-.homeBackground {
-  filter: blur(2px);
-  opacity: 0.7;
-}
-.radiusBorder5px {
-  border-radius: 3px;
-}
-.imgBlurHover:hover {
-  filter: drop-shadow(0px 0px 10px gray);
+.logo {
+  filter: drop-shadow(2px 2px 5px #000);
 }
 .centerTo {
   position: absolute;
@@ -347,14 +340,12 @@ section.wines h3 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.logo {
-  filter: drop-shadow(2px 2px 5px black);
-}
-/*.logo:hover {
-  filter: drop-shadow(10px 10px 20px purple);
-}*/
 .textWhite {
-  color: white;
-  font-family: arial;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+}
+.homeBackground {
+  filter: blur(2px);
+  opacity: 0.7;
 }

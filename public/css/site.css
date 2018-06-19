@@ -331,9 +331,26 @@ section.wines h3 {
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
+.homeBackground {
+  filter: blur(2px);
+}
 .radiusBorder5px {
   border-radius: 5px;
 }
 .imgBlurHover:hover {
   filter: drop-shadow(0px 0px 10px gray);
+}
+.centerTo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.logo {
+  filter: drop-shadow(5px 5px 5px black);
+}
+.textWhite {
+  color: white;
+  font-family: arial;
+  text-align: center;
 }

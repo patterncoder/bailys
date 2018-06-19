@@ -350,9 +350,9 @@ section.wines h3 {
 .logo {
   filter: drop-shadow(2px 2px 5px black);
 }
-.logo:hover {
+/*.logo:hover {
   filter: drop-shadow(10px 10px 20px purple);
-}
+}*/
 .textWhite {
   color: white;
   font-family: arial;

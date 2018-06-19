@@ -333,6 +333,7 @@ section.wines h3 {
 }
 .homeBackground {
   filter: blur(2px);
+  opacity: 0.8;
 }
 .radiusBorder5px {
   border-radius: 3px;
@@ -348,6 +349,9 @@ section.wines h3 {
 }
 .logo {
   filter: drop-shadow(2px 2px 5px black);
+}
+.logo:hover {
+  filter: drop-shadow(10px 10px 20px purple);
 }
 .textWhite {
   color: white;

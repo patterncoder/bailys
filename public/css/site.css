@@ -347,7 +347,7 @@ section.wines h3 {
   transform: translate(-50%, -50%);
 }
 .logo {
-  filter: drop-shadow(5px 5px 5px black);
+  filter: drop-shadow(2px 2px 5px black);
 }
 .textWhite {
   color: white;

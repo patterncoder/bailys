@@ -333,7 +333,7 @@ section.wines h3 {
 }
 .homeBackground {
   filter: blur(2px);
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .radiusBorder5px {
   border-radius: 3px;

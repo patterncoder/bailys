@@ -335,7 +335,7 @@ section.wines h3 {
   filter: blur(2px);
 }
 .radiusBorder5px {
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .imgBlurHover:hover {
   filter: drop-shadow(0px 0px 10px gray);

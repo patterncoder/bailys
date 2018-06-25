@@ -1,0 +1,33 @@
+extends ../../includes/layoutDining
+block diningContent
+    ol.breadcrumb
+        li
+            a(href="/") Home
+        li.active  Happy Hour
+    .visible-xs.hidden-sm
+        .btn-toolbar(style="margin-bottom: 15px")
+            a.btn.btn-info(href="/dining/menu" ) Menu
+            a.btn.btn-info(href="/dining/beer" ) Beers & More
+            a.btn.btn-info(href="/dining/wine" ) Wine List
+            a.btn.btn-info(href="/dining/cocktails" ) Specialty Cocktails
+            a.btn.btn-info(href="/dining/spirits" ) Distilled Spirits
+    
+    img.radiusBorder5px.img-responsive.border(src="/assets/filetMignon2.png")
+    
+    h3 Happy Hour!
+    p Join us every day, including Friday and Saturday, for Baily's happy
+        | hour from 3:30 to 6:30 PM. We are offering $2.00 off appetizers,
+        | $1.00 off all draught beer, and $1.00 off all house wines.
+    p Please keep in mind that the nightclub opens at 10:00pm on Friday 
+        | and Saturday and the ambient noise increases as the club fills up. 
+        | Guests are welcome to stay in Baily's upstairs in
+        | Rotunda and south dining rooms until midnight. 
+
+    .col-sm-6
+        h3 June
+        a(href="/assets/clubFlyers/4x6_june_home.jpg")
+            img.imgBlurHover.radiusBorder5px.img-responsive(src="/assets/clubFlyers/4x6_june_home.jpg")
+    .col-sm-6
+        h3 Upcoming Events:
+        a(href="/assets/clubFlyers/4x6_june_band_schedule.jpg")
+            img.imgBlurHover.radiusBorder5px.img-responsive(src="/assets/clubFlyers/4x6_june_band_schedule.jpg")

@@ -333,6 +333,7 @@ section.wines h3 {
 }
 .logo {
   filter: drop-shadow(2px 2px 5px #000);
+  z-index: -1;
 }
 .centerTo {
   position: absolute;
@@ -348,13 +349,13 @@ section.wines h3 {
 .homeBackground {
   filter: blur(2px);
   opacity: 0.7;
+  z-index: -1;
 }
 .openTableDiners {
   overflow: hidden;
 }
 .openTableContent {
-  margin: 0 auto;
-  display: table;
+  float: left;
 }
 .radiusBorder5px {
   border-radius: 3px;

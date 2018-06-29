@@ -13,6 +13,10 @@ var getFutureMusic = function () {
 
         if (!error && response.statusCode == 200) {
             var musicSchedule = JSON.parse(body);
+            console.log("MUSIC SCHEDULE!", musicSchedule);
+//            for(var i = 0; i < musicSchedule.Schedule.length; ++i) {
+//
+//            }
             deferred.resolve(musicSchedule);
             // musicSchedule.Schedule.ScheduleItems.map(function(item){
             //     

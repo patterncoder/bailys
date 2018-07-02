@@ -21,7 +21,7 @@ siteSettings.menus = {main: 2686,
                         wineList: 2689,
                         spirits: 601,
                         cocktails: 626,
-                        wineByGlass: 659,
+                        wineByGlass: 2694,
 
                         banqBreakPreComp: 376,
                         banqBreakCustom: 1676,

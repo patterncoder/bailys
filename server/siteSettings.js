@@ -14,7 +14,7 @@ siteSettings.apis = {baseUrl: "http://oldtowndining.com/api/",
     otdDjs: "djSchedule.ashx?date="
 }
 siteSettings.menus = {main: 2686, 
-                        partyHors: 374,
+                        partyHors: 2707,
                         partyDessert: 373,
                         partyRental: 375,
                         beersAndMore: 2691,
@@ -23,12 +23,12 @@ siteSettings.menus = {main: 2686,
                         cocktails: 626,
                         wineByGlass: 2694,
 
-                        banqBreakPreComp: 376,
-                        banqBreakCustom: 1676,
-                        banqLunchPreComp: 377,
-                        banqLunchCustom: 369,
+                        banqBreakPreComp: 2706,
+                        banqBreakCustom: 2705,
+                        banqLunchPreComp: 2702,
+                        banqLunchCustom: 2700,
                         banqDinnerPreComp: 378,
-                        banqDinnerCustom: 368,
+                        banqDinnerCustom: 2703,
                         bottles: 2688}
 
 siteSettings.utilDateBack = 2;

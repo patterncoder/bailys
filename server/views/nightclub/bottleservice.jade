@@ -26,7 +26,7 @@ block nightclubContent
             table.MenuItem
                 tr
                         td.MenuName
-                            span= val.MenuItems.MenuItem.MenuLName + '  '
+                            span= val.MenuItems.MenuItem.MenuLName + '  ' + (val.MenuItems.MenuItem.AdditionalTitleText ? val.MenuItems.MenuItem.AdditionalTitleText : "")
                         td.Leader 
                             div.Leader &nbsp;
                         td.MenuItemPrice= utils.getPriceNoCents(val.MenuItems.MenuItem.MenuPrice,true,{replaceZero:'$Market'})
@@ -38,7 +38,7 @@ block nightclubContent
                     tr
                         if item
                             td.MenuName
-                                span= item.MenuLName + '  '
+                                span= item.MenuLName + '  ' + (item.AdditionalTitleText ? item.AdditionalTitleText : "")
                             td.Leader 
                                 div.Leader &nbsp;
                             td.MenuItemPrice= utils.getPriceNoCents(item.MenuPrice,true,{replaceZero:'$Market'})

@@ -22,6 +22,7 @@ siteSettings.menus = {main: 2686,
                         spirits: 601,
                         cocktails: 660,
                         wineByGlass: 3708,
+                        newYear: 3712,
 
                         banqBreakPreComp: 2706,
                         banqBreakCustom: 2705,

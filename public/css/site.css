@@ -344,14 +344,14 @@ section.wines h3 {
 }
 .centerArrow {
   position: absolute;
-  top: 95%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
 .arrowSize {
-  width: 10%;
-  height: 10%;
+  width: 45px;
+  height: 45px;
 }
 .arrowStyle {
   transform: rotate(180deg);

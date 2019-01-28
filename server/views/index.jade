@@ -11,6 +11,10 @@ block content
                     img.logo(src="/assets/logo_white_transp_background.png")
                     p.textWhite.logo EST. 1992
                     hr.textWhite.logo
+                .centerArrow
+                    #btnArrow
+                        img.arrowSize.arrowStyle(src="/assets/transparentArrow.png")
+                        p View more
 
             .row
                 .container
@@ -18,7 +22,7 @@ block content
                         br
                         .well.radiusBorder5px
                             .col-sm-12
-                                a(href="/assets/clubFlyers/4x6_brunch_front_New.jpg")
+                                a#brunch(href="/assets/clubFlyers/4x6_brunch_front_New.jpg")
                                     img.imgBlurHover.radiusBorder5px.img-responsive(src="/assets/clubFlyers/4x6_brunch_front_New.jpg")
             
                             p Reserve a table with us today!
@@ -65,7 +69,7 @@ block content
 
 block scripts
     script(type="text/javascript", src="/js/index.js")
-
+    script(type="text/javascript" src= "/js/scrollTo.js")
     
 
 

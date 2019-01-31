@@ -22,8 +22,7 @@ block content
                         br
                         .well.radiusBorder5px
                             .col-sm-12
-                                a#brunch(href="/assets/clubFlyers/4x6_brunch_front_New.jpg")
-                                    img.imgBlurHover.radiusBorder5px.img-responsive(src="/assets/clubFlyers/4x6_brunch_front_New.jpg")
+                                #brunch
             
                             p Reserve a table with us today!
                             script(type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=995851&type=standard&theme=standard&iframe=true&overlay=false&domain=com&lang=en-US')
@@ -69,8 +68,12 @@ block content
 
 block scripts
     script(type="text/javascript", src="/js/index.js")
-    script(type="text/javascript" src= "/js/scrollTo.js")
-    
+    script(type="text/javascript", src= "/js/scrollTo.js")
+    //colorbox popup
+    //script(type="text/javascript", src="/vendor/colorbox/jquery.colorbox.js")
+    script(type="text/javascript", src="/vendor/jsonHTML/jsonHTML.min.js")
+    script(type="text/javascript", src="/js/imageScroll.js")
+    //script(type="text/javascript", src="/js/popup.js")
 
 
 

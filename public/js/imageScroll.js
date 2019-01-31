@@ -14,7 +14,10 @@ const imgArrDef = () => {
     return [
         "/assets/clubFlyers/4x6_brunch_front_New.jpg",
         "/assets/clubFlyers/V-day19.png",
-        "/assets/clubFlyers/4x6_latin june 2018.JPG"
+        "/assets/clubFlyers/4x6_March_Rod-Run_Fri.jpg",
+        "/assets/clubFlyers/4x6_latin june 2018.JPG",
+        "/assets/clubFlyers/4x6_March_Paddys_2019.jpg",
+        "/assets/clubFlyers/4x6_March_Mardi_2019.jpg",
     ];
 };
 

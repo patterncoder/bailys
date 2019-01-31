@@ -1,7 +1,7 @@
 const cssDef = () => {
     return {
         container: {
-            "max-width": "auto",
+            //"max-width": "auto",
         },
         imgs: {
             "max-width": "100%",
@@ -12,8 +12,8 @@ const cssDef = () => {
 
 const imgArrDef = () => {
     return [
-        "/assets/clubFlyers/4x6_brunch_front_New.jpg",
         "/assets/clubFlyers/V-day19.png",
+        "/assets/clubFlyers/4x6_brunch_front_New.jpg",
         "/assets/clubFlyers/4x6_March_Rod-Run_Fri.jpg",
         "/assets/clubFlyers/4x6_latin june 2018.JPG",
         "/assets/clubFlyers/4x6_March_Paddys_2019.jpg",
@@ -47,7 +47,7 @@ const showDivs = (n) => {
 const imgScroll = (imgArr, css) => {
     let container = sig();
     container.css(css.container);
-    container.class = "w3-content w3-display-container";
+    container.class = "w3-content w3-display-container col-sm-12";
 
     //add all flyers from the array.
     let indx = 0;

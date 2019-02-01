@@ -12,12 +12,30 @@ const cssDef = () => {
 
 const imgArrDef = () => {
     return [
-        "/assets/clubFlyers/V-day19.png",
-        "/assets/clubFlyers/4x6_brunch_front_New.jpg",
-        "/assets/clubFlyers/4x6_March_Rod-Run_Fri.jpg",
-        "/assets/clubFlyers/4x6_latin june 2018.JPG",
-        "/assets/clubFlyers/4x6_March_Paddys_2019.jpg",
-        "/assets/clubFlyers/4x6_March_Mardi_2019.jpg",
+        {
+            url: "/assets/clubFlyers/V-day19.png",
+            link: "https://baily.com/dining/valentines",
+        },
+        {
+            url: "/assets/clubFlyers/4x6_brunch_front_New.jpg",
+            link: "",
+        },
+        {
+            url: "/assets/clubFlyers/4x6_March_Rod-Run_Fri.jpg",
+            link: "",
+        },
+        {
+            url: "/assets/clubFlyers/4x6_latin june 2018.JPG",
+            link: "",
+        },
+        {
+            url: "/assets/clubFlyers/4x6_March_Paddys_2019.jpg",
+            link: "",
+        },
+        {
+            url: "/assets/clubFlyers/4x6_March_Mardi_2019.jpg",
+            link: "",
+        },
     ];
 };
 
@@ -30,18 +48,39 @@ const plusDivs = (n) => {
 const showDivs = (n) => {
     let i;
     let x = document.getElementsByClassName("mySlides");
-    if(n > x.length) {
+    if (n > x.length) {
         slideIndex = 1;
     }
-    if(n < 1) {
+    if (n < 1) {
         slideIndex = x.length;
     }
 
-    for(i = 0; i < x.length; ++i) {
+    for (i = 0; i < x.length; ++i) {
         x[i].style.display = "none";
     }
 
-    x[slideIndex-1].style.display = "block";
+    x[slideIndex - 1].style.display = "block";
+};
+
+const genImg = (url, urlLink, css) => {
+    let img = sig("img", {
+        class: "mySlides",
+        src: url,
+    }).css(css);
+
+    /*if (urlLink) {
+        img.event(eventTyp, (e) => {
+            func(e);
+        });
+    }*/
+
+    let link = sig("a", {
+        href: urlLink,
+    });
+
+    link.addChild(img);
+
+    return link;
 };
 
 const imgScroll = (imgArr, css) => {
@@ -51,13 +90,11 @@ const imgScroll = (imgArr, css) => {
 
     //add all flyers from the array.
     let indx = 0;
-    imgArr.map((url) => {
-        let img = sig("img", {
-            class: "mySlides",
-            src: url,
-        }).css(css.imgs);
-        if(!indx) {
-            img.css({
+    imgArr.map((obj) => {
+        let img = genImg(obj.url, obj.link, css.imgs);
+        if (!indx) {
+            //the first image should be displayed.
+            img.children[0].css({
                 "display": "block",
             });
         }

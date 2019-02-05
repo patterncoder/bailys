@@ -36,6 +36,10 @@ const imgArrDef = () => {
             url: "/assets/clubFlyers/4x6_March_Mardi_2019.jpg",
             link: "",
         },
+        {
+            url: "/assets/clubFlyers/4x6_Feb_Presidents_2019.jpg",
+            link: "",
+        },
     ];
 };
 

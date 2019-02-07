@@ -25,7 +25,7 @@ const imgArrDef = () => {
             link: "",
         },
         {
-            url: "/assets/clubFlyers/4x6_latin june 2018.JPG",
+            url: "/assets/clubFlyers/4x6_Feb_Latin.JPG",
             link: "",
         },
         {

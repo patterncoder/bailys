@@ -13,7 +13,7 @@ const cssDef = () => {
 const imgArrDef = () => {
     return [
         {
-            url: "/assets/clubFlyers/4x6_Brunch_Front.jpg",
+            url: "/assets/clubFlyers/4x6_Brunch_Front_small.jpg",
             link: "https://baily.com/dining",
         },
         {
@@ -25,15 +25,15 @@ const imgArrDef = () => {
             link: "https://baily.com/nightclub",
         },
         {
-            url: "/assets/clubFlyers/4x6_March_Paddys_2019.jpg",
+            url: "/assets/clubFlyers/4x6_March_Paddys_2019_small.jpg",
             link: "https://baily.com/nightclub",
         },
         {
-            url: "/assets/clubFlyers/4x6_March_Mardi_2019.jpg",
+            url: "/assets/clubFlyers/4x6_March_Mardi_2019_small.jpg",
             link: "https://baily.com/nightclub",
         },
         {
-            url: "/assets/clubFlyers/4x6_New_Latin.jpg",
+            url: "/assets/clubFlyers/4x6_New_Latin_small.jpg",
             link: "https://baily.com/nightclub",
         },
     ];

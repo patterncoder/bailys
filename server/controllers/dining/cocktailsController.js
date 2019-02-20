@@ -17,7 +17,7 @@ var getData = function (req, res) {
     entertainmentService.getFutureMusicTop3()
         .then(function(music) {
             viewBag.schedule = music;
-            return menuService.getMenuById(605);
+            return menuService.getMenuById(siteSettings.menus.cocktails);
             //return eventsService.getEventsTopX();
         })
         .then(function(menu){

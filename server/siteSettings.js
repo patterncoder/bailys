@@ -14,6 +14,7 @@ siteSettings.apis = {
     otdBanquets: "banquets.ashx?date=",
     otdDjs: "djSchedule.ashx?date="
 }
+<<<<<<< HEAD
 siteSettings.menus = {
     main: 2686,
     partyHors: 2707,
@@ -26,6 +27,20 @@ siteSettings.menus = {
     wineByGlass: 3708,
     newYear: 3712,
     valentines: 3715,
+=======
+siteSettings.menus = {main: 2686, 
+                        partyHors: 2707,
+                        partyDessert: 373,
+                        partyRental: 375,
+                        beersAndMore: 3723,
+                        wineList: 3721,
+
+                        spirits: 601,
+                        cocktails: 3722,
+                        wineByGlass: 3708,
+                        newYear: 3712,
+                        valentines: 3715,
+>>>>>>> a3c82293d9ce0cbc0d453ed206478fa7112e2907
 
     banqBreakPreComp: 2706,
     banqBreakCustom: 2705,

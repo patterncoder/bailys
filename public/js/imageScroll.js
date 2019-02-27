@@ -118,6 +118,18 @@ const imgScroll = (imgArr, css) => {
         plusDivs(+1);
     });
 
+    const auto = (id) => {
+        console.log("auto loop called");
+        const triggerClick = () => {
+            $(`#${btn0.id}`).trigger("click");
+        };
+
+        setInterval(triggerClick, 7000); //every 5 seconds.
+    };
+
+
+    auto(btn0.id);
+
     //add the buttons
     container.addChild(btn0);
     container.addChild(btn1);

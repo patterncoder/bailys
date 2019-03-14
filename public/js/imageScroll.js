@@ -21,7 +21,7 @@ const imgArrDef = () => {
             link: "https://baily.com/nightclub",
         },
         {
-            url: "/assets/clubFlyers/4x6_Feb_Latin.JPG",
+            url: "/assets/clubFlyers/4x6_March_Latin.jpg",
             link: "https://baily.com/nightclub",
         },
         {

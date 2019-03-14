@@ -2,10 +2,12 @@ const cssDef = () => {
     return {
         container: {
             //"max-width": "auto",
+            //"border-radius": "5px",
         },
         imgs: {
             "max-width": "100%",
             "display": "none",
+            "border-radius": "5px"
         }
     };
 };
@@ -18,23 +20,23 @@ const imgArrDef = () => {
         },
         {
             url: "/assets/clubFlyers/4x6_March_Rod-Run_Fri.jpg",
-            link: "https://baily.com/nightclub",
+            link: "https://baily.com/music",
         },
         {
             url: "/assets/clubFlyers/4x6_March_Latin.jpg",
-            link: "https://baily.com/nightclub",
+            link: "https://baily.com/music",
         },
         {
             url: "/assets/clubFlyers/4x6_March_Paddys_2019.jpg",
-            link: "https://baily.com/nightclub",
+            link: "https://baily.com/music",
         },
         {
             url: "/assets/clubFlyers/4x6_March_Mardi_2019.jpg",
-            link: "https://baily.com/nightclub",
+            link: "https://baily.com/music",
         },
         {
             url: "/assets/clubFlyers/4x6_New_Latin.jpg",
-            link: "https://baily.com/nightclub",
+            link: "https://baily.com/music",
         },
     ];
 };
@@ -102,11 +104,16 @@ const imgScroll = (imgArr, css) => {
         container.addChild(img);
     });
 
+    //determines if the auto-scroll should be disabled or not.
+    let disable = false;
+
     //next button left
     let btn0 = sig("button", {
         class: "w3-button w3-black w3-display-left",
         text: "&#10094",
     }).event("click", () => {
+        //disables the auto image flip.
+        disable = true;
         plusDivs(-1);
     });
 
@@ -115,13 +122,17 @@ const imgScroll = (imgArr, css) => {
         class: "w3-button w3-black w3-display-right",
         text: "&#10095",
     }).event("click", () => {
+        //disables the auto image flip.
+        disable = true;
         plusDivs(+1);
     });
 
     const auto = (id) => {
-        console.log("auto loop called");
         const triggerClick = () => {
-            $(`#${btn0.id}`).trigger("click");
+            //$(`#${btn0.id}`).trigger("click");
+            if(!disable) {
+                plusDivs(+1);
+            }
         };
 
         setInterval(triggerClick, 7000); //every 5 seconds.

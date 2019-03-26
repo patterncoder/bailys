@@ -16,7 +16,7 @@ const imgArrDef = () => {
     return [
         {
             url: "/assets/clubFlyers/4x6_Brunch_Front.jpg",
-            link: "https://baily.com/dining",
+            link: "https://baily.com/assets/clubFlyers/4x6_brunch_back.JPG",
         },
         {
             url: "/assets/clubFlyers/4x6_April_Spring-Break.jpg",

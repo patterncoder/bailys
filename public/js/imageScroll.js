@@ -19,19 +19,11 @@ const imgArrDef = () => {
             link: "https://baily.com/dining",
         },
         {
-            url: "/assets/clubFlyers/4x6_March_Rod-Run_Fri.jpg",
+            url: "/assets/clubFlyers/4x6_April_Spring-Break.jpg",
             link: "https://baily.com/music",
         },
         {
             url: "/assets/clubFlyers/4x6_March_Latin.jpg",
-            link: "https://baily.com/music",
-        },
-        {
-            url: "/assets/clubFlyers/4x6_March_Paddys_2019.jpg",
-            link: "https://baily.com/music",
-        },
-        {
-            url: "/assets/clubFlyers/4x6_March_Mardi_2019.jpg",
             link: "https://baily.com/music",
         },
         {

@@ -16,6 +16,10 @@ const imgArrDef = () => {
     return [
         {
             url: "/assets/clubFlyers/4x6_Brunch_Front.jpg",
+            link: "https://baily.com/assets/clubFlyers/4x6_Brunch_Front.jpg",
+        },
+        {
+            url: "/assets/clubFlyers/4x6_brunch_back.JPG",
             link: "https://baily.com/assets/clubFlyers/4x6_brunch_back.JPG",
         },
         {

@@ -27,10 +27,6 @@ const imgArrDef = () => {
             link: "https://baily.com/music",
         },
         {
-            url: "/assets/clubFlyers/4x6_March_Latin.jpg",
-            link: "https://baily.com/music",
-        },
-        {
             url: "/assets/clubFlyers/4x6_New_Latin.jpg",
             link: "https://baily.com/music",
         },

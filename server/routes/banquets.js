@@ -9,6 +9,7 @@ var beveragePackageController = require('../controllers/banquets/beveragePackage
 var venuesController = require('../controllers/banquets/venuesController');
 var bookingController = require('../controllers/banquets/bookingController');
 var partyAddonsController = require('../controllers/banquets/partyAddonsController');
+var partyDesignController = require('../controllers/banquets/partyDesignController');
 
 router.get('/', banquetsController.getView);
 
@@ -23,6 +24,7 @@ router.get('/menus/dinner', banquetMenusController.getViewDinner );
 router.get('/beverageservice', beveragePackageController.getView);
 
 router.get('/partyAddons', partyAddonsController.getView);
+router.get('/partyDesign', partyDesignController.getView);
 
 
 

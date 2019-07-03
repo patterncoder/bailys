@@ -11,7 +11,7 @@ var _ = require("lodash");
 var getView = function (req, res) {
 
     var viewBag = {};
-    viewBag.title = "Party Add-ons";
+    viewBag.title = "Party Design";
     
     banquetsService.getFutureBookings()
         
@@ -39,7 +39,7 @@ var getView = function (req, res) {
         .then(function(partyRentals){
             viewBag.partyRentals = partyRentals;
             console.log(viewBag);
-            res.render('banquets/partyaddons', {  viewBag: viewBag })
+            res.render('banquets/partyDesign', {  viewBag: viewBag })
         });
 
 

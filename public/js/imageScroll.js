@@ -24,8 +24,20 @@ const imgArrDef = () => {
             link: "https://baily.com/assets/clubFlyers/4x6_brunch_back.JPG",
         },
         {
-            url: "/assets/clubFlyers/4x6_4th.jpg",
+            url: "/assets/clubFlyers/4x6_July_Home.jpg",
             link: "https://baily.com/music",
+        },
+        {
+            url: "/assets/clubFlyers/4x6_July_Band_Schedule.jpg",
+            link: "https://baily.com/music",
+        },
+        {
+            url: "/assets/clubFlyers/4x6_4th.jpg",
+            link: "https://baily.com/nightclub",
+        },
+        {
+            url: "/assets/clubFlyers/4x6_July_Latin_Night.jpg",
+            link: "https://baily.com/nightclub",
         },
         {
             url: "/assets/clubFlyers/4x6_New_Latin.jpg",

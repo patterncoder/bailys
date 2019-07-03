@@ -23,7 +23,7 @@ const imgArrDef = () => {
             link: "https://baily.com/assets/clubFlyers/4x6_brunch_back.JPG",
         },
         {
-            url: "/assets/clubFlyers/4x6_June_Latin.jpeg",
+            url: "/assets/clubFlyers/4x6_4th.jpg",
             link: "https://baily.com/music",
         },
         {

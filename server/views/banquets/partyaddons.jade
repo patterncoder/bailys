@@ -1,11 +1,11 @@
 extends ../../includes/layoutBanquet
 block banquetContent
-    ol.breadcrumb
-        li
-            a(href="/") Home
-        li
-            a(href="/banquets") Banquet Welcome
-        li.active  Party Add-ons
+    //- ol.breadcrumb
+    //-     li
+    //-         a(href="/") Home
+    //-     li
+    //-         a(href="/banquets") Banquet Welcome
+    //-     li.active  Party Add-ons
     h1= viewBag.menu.Menu.MenuTitle
     p= viewBag.menu.Menu.SubTitle
     script var data = !{JSON.stringify(viewBag.menu)}; console.log(data);

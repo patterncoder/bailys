@@ -1,27 +1,15 @@
 ﻿extends ../../includes/layoutNightclub
 block nightclubContent
-    ol.breadcrumb
-        li
-            a(href="/") Home
-        li.active  Nightclub Info
+    //- ol.breadcrumb
+        //- li
+        //-     a(href="/") Home
+        //- li.active  Nightclub Info
     .visible-xs.hidden-sm
         .btn-toolbar(style="margin-bottom: 15px")
             a.btn.btn-info(href="/nightclub/menu" ) Club Menu
             a.btn.btn-info(href="/nightclub/bottleservice" ) VIP Bottle Serivce
             // a.btn.btn-info(href="/nightclub/partypackage" ) Party Packages
             
-    .col-sm-12
-        h3 July
-        a(href="/assets/clubFlyers/4x6_4th.jpg")
-            img.imgBlurHover.radiusBorder5px.img-responsive(src="/assets/clubFlyers/4x6_4th.jpg")
-    .col-sm-6
-        h3 Latin Nights!:
-        a(href="/assets/clubFlyers/4x6_July_Latin_Night.jpg")
-            img.imgBlurHover.radiusBorder5px.img-responsive(src="/assets/clubFlyers/4x6_July_Latin_Night.jpg")
-    .col-sm-6
-        h3 Party!
-        a(href="/assets/clubFlyers/4x6_New_Latin.jpg")
-            img.imgBlurHover.radiusBorder5px.img-responsive(src="/assets/clubFlyers/4x6_New_Latin.jpg")
     .col-sm-12
         h3 Come Play in Old Town
         p The Hottest Nightclub in the I.E. open every Friday and Saturday.
@@ -55,6 +43,21 @@ block nightclubContent
             li Gentlemen: Must wear Collared Shirt & Closed Toe Shoes - No Baseball Caps, Shorts, Flip Flops
             li Ladies: Dress to Impress
         
+        br
+    
+        .col-sm-12
+            #nightclub
+
+
+block scripts
+    script(type="text/javascript", src="/js/index.js")
+    script(type="text/javascript", src= "/js/scrollTo.js")
+
+    //code for image scroller.
+    script(type="text/javascript", src="/vendor/jsonHTML/jsonHTML.min.js")
+    script(type="text/javascript", src="/js/imageScroll.js")
+
+    script start("nightclub", ["nightclub"])
     
     
     

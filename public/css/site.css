@@ -55,6 +55,9 @@ html {
   background-color: #333;
   border-color: #555;
 }
+.sideBarHeader {
+  text-align: center;
+}
 .contentModule ul {
   margin-top: 10px;
 }

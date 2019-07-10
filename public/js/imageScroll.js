@@ -1,3 +1,4 @@
+const scrollerDB = new micronDB();
 const cssDef = () => {
     return {
         container: {
@@ -16,34 +17,47 @@ const cssDef = () => {
 const imgArrDef = () => {
     return [
         {
+            type: "brunch",
             url: "/assets/clubFlyers/4x6_Brunch_Front.jpg",
             link: "https://baily.com/assets/clubFlyers/4x6_Brunch_Front.jpg",
         },
+        // {
+        //     type: "brunch",
+        //     url: "/assets/clubFlyers/4x6_brunch_back.JPG",
+        //     link: "https://baily.com/assets/clubFlyers/4x6_brunch_back.JPG",
+        // },
         {
-            url: "/assets/clubFlyers/4x6_brunch_back.JPG",
-            link: "https://baily.com/assets/clubFlyers/4x6_brunch_back.JPG",
-        },
-        {
+            type: "music",
             url: "/assets/clubFlyers/4x6_July_Home.jpg",
             link: "https://baily.com/music",
         },
         {
+            type: "music",
             url: "/assets/clubFlyers/4x6_July_Band_Schedule.jpg",
             link: "https://baily.com/music",
         },
         {
+            type: "nightclub",
             url: "/assets/clubFlyers/4x6_4th.jpg",
             link: "https://baily.com/nightclub",
         },
         {
+            type: "nightclub",
             url: "/assets/clubFlyers/4x6_July_Latin_Night.jpg",
             link: "https://baily.com/nightclub",
         },
         {
+            type: "nightclub",
             url: "/assets/clubFlyers/4x6_New_Latin.jpg",
             link: "https://baily.com/music",
         },
     ];
+};
+
+const insertImgs = (imgLst) => {
+    imgLst.map((obj) => {
+        scrollerDB.insert(obj);
+    });
 };
 
 let slideIndex = 1;
@@ -153,4 +167,23 @@ const imgScroll = (imgArr, css) => {
     return container;
 };
 
-imgScroll(imgArrDef(), cssDef()).appendTo("#brunch");
+insertImgs(imgArrDef());
+
+const start = (id, types) => {
+    let imgArr = [];
+
+    types.map((obj) => {
+        let queryResult = scrollerDB.query({
+            where: {
+                type: obj,
+            }
+        });
+        queryResult.map((tmp) => {
+            imgArr.push(tmp);
+        });
+    });
+
+    console.log(imgArr);
+
+    imgScroll(imgArr, cssDef()).appendTo("#" + id);
+}

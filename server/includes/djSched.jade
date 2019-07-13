@@ -1,7 +1,7 @@
 .contentModule
     .text-sm-right
         .sideBarHeader
-            h3 Who's Spinnin'
+            h3 Our DJ's
         if (utils.objKeysLength(viewBag.schedule) > 0)
             each val in viewBag.schedule.Schedule.ScheduleItems
                 h4= val.BandName

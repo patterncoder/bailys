@@ -184,7 +184,7 @@ let banqSubForm = () => {
         }
 
         $.ajax({
-            url: "http://67.205.162.241:1984/inquiry",
+            url: "https://67.205.162.241:1984/inquiry",
             type: "POST",
             data: genSubmit(data),
             success: function (data, textStatus, jqXHR) {

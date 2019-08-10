@@ -186,6 +186,7 @@ let banqSubForm = () => {
         $.ajax({
             url: "https://67.205.162.241:1984/inquiry",
             type: "POST",
+            dataType: "jsonp",
             data: genSubmit(data),
             beforeSend: function(request) {
                 request.setRequestHeader("Content-Type", "application/json");

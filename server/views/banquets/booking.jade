@@ -118,3 +118,16 @@ block banquetContent
 
     p Payment for any rentals, which are coordinated by the Events Manager, will be paid in full (including tax 
         |on the rentals) two weeks prior to the event.
+
+    .row
+        .container
+            br
+            #subForm
+                h4 Online submission
+                p If you prefer, you can inquire to make a reservation with us here:
+
+block scripts
+    //code for submission.
+    script(type="text/javascript", src="/vendor/jsonHTML/jsonHTML.min.js")
+    script(type="text/javascript", src="/js/banquetSubmit.js")
+    script banqSubForm().appendTo("#subForm")

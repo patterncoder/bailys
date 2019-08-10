@@ -187,6 +187,9 @@ let banqSubForm = () => {
             url: "https://67.205.162.241:1984/inquiry",
             type: "POST",
             data: genSubmit(data),
+            beforeSend: function(request) {
+                request.setRequestHeader("Content-Type", "application/json");
+            },
             success: function (data, textStatus, jqXHR) {
                 alert(`Thank you ${$("#nameBx").val()}, we will be contacting you soon!`);
             },

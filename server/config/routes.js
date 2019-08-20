@@ -1,4 +1,4 @@
-﻿var users = require('../routes/users');
+﻿// var users = require('../routes/users');
 var indexRoutes = require('../routes/index');
 var signUpRoutes = require('../routes/signup');
 var diningRoutes = require('../routes/dining');
@@ -28,27 +28,5 @@ module.exports = function (app) {
         res.send(404);
     });
 
-    //const jsonParser = bodyParser.json();
-
-    //POST for the inquiry form on banquets.
-    // app.post("/inquiry", jsonParser, (req, res) => {
-
-    //     console.log(req.body);
-
-    //     try {
-    //         console.log("sending request...");
-    //         request.post("http://67.205.162.241:1984/inquiry", {json: req.body}, (err, response, body) => {
-    //             //console.log(response);
-    //             //send the response from the url above back.
-    //             res.send(response.statusCode);
-    //         });
-
-    //     } catch (e) {
-    //         res.send(e);
-    //     }
-
-    // });
-
     return app;
-
 };

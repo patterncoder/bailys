@@ -2,6 +2,9 @@
   "name": "bailys",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": ">=10.16"
+  },
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www"

@@ -1,0 +1,48 @@
+
+extends ../../includes/layoutDining
+block diningContent
+    //- ol.breadcrumb
+    //-     li
+    //-         a(href="/") Home 
+    //-         &nbsp;
+    //-     li
+    //-         a(href="/dining") Restaurant Info 
+    //-         &nbsp;
+    //-     li.active  Menu
+    //h2= viewBag.menu.Menu.MenuTitle
+    //.list-group
+    img.pull-right.stdImgSize.radiusBorder5px.img-responsive.border(src="/assets/valentinesHands.jpg" )
+    br
+    br
+    br
+    h3 Happy Valentines Day!
+    p Join us for our annual Valentine's Dinner.  Voted one of the most romantic restaurants by Inland Empire Magazine, Baily's is a top choice to treat you and your date for an evening of dinner and drinks in a romantic setting.  
+    p The four course dinner features a choice of appetizer, choice of soup or salad, choice of entree, and choice of dessert.  Each guest will also receive a glass of sparkling wine and complementary entry to Baily's Nightclub for a future date night of fun and dancing.
+    br
+    p $150 per couple plus tax and gratuity
+    p To make the reservation we require a phone number and a credit card number to secure your time.  You can cancel your reservation up to 48 hours in advance, however if you don't make the reservation there is a $25 no show fee.  Call 951-676-9567 to make the reservation.
+
+    br
+    br
+    
+    each val in viewBag.menu.Menu.Sections.Section
+        h3= val.SectionTitle
+        // each item in val.MenuItems.MenuItem
+        //     table.MenuItem2
+        //         tr
+        //             td.MenuName2= item.MenuLName
+        //             td.MenuItemPrice2= utils.getPriceNoCents(item.MenuPrice,true)
+        //         tr
+        //             td.MenuItemDescription2(colspan="2")= item.MenuDescription
+        //             td
+        each item in val.MenuItems.MenuItem
+            table.MenuItem
+                tr
+                    td.MenuName
+                        span= item.MenuLName + '  '
+                    td.Leader 
+                        div.Leader &nbsp;
+                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true,{replaceZero:'$Market'})
+                tr
+                    td.Description(colspan="3")= item.MenuDescription
+    p= viewBag.menu.Menu.Footer

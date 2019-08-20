@@ -1,0 +1,81 @@
+extends ../includes/layout
+
+block content
+    //.row.visible-md.visible-lg.visible-sm
+        //include ../includes/carousel
+    .row
+        .container-fluid
+            .row
+                .fill-screen.homeBackground(style="background-image:url(/assets/patioAtNight.jpg)")
+                .centerTo.logo
+                    img.logo(src="/assets/logo_white_transp_background.png")
+                    p.textWhite.logo EST. 1992
+                    hr.textWhite.logo
+                .centerArrow
+                    #btnArrow
+                        img.arrowSize.arrowStyle(src="/assets/transparentArrow.png")
+                        p View more
+
+            .row
+                .container
+                    .col-sm-8.col-sm-offset-2.text-center
+                        br
+                        .well.radiusBorder5px
+                            .col-sm-12
+                                #brunch
+            
+                            p Reserve a table with us today!
+                            script(type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=995851&type=standard&theme=standard&iframe=true&overlay=false&domain=com&lang=en-US')
+                            p If your preferred reservation time is not available, please call the restaurant at 951.676.9567 to inquire about other potential options.
+                            hr
+                            p Keep up to date with members only offers and events!
+                            a.btn.btn-info(href="#signUpModal", data-toggle="modal") Join our club!
+            .row
+                hr
+                .col-md-2.col-sm-3.col-md-offset-2
+                    .thumbnail.center-block
+                        a(href="/dining")
+                            img.radiusBorder5px.imgBlurHover.img-responsive.center-block(src="/assets/restaurant.png" )
+                        .caption
+                            p The art of hospitality...Unique offerings delivered with friendly and
+                                | knowledgeable service.  Choose to dine on the patio, the vibrant downstairs
+                                | or the more intimate upstairs.&nbsp;&nbsp;
+                
+                .col-md-2.col-sm-3
+                    .thumbnail.center-block
+                        a(href="/nightclub")
+                            img.radiusBorder5px.imgBlurHover.img-responsive.center-block(src="/assets/nightclub6.png" )
+                        .caption
+                            p Full service nightclub boasting ample elbow room, three bars, two dance floors,
+                                | bottle service, and party packages.&nbsp;&nbsp;
+
+                .col-md-2.col-sm-3
+                    .thumbnail.center-block
+                        a(href="/music")
+                            img.radiusBorder5px.imgBlurHover.img-responsive.center-block(src="/assets/music3.png" )
+                        .caption
+                            p Six months in, six months out.  When its cold, November through April, solo acts are featured
+                                | on the bar stage.  When it warms up, May through Oct look for full bands on the Courtyard Stage.&nbsp;&nbsp;
+                                
+                .col-md-2.col-sm-3
+                    .thumbnail.center-block
+                        a(href="/banquets")
+                            img.radiusBorder5px.imgBlurHover.img-responsive.center-block(src="/assets/banquet3.png" )
+                        .caption
+                            p Baily's was built from the ground up for private parties and banquets.
+                                | Secluded rooms, diverse menus and stellar service.&nbsp;&nbsp;
+    .push
+
+block scripts
+    script(type="text/javascript", src="/js/index.js")
+    script(type="text/javascript", src= "/js/scrollTo.js")
+
+    //code for image scroller.
+    script(type="text/javascript", src="/vendor/jsonHTML/jsonHTML.min.js")
+    script(type="text/javascript", src="/js/imageScroll.js")
+
+    script start("brunch", ["brunch", "music"])
+
+
+
+

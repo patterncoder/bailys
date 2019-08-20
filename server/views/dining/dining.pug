@@ -1,0 +1,48 @@
+﻿extends ../../includes/layoutDining
+block diningContent
+    //- ol.breadcrumb
+    //-     li
+    //-         a(href="/") Home
+    //-     li.active  Restaurant Info
+    .visible-xs.hidden-sm
+        .btn-toolbar(style="margin-bottom: 15px")
+            a.btn.btn-info(href="/dining/menu" ) Menu
+            a.btn.btn-info(href="/dining/beer" ) Beers & More
+            a.btn.btn-info(href="/dining/wine" ) Wine List
+            a.btn.btn-info(href="/dining/cocktails" ) Specialty Cocktails
+            a.btn.btn-info(href="/dining/spirits" ) Distilled Spirits
+    
+    img.radiusBorder5px.img-responsive.border(src="/assets/filetMignon2.png")
+    
+    h3 Cuisine
+    p Baily's serves California/Continental cuisine.  Our food is prepared daily 
+        | by our well trained and talented culinary staff.  The menu features
+        | Appetizers, Soup & Salads, Entrees and Desserts.
+
+    h3 Hours
+    ul
+        li Open Monday - Thursday 11AM - 9PM.
+        li Friday - Saturday 11AM - 10PM *last seating for downstairs with live music
+            | is at 9PM to allow smooth tansition into nightclub. Seating for dinner is
+            | still available upstairs until 10PM.
+        li Sunday buffet brunch 10AM - 2PM, dinner 2PM - 9PM.
+        li Please keep in mind that our nightclub opens at 10:00pm on Friday 
+            | and Saturday and the ambient noise increases as the club fills up. 
+            | Guests are welcome to stay in Baily's upstairs in
+            | Rotunda and south dining rooms until midnight. 
+    h3 Nightclub Hours
+    ul
+        li Friday & Saturday 10PM - 2AM.
+    p Please keep in mind that the nightclub opens at 10:00pm on Friday 
+        | and Saturday and the ambient noise increases as the club fills up. 
+        | Guests are welcome to stay in Baily's upstairs in
+        | Rotunda and south dining rooms until midnight. 
+
+    .col-sm-6
+        h3 June
+        a(href="/assets/clubFlyers/4x6_July_Home.jpg")
+            img.imgBlurHover.radiusBorder5px.img-responsive(src="/assets/clubFlyers/4x6_July_Home.jpg")
+    .col-sm-6
+        h3 Live!
+        a(href="/assets/clubFlyers/4x6_July_Band_Schedule.jpg")
+            img.imgBlurHover.radiusBorder5px.img-responsive(src="/assets/clubFlyers/4x6_July_Band_Schedule.jpg")

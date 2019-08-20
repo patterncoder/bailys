@@ -1,0 +1,30 @@
+//- Created by patterncoder on 5/12/2015.
+extends ../../includes/layoutDining
+block diningContent
+    //- ol.breadcrumb
+    //-     li
+    //-         a(href="/") Home
+    //-     li
+    //-         a(href="/dining") Restaurant Info
+    //-     li.active  Wine List
+    .twoColumns
+        img.radiusBorder5px.img-responsive.border(src="/assets/bottleOfBaily.png")
+        each val in viewBag.menu.Menu.Sections.Section
+            section.wines
+                h3= val.SectionTitle
+                hr(style="padding: 0px; margin: 0px")
+                ul.list-unstyled.wineList
+                    each item in val.MenuItems.MenuItem
+                        li= item.WineVintage + '  ' + item.WineryName + ' - ' + item.WineName + '  ' 
+                            strong= utils.getPriceNoCents(item.MenuPrice,true)
+                    
+    p= viewBag.menu.Menu.Footer
+    
+    
+    //- each val in viewBag.menu.Menu.Sections.Section
+    //-     h3= val.SectionTitle
+    //-     each item in val.MenuItems.MenuItem
+    //-         p= item.WineVintage + '  ' + item.WineryName + ' - ' + item.WineName + '  ' 
+    //-             strong= utils.getPriceNoCents(item.MenuPrice,true)
+    //-             
+    //- p= viewBag.menu.Menu.Footer

@@ -1,0 +1,89 @@
+﻿#myNav.nav.navbar.navbar-inverse
+    .container-fluid
+        .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href='/')
+                //img(src="/assets/logo_white_transp_background.png" height="30px")
+                span#logo BAILY'S
+        #myNavbar.collapse.navbar-collapse
+            ul.nav.navbar-nav
+                li.dropdown
+                    a.dropdown-toggle(href="#" data-toggle="dropdown") Dining
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='/dining') Hours
+                        li
+                            a(href='/dining/menu') Menu
+                        li
+                            a(href='/dining/beer') Beers & More
+                        li
+                            a(href='/dining/wine') Wine List - Bottle
+                        li
+                            a(href='/dining/wineByGlass') Wine List - Glass
+                        li
+                            a(href='/dining/cocktails') Specialty Drinks
+                        //- li
+                            // -a(href='/dining/spirits') Spirits
+                        li
+                            a(href='/dining/happyHour') Happy Hour
+                        li
+                            a(href='/dining/wineWednesday') Wine Wednesday
+                        //- li
+                            //- a(href='/dining/valentines') Valentines
+                        //- li
+                        //-    a(href='/dining/newYear') New Year!
+                li.dropdown
+                    a.dropdown-toggle(href="#" data-toggle="dropdown") Nightclub
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='/nightclub') Nightclub
+                        //-li
+                        //-    a(href='/nightclub/menu') Club Menu
+                        li
+                            a(href='/nightclub/bottleservice') VIP Table Service
+                        //- li
+                        //-     a(href='/nightclub/partypackage') Party Packages
+                li.dropdown
+                    a.dropdown-toggle(href="#" data-toggle="dropdown") Music
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='/music') Information
+                        li
+                            a(href='/music/schedule') Music Schedule
+                        li
+                            a(href='/music/booking') Booking Information
+                li.dropdown
+                    a.dropdown-toggle(href="#" data-toggle="dropdown") Banquets
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='/banquets') Welcome
+                        li
+                            a(href='/banquets/booking') Booking Info
+                        li
+                            a(href='/banquets/venues') Venues
+                        li
+                            a(href='/banquets/menus/breakfast') Menus
+                        li
+                            a(href='/banquets/beverageservice') Beverage Service
+                        li
+                            a(href='/banquets/partyaddons') Party Add-ons
+                        li
+                            a(href="/banquets/partyDesign") Party Design Criteria
+                li.dropdown
+                    a.dropdown-toggle(href='#' data-toggle="dropdown") About
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a(href="/about") General Information
+                        li
+                            a(href="/about/history") History
+                        li
+                            a(href="/about/employment") Employment
+

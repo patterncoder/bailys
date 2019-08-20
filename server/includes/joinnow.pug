@@ -1,0 +1,21 @@
+.modal.fade(id="signUpModal", tabindex="-1")
+        .modal-dialog
+            .modal-content
+                .modal-header.text-center
+                    a.close(href="#", data-dismiss="modal") &times;
+                    h2 Keep informed!
+                .modal-body.text-center(id="signUpModalBody")
+                    p We do not share you email address with anyone.
+                    br
+                    form.form-inline(name="signUpForm", id="signUpForm", action="/api/signup", method="post")
+                        //.form-group
+                            //label.sr-only(for="inputEmail") Email 
+                        .input-group
+                            input.form-control(id="email", type="email", placeholder="Email Address")
+                            span.input-group-btn
+                                button.btn.btn-info(type="submit") Add Me!  
+                            //button.btn.btn-success(type="submit") Join our club!
+                    br
+                    p#modalResult
+                .modal-footer
+                    button.btn.btn-info(data-dismiss="modal") Close

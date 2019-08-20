@@ -1,0 +1,24 @@
+extends ../../includes/layoutDining
+block diningContent
+    //- ol.breadcrumb
+    //-     li
+    //-         a(href="/") Home
+    //-     li
+    //-         a(href="/dining") Restaurant Info
+    //-     li.active  Specialty Cocktails
+    h2= viewBag.menu.Menu.MenuTitle
+    
+    //This code is a little different from other menus becuase the retured json only has one
+    //menu section and comes in as an object instead of an array.
+    each item in viewBag.menu.Menu.Sections.Section.MenuItems.MenuItem
+        table.MenuItem
+            tr
+                td.MenuName
+                    span= item.MenuLName + '  '
+                td.Leader 
+                    div.Leader &nbsp;
+                td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,false)
+            tr
+                td.Description(colspan="3")= item.MenuDescription
+    p= viewBag.menu.Menu.Footer
+    

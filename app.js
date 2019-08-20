@@ -7,11 +7,11 @@ var app = express();
 //get the config based on environment
 var config = require('./server/config/config')[env];
 // set up express based on env config
-require("./server/config/express")(app, config);
+app = require("./server/config/express")(app, config);
 // set up parent routes
-require('./server/config/routes')(app);
+app = require("./server/config/routes")(app);
 // set up error messages
-require('./server/config/errors')(app);
+app = require("./server/config/errors")(app);
 
 
 module.exports = app; 

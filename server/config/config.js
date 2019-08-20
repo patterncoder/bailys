@@ -1,7 +1,10 @@
 ﻿var path = require('path');
+
 var rootPath = path.normalize(__dirname + '/../../');
 
-console.log(rootPath);
+
+
+console.log("config.js rootPath:", rootPath);
 module.exports = {
     development: {
         rootPath: rootPath,

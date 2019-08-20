@@ -1,5 +1,5 @@
-﻿var express = require('express'),
-    stylus = require('stylus');
+﻿var express = require('express');
+    //stylus = require('stylus');
 
 var stylus = require('stylus');
 
@@ -13,27 +13,27 @@ var bodyParser = require('body-parser');
 module.exports = function (app, config) {
 
     // view engine setup
+    app.set('view engine', 'pug');
     app.set('views', config.rootPath + '/server/views');
-    app.set('view engine', 'jade');
 
     // Stylus setup
-    //console.log(config.rootPath);
-    //console.log(__dirname);
+    console.log(config.rootPath);
+    console.log(__dirname);
     function compile(str, path) {
         return stylus(str).set('filename', path);
 
     }
     app.use(stylus.middleware(
-                {
-                    src: config.rootPath + '/public',
-                    compile: compile
-                }
-            ));
+        {
+            src: config.rootPath + '/public',
+            compile: compile
+        }
+    ));
 
     // add our utils library for use in jade templates
     app.locals.utils = require('../utils/util.js');
-    
-    
+
+
     // uncomment after placing your favicon in /public
     app.use(favicon(__dirname + '/../../public/favicon.ico'));
     app.use(logger('dev'));
@@ -42,4 +42,5 @@ module.exports = function (app, config) {
     app.use(cookieParser());
     app.use(express.static(config.rootPath + '/public', { maxAge: 86400000 }));
 
+    return app;
 };

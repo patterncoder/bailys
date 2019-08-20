@@ -56,6 +56,11 @@ const imgArrDef = () => {
             url: "/assets/clubFlyers/4x6_New_Latin.jpg",
             link: "https://baily.com/music",
         },
+        {
+            type: "brunch",
+            url: "/assets/clubFlyers/OTNM Poster.jpg",
+            link: "",
+        }
     ];
 };
 

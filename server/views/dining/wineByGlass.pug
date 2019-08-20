@@ -1,0 +1,29 @@
+extends ../../includes/layoutDining
+block diningContent
+    //- ol.breadcrumb
+    //-     li
+    //-         a(href="/") Home
+    //-     li
+    //-         a(href="/dining") Restaurant Info
+    //-     li.active  Wine by the Glass
+    img.radiusBorder5px.img-responsive.border(src='/assets/wine-glasses.jpg')
+    each val in viewBag.wineByGlass.Menu.Sections.Section
+            section.wines
+                h3= val.SectionTitle
+                //- hr(style="padding: 0px; margin: 0px")
+                ul.list-unstyled.wineList
+                    if(val.hasOwnProperty("MenuItems"))
+                        if(!Array.isArray(val.MenuItems.MenuItem))
+                            - var singleItem = val.MenuItems.MenuItem
+                            li= singleItem.WineVintage + '  ' + singleItem.WineryName + ' - ' + singleItem.WineName + '  ' 
+                                    strong= utils.getPriceNoCents(singleItem.MenuPrice,false)
+                        else
+                            each item in val.MenuItems.MenuItem
+                                li= (item.WineVintage ? item.WineVintage : '') + '  ' + item.WineryName + ' - ' + item.WineName + '  ' 
+                                    strong= utils.getPriceNoCents(item.MenuPrice,false)
+
+    //br            
+    //br
+    //p= viewBag.wineByGlass.Menu.Footer
+
+

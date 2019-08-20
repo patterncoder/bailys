@@ -1,0 +1,34 @@
+extends ../../includes/layoutDining
+block diningContent
+    //- ol.breadcrumb
+    //-     li
+    //-         a(href="/") Home
+    //-     li.active  Happy Hour
+    .visible-xs.hidden-sm
+        .btn-toolbar(style="margin-bottom: 15px")
+            a.btn.btn-info(href="/dining/menu" ) Menu
+            a.btn.btn-info(href="/dining/beer" ) Beers & More
+            a.btn.btn-info(href="/dining/wine" ) Wine List
+            a.btn.btn-info(href="/dining/cocktails" ) Specialty Cocktails
+            a.btn.btn-info(href="/dining/spirits" ) Distilled Spirits
+    
+    img.radiusBorder5px.img-responsive.border(src="/assets/wine-glasses.jpg")
+    
+    br
+    br
+    br
+    //- h3 Happy Hour!
+    p Join us Monday through Thursday, for Baily's happy
+        | hour from 3:00 to 6:00 PM. We are offering $2.00 off appetizers,
+        | $1.00 off all draught beer, and $1.00 off all house wines.
+    br
+    br
+
+    //- .col-sm-6
+    //-     h3 July
+    //-     a(href="/assets/clubFlyers/4x6_July_Home.jpg")
+    //-         img.imgBlurHover.radiusBorder5px.img-responsive(src="/assets/clubFlyers/4x6_July_Home.jpg")
+    //- .col-sm-6
+    //-     h3 Live!
+    //-     a(href="/assets/clubFlyers/4x6_July_Band_Schedule.jpg")
+    //-         img.imgBlurHover.radiusBorder5px.img-responsive(src="/assets/clubFlyers/4x6_July_Band_Schedule.jpg")

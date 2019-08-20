@@ -1,0 +1,23 @@
+.contentModule
+    .text-sm-right
+        .sideBarHeader
+            h3 Live Music
+        if (utils.objKeysLength(viewBag.schedule) > 0)
+            each val in viewBag.schedule.Schedule.ScheduleItems
+                if(val.Website && val.Website.length > 0)
+                    console.log("entSched:", val.Website)
+                    a(href=`#{${val.Website}}`)
+                        //- a(href"="#{val.Website}"")
+                        h4.bandLink= val.BandName
+                else
+                    h4= val.BandName
+                p #{utils.shortenDate(val.Date)}, #{utils.removeLeadingZeroFromTime(val.Time)}
+                    | <br/>
+                    | #{val.RoomName}
+                hr.contentModuleList
+        else
+            p(style="margin-top: 10px") We are behind on data entry...Come on down we have music every Friday and Saturday night!
+
+
+
+

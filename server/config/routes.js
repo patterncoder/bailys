@@ -6,8 +6,7 @@ var nightclubRoutes = require('../routes/nightclub');
 var musicRoutes = require('../routes/music');
 var banquetRoutes = require('../routes/banquets');
 var aboutRoutes = require('../routes/about');
-// const request = require("request");
-// const bodyParser = require("body-parser");
+let banquetSubmitRoutes = require("../routes/banquetSubmit");
 
 module.exports = function (app) {
     console.log("routes.js app:", app);
@@ -15,6 +14,7 @@ module.exports = function (app) {
     app.use('/', indexRoutes);
 
     app.use('/api/signup', signUpRoutes);
+    app.use("/api/inquiry", banquetSubmitRoutes);
 
     //app.use('/users', users);
 

@@ -125,8 +125,19 @@ block banquetContent
             #subForm
                 h4 Online submission
                 p If you prefer, you can inquire to make a reservation with us here:
+                br
+                form.form-inline(name="inquiryForm", id="inquiryForm", action="/api/inquiry", method="post")
+                        .input-group
+                            input.form-control(name="date", type="date", placeholder="date")
+                            input.form-control(name="time", type="time", placeholder="time")
+                            input.form-control(name="name", type="text", placeholder="Contact Name")
+                            input.form-control(name="email", type="email", placeholder="Contact Email")
+                            input.form-control(name="phone", type="text", placeholder="Contact Phone Number")
+                            input.form-control(name="details", type="textarea", placeholder="Any details we should know about?")
+                            span.input-group-btn
+                                button.btn.btn-info(type="submit") Contact Me!  
 
 block scripts
     script(type="text/javascript", src="/vendor/jsonHTML/jsonHTML.min.js")
     script(type="text/javascript", src="/js/banquetSubmit.js")
-    script banqSubForm().appendTo("#subForm")
+    //- script banqSubForm().appendTo("#subForm")

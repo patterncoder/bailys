@@ -1,15 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const request = require("request");
-const bodyParser = require("body-parser");
+//const bodyParser = require("body-parser");
 const mailer = require("../utils/mailer");
 
 
 
-const jsonParser = bodyParser.json();
+//const jsonParser = bodyParser.json();
 
 //POST for the inquiry form on banquets.
-router.post("/", jsonParser, async (req, res) => {
+router.post("/", async (req, res) => {
 
     console.log(req.body);
 
@@ -18,9 +18,11 @@ router.post("/", jsonParser, async (req, res) => {
         let message = `
         Customer Name: ${tmp.name}
         Customer Email: ${tmp.email}
-        Customer Number: ${tmp.phoneNumber}
+        Customer Number: ${tmp.phone}
+        Inquiry Date: ${tmp.date}
+        Inquiry Time: ${tmp.time}
     
-        message: ${tmp.message}`;
+        message: ${tmp.details}`;
         let response = await mailer(message);
     
         res.send(response)

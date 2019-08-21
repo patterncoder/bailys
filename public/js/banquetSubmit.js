@@ -185,7 +185,7 @@ let banqSubForm = () => {
 
         try {
             $.ajax({
-                url: "https://baily.com/inquiry",
+                url: "https://baily.com/api/inquiry",
                 type: "POST",
                 dataType: "jsonp",
                 data: genSubmit(data),

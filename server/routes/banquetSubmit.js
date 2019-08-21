@@ -8,6 +8,10 @@ const mailer = require("../utils/mailer");
 
 //const jsonParser = bodyParser.json();
 
+router.get("/", (req, res) => {
+    res.send("We will contact you soon!");
+});
+
 //POST for the inquiry form on banquets.
 router.post("/", async (req, res) => {
 
@@ -24,10 +28,22 @@ router.post("/", async (req, res) => {
     
         message: ${tmp.details}`;
         let response = await mailer(message);
+        console.log(response);
     
-        res.send(response)
+        res.send(`
+        <html>
+            <p> We will be contacting you soon! </p>
+        </html>
+        
+        `);
     } catch (e) {
-        res.send(e);
+        console.log(e);
+        res.send(`
+        <html>
+            <p> Sorry, we could not process your request, maybe contact us by phone? </p>
+        </html>
+        
+        `);
     }
 
     // try {

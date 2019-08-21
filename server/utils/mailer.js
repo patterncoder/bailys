@@ -43,7 +43,7 @@ const mailer = async (message) => {
 	});
 
 	let mailOptions = {
-		to: "jesse@baily.com",
+		to: "events@baily.com",
 		subject: "Baily.com Inquiry",
 		text: message,
 	};

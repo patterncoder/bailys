@@ -28,7 +28,7 @@ const imgArrDef = () => {
         // },
         {
             type: "music",
-            url: "/assets/clubFlyers/4x6_Aug_Home.jpg",
+            url: "/assets/clubFlyers/4x6_Sep_Home.jpg",
             link: "https://baily.com/music",
         },
         {
@@ -37,8 +37,13 @@ const imgArrDef = () => {
             link: "https://baily.com/music",
         },
         {
+            type: "music",
+            url: "/assets/clubFlyers/4x6_Sep_Band_Schedule.jpg",
+            link: "https://baily.com/music",
+        },
+        {
             type: "nightclub",
-            url: "/assets/clubFlyers/4x6_Aug_Pj_Party.jpg",
+            url: "/assets/clubFlyers/4x6_Sep_Beach_Bash_2019.jpg",
             link: "https://baily.com/nightclub",
         },
         {

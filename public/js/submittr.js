@@ -24,6 +24,8 @@ let submittr = (url, inputObj) => {
             ++sCnt;
             dfd.resolve(true);
         });
+    } else {
+        alert("Your submission is already in progress!");
     }
     return dfd.promise();
 };

@@ -28,18 +28,23 @@ router.post("/", async (req, res) => {
             `,
         }
         request.post("http://67.205.162.241:1984/inquiry", { json: msg }, (err, response, body) => {
-            //console.log(response);
-            res.send(`
+            //console.log("banquetSubmit req:", req.body);
+            return res.redirect(`/banquets/banquetSuccess?name=${req.body.name}`);
+            //res.send(true);
+            //res.status(200).end();
+            /*res.send(`
             <html>
-                <p> We will be contacting you soon! </p>
+                <p> Thank you, we will be contacting you soon! Please click the link to continue. </p>
+                <a href= "/banquets/booking"> Continue... </a>
             </html>
-            `);
+            `);*/
+            //console.log(response);
         });
 
     } catch (e) {
         res.send(`
         <html>
-            <p> Sorry, we could not process your request, maybe contact us by phone? </p>
+        <p> Sorry, your request could not be processed at this time, please call us instead? </p>
         </html>
         `);
     }

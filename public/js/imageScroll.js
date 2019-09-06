@@ -33,27 +33,12 @@ const imgArrDef = () => {
         },
         {
             type: "music",
-            url: "/assets/clubFlyers/4x6_Aug_Band_Schedule.jpg",
-            link: "https://baily.com/music",
-        },
-        {
-            type: "music",
             url: "/assets/clubFlyers/4x6_Sep_Band_Schedule.jpg",
             link: "https://baily.com/music",
         },
         {
             type: "nightclub",
             url: "/assets/clubFlyers/4x6_Sep_Beach_Bash_2019.jpg",
-            link: "https://baily.com/nightclub",
-        },
-        {
-            type: "nightclub",
-            url: "/assets/clubFlyers/4x6_Aug_TOP40_DJ.jpg",
-            link: "https://baily.com/nightclub",
-        },
-        {
-            type: "nightclub",
-            url: "/assets/clubFlyers/4x6_Aug_Latin_Night.jpg",
             link: "https://baily.com/nightclub",
         },
         {

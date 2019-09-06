@@ -38,11 +38,12 @@ block diningContent
         | Guests are welcome to stay in Baily's upstairs in
         | Rotunda and south dining rooms until midnight. 
 
-    .col-sm-6
-        h3 June
-        a(href="/assets/clubFlyers/4x6_July_Home.jpg")
-            img.imgBlurHover.radiusBorder5px.img-responsive(src="/assets/clubFlyers/4x6_July_Home.jpg")
-    .col-sm-6
-        h3 Live!
-        a(href="/assets/clubFlyers/4x6_July_Band_Schedule.jpg")
-            img.imgBlurHover.radiusBorder5px.img-responsive(src="/assets/clubFlyers/4x6_July_Band_Schedule.jpg")
+    .col-sm-12
+        h3 Live Music:
+        #music
+
+block scripts
+    //- code for image scroller.
+    script(type="text/javascript", src="/vendor/jsonHTML/jsonHTML.min.js")
+    script(type="text/javascript", src="/js/imageScroll.js")
+    script start("music", ["music"])

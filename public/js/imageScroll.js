@@ -21,24 +21,34 @@ const imgArrDef = () => {
             url: "/assets/clubFlyers/4x6_Brunch_Front.jpg",
             link: "https://baily.com/assets/clubFlyers/4x6_Brunch_Front.jpg",
         },
-        // {
-        //     type: "brunch",
-        //     url: "/assets/clubFlyers/4x6_brunch_back.JPG",
-        //     link: "https://baily.com/assets/clubFlyers/4x6_brunch_back.JPG",
-        // },
         {
             type: "music",
-            url: "/assets/clubFlyers/4x6_Sep_Home.jpg",
+            url: "/assets/clubFlyers/4x6_Oct_Home.jpg",
             link: "https://baily.com/music",
         },
         {
             type: "music",
-            url: "/assets/clubFlyers/4x6_Sep_Band_Schedule.jpg",
+            url: "/assets/clubFlyers/4x6_Oct_Band_Schedule.jpg",
             link: "https://baily.com/music",
         },
         {
             type: "nightclub",
-            url: "/assets/clubFlyers/4x6_Sep_Beach_Bash_2019.jpg",
+            url: "/assets/clubFlyers/4x6_Oct_Latin_Night.jpg",
+            link: "https://baily.com/nightclub",
+        },
+        {
+            type: "nightclub",
+            url: "/assets/clubFlyers/4x6_Oct_TOP40_DJ.jpg",
+            link: "https://baily.com/nightclub",
+        },
+        {
+            type: "nightclub",
+            url: "/assets/clubFlyers/4x6_Oct_costume_contest.jpg",
+            link: "https://baily.com/nightclub",
+        },
+        {
+            type: "nightclub",
+            url: "/assets/clubFlyers/4x6_Oct_halloween_ball.jpg",
             link: "https://baily.com/nightclub",
         },
         {
@@ -49,7 +59,7 @@ const imgArrDef = () => {
         {
             type: "brunch",
             url: "/assets/clubFlyers/OTNM Poster.jpg",
-            link: "",
+            link: "/assets/clubFlyers/OTNM Poster.jpg", //just opens to the full size image.
         }
     ];
 };
@@ -178,9 +188,19 @@ const start = (id, types) => {
                 type: obj,
             }
         });
-        queryResult.map((tmp) => {
-            imgArr.push(tmp);
-        });
+
+        let addToArr = (arr) => {
+            arr.map((tmp) => {
+                if(tmp.length) {
+                    //sometimes micronDB will send the object in an array... it's a bug... ex. [[obj]].
+                    addToArr(tmp); //calls recursively.
+                } else {
+                    imgArr.push(tmp);
+                }
+            });
+        };
+
+        addToArr(queryResult);
     });
 
     console.log(imgArr);

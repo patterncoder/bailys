@@ -16,8 +16,8 @@ block nightclubContent
                             span= val.MenuItems.MenuItem.MenuLName + '  ' + (val.MenuItems.MenuItem.AdditionalTitleText ? val.MenuItems.MenuItem.AdditionalTitleText : "")
                         td.Leader 
                             div.Leader &nbsp;
-                        td.MenuItemPrice= utils.getPriceNoCents(val.MenuItems.MenuItem.MenuPrice,true,{replaceZero:'$Market'}) + " " + (val.MenuItems.MenuItem.MenuPriceFor ? val.MenuItems.MenuItem.MenuPriceFor : "")
-                        td.MenuItemPrice= utils.getPriceNoCents(val.MenuItems.MenuItem.MenuPrice2,true,{replaceZero:'$Market'}) + " " + (val.MenuItems.MenuItem.MenuPricefor2 ? val.MenuItems.MenuItem.MenuPricefor2 : "")
+                        td.MenuItemPrice= utils.getPriceNoCents(val.MenuItems.MenuItem.MenuPrice,true,{replaceZero:''}) + " " + (val.MenuItems.MenuItem.MenuPriceFor ? val.MenuItems.MenuItem.MenuPriceFor : "")
+                        td.MenuItemPrice= utils.getPriceNoCents(val.MenuItems.MenuItem.MenuPrice2,true,{replaceZero:''}) + " " + (val.MenuItems.MenuItem.MenuPricefor2 ? val.MenuItems.MenuItem.MenuPricefor2 : "")
             //if there is an array of objects at MenuItem.menuItem > Iterate though each object, creating a table for each
         else
             each item in val.MenuItems.MenuItem
@@ -28,8 +28,8 @@ block nightclubContent
                                 span= item.MenuLName + '  ' + (item.AdditionalTitleText ? item.AdditionalTitleText : "")
                             td.Leader 
                                 div.Leader &nbsp;
-                            td.MenuItemPrice= utils.getPriceNoCents(item.MenuPrice,true,{replaceZero:'$Market'}) + " " + (item.MenuPriceFor ? item.MenuPriceFor : "")
-                            td.MenuItemPrice= utils.getPriceNoCents(item.MenuPrice2,true,{replaceZero:'$Market'}) + " " + (item.MenuPricefor2 ? item.MenuPricefor2 : "")
+                            td.MenuItemPrice= utils.getPriceNoCents(item.MenuPrice,true,{replaceZero:''}) + " " + (item.MenuPriceFor ? item.MenuPriceFor : "")
+                            td.MenuItemPrice= utils.getPriceNoCents(item.MenuPrice2,true,{replaceZero:''}) + " " + (item.MenuPricefor2 ? item.MenuPricefor2 : "")
     p= viewBag.bottles.Menu.Footer
 
     //- p=viewBag.bottles.Menu.Sections.Section[0].MenuItems.MenuItem[0].MenuLName

@@ -19,7 +19,7 @@ siteSettings.menus = {
     partyHors: 2707,
     partyDessert: 373,
     partyRental: 375,
-    beersAndMore: 5738,
+    beersAndMore: 5741,
     wineList: 5739,
     spirits: 601,
     cocktails: 3722,

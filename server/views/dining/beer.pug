@@ -8,12 +8,14 @@ block diningContent
     //-     li.active  Beers & More
     img.radiusBorder5px.img-responsive.border(src='/assets/barSign2.png')
     each val in viewBag.beersAndMore.Menu.Sections.Section
+        console.log(val)
         h3= val.SectionTitle
         table.MenuItem2
             each item in val.MenuItems.MenuItem
-                tr
-                    td.MenuName2= item.MenuLName
-                    td.MenuItemPrice2= utils.getPriceNoCents(item.MenuPrice,false)
+                if item
+                    tr
+                        td.MenuName2= item.MenuLName
+                        td.MenuItemPrice2= utils.getPriceNoCents(item.MenuPrice,false)
                 
     p= viewBag.beersAndMore.Menu.Footer
 

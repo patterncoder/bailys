@@ -26,6 +26,17 @@ var getData = function (req, res) {
             return menuService.getMenuById(siteSettings.menus.beersAndMore)
         })
         .then(function(beersAndMore){
+            //viewBag.beersAndMore.Menu.Sections.Section
+            // beersAndMore.Menu.Sections.Section.map((obj) => {
+            //     obj.MenuItems.MenuItem.map((tmp) => {
+            //         if(tmp.hasOwnProperty("MenuLName")) {
+            //             console.log("has property:", tmp.MenuLName);
+            //         } else {
+            //             console.log("does not have property", tmp);
+            //         }
+            //     })
+            // })
+            console.log(beersAndMore);
             viewBag.beersAndMore = beersAndMore;
             
             res.render('dining/beer', {  viewBag: viewBag })

@@ -13,16 +13,17 @@ var getMenuById = function(menuId){
     
     request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
-
             var menu = JSON.parse(body);
-
-            // this fixes the issue where one of the objects did not have the MenuItems property.
-            for(var i = 0; i < menu.Menu.Sections.Section.length; ++i) {
-                var section = menu.Menu.Sections.Section[i];
-                if(!menu.Menu.Sections.Section[i].hasOwnProperty("MenuItems")) {
-                    menu.Menu.Sections.Section[i].MenuItems = {MenuItem: []}; //fix!
-                }
-            }
+            (menu && menu.Menu && menu.Menu.Sections && menu.Menu.Sections.Section).forEach((section) => {
+                section.MenuItems.MenuItem = Array.isArray(section.MenuItems.MenuItem) ? section.MenuItems.MenuItem : [section.MenuItems.MenuItem];
+            });
+            // // this fixes the issue where one of the objects did not have the MenuItems property.
+            // for(var i = 0; i < menu.Menu.Sections.Section.length; ++i) {
+            //     var section = menu.Menu.Sections.Section[i];
+            //     if(!menu.Menu.Sections.Section[i].hasOwnProperty("MenuItems")) {
+            //         menu.Menu.Sections.Section[i].MenuItems = {MenuItem: []}; //fix!
+            //     }
+            // }
 
             //console.log(menu.Menu.Sections.Section[1]);
             //util.traverseJSONandFindKey(menu, 'MenuPrice', util.getPriceNoCents);

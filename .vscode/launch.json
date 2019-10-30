@@ -3,6 +3,12 @@
 	// List of configurations. Add new configurations or edit existing ones.  
 	// ONLY "node" and "mono" are supported, change "type" to switch.
 	"configurations": [
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach",
+            "port": 7000
+        },
 		{
 			// Name of configuration; appears in the launch configuration drop down menu.
 			"name": "Launch app.js",
@@ -23,15 +29,6 @@
 			// Environment variables passed to the program.
 			"env": { },
 			// Use JavaScript source maps (if they exist).
-			"sourceMaps": false
-		}, 
-		{
-			"name": "Attach",
-			"type": "node",
-			// TCP/IP address. Default is "localhost".
-			"address": "localhost",
-			// Port to attach to.
-			"port": 5858,
 			"sourceMaps": false
 		}
 	]

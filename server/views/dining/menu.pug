@@ -11,16 +11,15 @@ block diningContent
     //h2= viewBag.menu.Menu.MenuTitle
     //.list-group
     img.pull-right.radiusBorder5px.img-responsive.border(src="/assets/chixPicatta.png" )
-    p Chef De Lira and his staff work every day preparing the menu from scratch.
-        | This includes baking bread, making pasta, dressings, stocks, soups, sauces
-        | and more. We are proud of our food and we encourage you to try every menu item...
-        | of course not in one sitting!
-    p If you feel interested in how something is made, please ask your server. In most cases the chef
-        | may come to your table and describe the process, occasionally granting a recipe.
-        | If you have any special dietary requirements, be sure to ask your server for 
-        | assistance in making your selection. We may be able to make adjustments to an existing
-        | item, or make one just for you!
+    p We work every day preparing our menu from scratch. This includes baking bread, 
+        | making pasta, dressings, stocks, soups, sauces and more. 
+    p If you feel interested in how something is made due to any special dietary requirements, 
+        | be sure to ask your server for assistance. We may be able to make adjustments to an existing
+        | item!
 
+    br
+    br
+    br
     
     each val in viewBag.menu.Menu.Sections.Section
         h3= val.SectionTitle

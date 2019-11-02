@@ -12,7 +12,7 @@ var getData = function (req, res) {
 
     //var url = siteSettings.apis.baseUrl + siteSettings.apis.otdMenus + siteSettings.menus.main;
     var viewBag = {};
-    viewBag.title = "Bailys";
+    viewBag.title = "Hours";
     entertainmentService.getFutureMusicTop3()
         .then(function(music) {
             viewBag.schedule = music;

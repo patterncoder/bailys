@@ -12,7 +12,7 @@ var getData = function (req, res) {
 
     //var url = siteSettings.apis.baseUrl + siteSettings.apis.otdMenus + siteSettings.menus.main;
     var viewBag = {};
-    viewBag.title = "Restaurant & Nightclub";
+    viewBag.title = "Nightclub";
     djService.getFutureDJs()
         .then(function(djSchedule) {
             viewBag.schedule = djSchedule;

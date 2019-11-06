@@ -19,7 +19,7 @@ const imgArrDef = () => {
         {
             type: "brunch",
             url: "/assets/clubFlyers/4x6_Brunch_Front.jpg",
-            link: "https://baily.com/assets/clubFlyers/4x6_Brunch_Front.jpg",
+            link: "https://baily.com/dining/brunch",
         },
         {
             type: "music",

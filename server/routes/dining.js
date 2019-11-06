@@ -14,6 +14,7 @@ var happyHourController = require('../controllers/dining/happyHourController');
 var wineWednesdayController = require('../controllers/dining/wineWednesdayController');
 //var newYearController = require('../controllers/dining/newYearController');
 var valentinesController = require('../controllers/dining/valentinesController');
+var brunchController = require("../controllers/dining/brunchController");
 
 router.get('/', diningController.getView);
 
@@ -32,6 +33,8 @@ router.get('/spirits', spiritsController.getView);
 router.get('/happyHour', happyHourController.getView);
 
 router.get('/wineWednesday', wineWednesdayController.getView);
+
+router.get("/brunch", brunchController.getView);
 
 //router.get('/newYear', newYearController.getView);
 

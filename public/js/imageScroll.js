@@ -60,7 +60,47 @@ const imgArrDef = () => {
             type: "brunch",
             url: "/assets/clubFlyers/OTNM Poster.jpg",
             link: "/assets/clubFlyers/OTNM Poster.jpg", //just opens to the full size image.
-        }
+        },
+        {
+            type: "brunch-buffet",
+            url: "/assets/brunch/buffet 1.jpg",
+            link: ""
+        },
+        {
+            type: "brunch-buffet",
+            url: "/assets/brunch/buffet 2.jpg",
+            link: ""
+        },
+        {
+            type: "brunch-buffet",
+            url: "/assets/brunch/buffet 3.jpg",
+            link: ""
+        },
+        {
+            type: "brunch-buffet",
+            url: "/assets/brunch/buffet 5.jpg",
+            link: ""
+        },
+        {
+            type: "brunch-buffet",
+            url: "/assets/brunch/buffet 6.jpg",
+            link: ""
+        },
+        {
+            type: "brunch-buffet",
+            url: "/assets/brunch/buffet 7.jpg",
+            link: ""
+        },
+        {
+            type: "brunch-buffet",
+            url: "/assets/brunch/buffet 9.jpg",
+            link: ""
+        },
+        {
+            type: "brunch-buffet",
+            url: "/assets/brunch/buffet 16.jpg",
+            link: ""
+        },
     ];
 };
 

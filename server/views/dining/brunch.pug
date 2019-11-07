@@ -19,6 +19,9 @@ block diningContent
 
     div.col-sm-12.text-center.radiusBorder5px.border
         br
+        p
+            h2 Brunch Menu
+        br
         p 
             i 
                 u All items come with bacon, sausage, home style potatoes,
@@ -73,6 +76,16 @@ block diningContent
 
     br
     br
+
+    #brunch.col-sm-12.text-center.radiusBorder5px.border
     br
     br
     br
+
+
+block scripts
+    //code for image scroller.
+    script(type="text/javascript", src="/vendor/jsonHTML/jsonHTML.min.js")
+    script(type="text/javascript", src="/js/imageScroll.js")
+
+    script start("brunch", ["brunch-buffet"])

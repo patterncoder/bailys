@@ -14,13 +14,15 @@ var getMenuById = function(menuId){
     request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             var menu = JSON.parse(body);
-            console.log(typeof menu.Menu.Sections.Section);
+            console.log(menu.Menu.Sections.Section);
 
             //if the object is an array, it will have a length,
             //if not, the length will be undefined which evaluates to false.
             if (menu.Menu.Sections.Section.length) 
                 (menu && menu.Menu && menu.Menu.Sections && menu.Menu.Sections.Section).forEach((section) => {
-                    section.MenuItems.MenuItem = Array.isArray(section.MenuItems.MenuItem) ? section.MenuItems.MenuItem : [section.MenuItems.MenuItem];
+                    if(section.hasOwnProperty("MenuItems")) {
+                        section.MenuItems.MenuItem = Array.isArray(section.MenuItems.MenuItem) ? section.MenuItems.MenuItem : [section.MenuItems.MenuItem];
+                    }
                 });
 
             deferred.resolve(menu);

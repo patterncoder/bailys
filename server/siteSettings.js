@@ -23,8 +23,8 @@ siteSettings.menus = {
     wineList: 5739,
     spirits: 601,
     cocktails: 3722,
-    wineByGlass: 3719,
-    newYear: 3712,
+    wineByGlass: 5737,
+    newYear: 5742,
     valentines: 3715,
 
     banqBreakPreComp: 2706,

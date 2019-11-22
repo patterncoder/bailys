@@ -1,16 +1,6 @@
 
 extends ../../includes/layoutDining
 block diningContent
-    //- ol.breadcrumb
-    //-     li
-    //-         a(href="/") Home 
-    //-         &nbsp;
-    //-     li
-    //-         a(href="/dining") Restaurant Info 
-    //-         &nbsp;
-    //-     li.active  Menu
-    //h2= viewBag.menu.Menu.MenuTitle
-    //.list-group
     img.pull-right.stdImgSize.radiusBorder5px.img-responsive.border(src="/assets/vintage2019.jpg" )
     p Monday, December 31st is our annual New Year's Eve extravaganza.  We have three offerings for 
         | your night of entertainment.  Come for any one of the three or all of them...the choice is yours.
@@ -29,14 +19,14 @@ block diningContent
     
     each val in viewBag.menu.Menu.Sections.Section
         h3= val.SectionTitle
-        // each item in val.MenuItems.MenuItem
-        //     table.MenuItem2
-        //         tr
-        //             td.MenuName2= item.MenuLName
-        //             td.MenuItemPrice2= utils.getPriceNoCents(item.MenuPrice,true)
-        //         tr
-        //             td.MenuItemDescription2(colspan="2")= item.MenuDescription
-        //             td
+        //- each item in val.MenuItems.MenuItem
+        //-     table.MenuItem2
+        //-         tr
+        //-             td.MenuName2= item.MenuLName
+        //-             td.MenuItemPrice2= utils.getPriceNoCents(item.MenuPrice,true)
+        //-         tr
+        //-             td.MenuItemDescription2(colspan="2")= item.MenuDescription
+        //-             td
         each item in val.MenuItems.MenuItem
             table.MenuItem
                 tr
@@ -48,5 +38,3 @@ block diningContent
                 tr
                     td.Description(colspan="3")= item.MenuDescription
     p= viewBag.menu.Menu.Footer
-    
-   

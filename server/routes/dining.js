@@ -12,7 +12,7 @@ var spiritsController = require('../controllers/dining/spiritsController');
 var diningController = require('../controllers/dining/diningController');
 var happyHourController = require('../controllers/dining/happyHourController');
 var wineWednesdayController = require('../controllers/dining/wineWednesdayController');
-//var newYearController = require('../controllers/dining/newYearController');
+var newYearController = require('../controllers/dining/newYearController');
 var valentinesController = require('../controllers/dining/valentinesController');
 var brunchController = require("../controllers/dining/brunchController");
 
@@ -36,7 +36,7 @@ router.get('/wineWednesday', wineWednesdayController.getView);
 
 router.get("/brunch", brunchController.getView);
 
-//router.get('/newYear', newYearController.getView);
+router.get('/newYear', newYearController.getView);
 
 router.get('/valentines', valentinesController.getView);
 

@@ -2,21 +2,26 @@
 extends ../../includes/layoutDining
 block diningContent
     //- img.pull-right.stdImgSize.radiusBorder5px.img-responsive.border(src="/assets/vintage2019.jpg" )
-    p Four course dinner. $79 per person plus tax and gratuity. Reservations begin at 5pm, last seating at 10pm. Includes complimentary entry into the nightclub and a sparkling wine toast.
-    //- p Tuesday, December 31st is our annual New Year's Eve extravaganza.  We have three offerings for 
-    //-     | your night of entertainment.  Come for any one of the three or all of them...the choice is yours.
-    //- ul(style='list-style-type:disc') Pre Party on the first floor - NO COVER CHARGE
-    //-     li 5:00 to 9:00PM
-    //-     li Open menu and appetizer specials.
-    //- ul(style='list-style-type:disc') Dinner on the second floor
-    //-     li Four course menu (see below)
-    //-     li Reservations available from 5:00pm to 10:00pm $79 per person.
-    //-     li Complimentary cover charge for the nightclub.
-    //- ul(style='list-style-type:disc') Nightclub Celebration at Eleven After Dark
-    //-     li 9:00pm - 2:00am
-    //-     li Photographer: Photos available on Facebook on 1/5/18.
-    //-     li Voucher for a glass of champagne.
-    //-         li $25 per person cover charge
+    p Tuesday, December 31st is our annual New Year's Eve extravaganza.  We have three offerings for 
+        | your night of entertainment.  Come for any one of the three or all of them...the choice is yours.
+    ul 
+        h4 Pre Party on the first floor
+        li 5:00 to 7:00PM (last seating at 7pm)
+        li Open menu and appetizer specials.
+        li Live music
+    ul 
+        h4 Dinner on the second floor
+        li By reservation from 5:00pm - 10:00pm
+        li Four course menu
+        li $79 per person
+        li Complimentary cover charge for the nightclub.
+    ul 
+        h4 Nightclub Celebration
+        li 9:00pm - 2:00am
+        li Professional photographer
+        li Complimentary champagne toast
+        li $25 per person cover charge
+        li VIP Table Service options available by reservation
     
     each val in viewBag.menu.Menu.Sections.Section
         h3= val.SectionTitle

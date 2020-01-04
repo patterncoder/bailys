@@ -23,37 +23,27 @@ const imgArrDef = () => {
         },
         {
             type: "music",
-            url: "/assets/clubFlyers/4x6_Dec_Sun.jpg",
+            url: "/assets/clubFlyers/4x6_Jan_Sun.png",
             link: "https://baily.com/music",
         },
         {
             type: "music",
-            url: "/assets/clubFlyers/4x6_Dec_Band.jpg",
+            url: "/assets/clubFlyers/4x6_Jan_Band.png",
             link: "https://baily.com/music",
         },
         {
             type: "nightclub",
-            url: "/assets/clubFlyers/4x6_Dec_Latin.jpg",
+            url: "/assets/clubFlyers/4x6_Jan_Latin.png",
             link: "https://baily.com/nightclub",
         },
         {
             type: "nightclub",
-            url: "/assets/clubFlyers/4x6_Dec_TOP.jpg",
+            url: "/assets/clubFlyers/4x6_Jan_Top.png",
             link: "https://baily.com/nightclub",
         },
         {
             type: "nightclub",
-            url: "/assets/clubFlyers/4x6_NYE_2020-front.jpg",
-            link: "https://baily.com/nightclub",
-        },
-        {
-            type: "nightclub",
-            url: "/assets/clubFlyers/4x6_NYE_2020 Back.jpg",
-            link: "https://baily.com/nightclub",
-        },
-        {
-            type: "nightclub",
-            url: "/assets/clubFlyers/4x6_Santa_Party.jpg",
+            url: "/assets/clubFlyers/Jan_2020_Winter_Glow.png",
             link: "https://baily.com/nightclub",
         },
         {

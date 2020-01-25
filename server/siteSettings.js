@@ -25,7 +25,7 @@ siteSettings.menus = {
     cocktails: 3722,
     wineByGlass: 5737,
     newYear: 5742,
-    valentines: 3715,
+    valentines: 5744,
 
     banqBreakPreComp: 2706,
     banqBreakCustom: 2705,

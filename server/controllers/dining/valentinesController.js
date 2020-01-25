@@ -15,7 +15,7 @@ var getView = function (req, res) {
 
     //var url = siteSettings.apis.baseUrl + siteSettings.apis.otdMenus + siteSettings.menus.main;
     var viewBag = {};
-    viewBag.title = "Valentines";
+    viewBag.title = "Valentine's Day 2020!";
     entertainmentService.getFutureMusicTop3()
         .then(function(music) {
             viewBag.schedule = music;

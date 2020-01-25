@@ -20,7 +20,7 @@ siteSettings.menus = {
     partyDessert: 373,
     partyRental: 375,
     beersAndMore: 5740,
-    wineList: 5739,
+    wineList: 5746,
     spirits: 601,
     cocktails: 3722,
     wineByGlass: 5737,
@@ -33,7 +33,7 @@ siteSettings.menus = {
     banqLunchCustom: 5727,
     banqDinnerPreComp: 2704,
     banqDinnerCustom: 2703,
-    bottles: 4723
+    bottles: 5745
 }
 
 siteSettings.utilDateBack = 2;

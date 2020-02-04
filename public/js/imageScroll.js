@@ -23,27 +23,27 @@ const imgArrDef = () => {
         },
         {
             type: "music",
-            url: "/assets/clubFlyers/4x6_Feb_Sun.png",
+            url: "/assets/clubFlyers/4x6_Feb_Sun.jpg",
             link: "https://baily.com/music",
         },
         {
             type: "music",
-            url: "/assets/clubFlyers/4x6_Feb_Band.png",
+            url: "/assets/clubFlyers/4x6_Feb_Band.jpg",
             link: "https://baily.com/music",
         },
         {
             type: "nightclub",
-            url: "/assets/clubFlyers/4x6_Feb_Latin.png",
+            url: "/assets/clubFlyers/4x6_Feb_Latin.jpg",
             link: "https://baily.com/nightclub",
         },
         {
             type: "nightclub",
-            url: "/assets/clubFlyers/4x6_Feb_Top.png",
+            url: "/assets/clubFlyers/4x6_Feb_Top.jpg",
             link: "https://baily.com/nightclub",
         },
         {
             type: "nightclub",
-            url: "/assets/clubFlyers/4x6_Feb_Presidents Day.png",
+            url: "/assets/clubFlyers/4x6_Feb_Presidents Day.jpg",
             link: "https://baily.com/nightclub",
         },
         {

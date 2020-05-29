@@ -21,31 +21,31 @@ const imgArrDef = () => {
             url: "/assets/clubFlyers/4x6_Brunch_Front.jpg",
             link: "https://baily.com/dining/brunch",
         },
-        {
-            type: "music",
-            url: "/assets/clubFlyers/4x6_Mar_Sun.jpg",
-            link: "https://baily.com/music",
-        },
-        {
-            type: "music",
-            url: "/assets/clubFlyers/4x6_Mar_Band.jpg",
-            link: "https://baily.com/music",
-        },
-        {
-            type: "nightclub",
-            url: "/assets/clubFlyers/4x6_Mar_Latin.jpg",
-            link: "https://baily.com/nightclub",
-        },
-        {
-            type: "nightclub",
-            url: "/assets/clubFlyers/4x6_Mar_Top.jpg",
-            link: "https://baily.com/nightclub",
-        },
-        {
-            type: "nightclub",
-            url: "/assets/clubFlyers/4x6_4_14.jpg",
-            link: "https://baily.com/nightclub",
-        },
+        // {
+        //     type: "music",
+        //     url: "/assets/clubFlyers/4x6_Mar_Sun.jpg",
+        //     link: "https://baily.com/music",
+        // },
+        // {
+        //     type: "music",
+        //     url: "/assets/clubFlyers/4x6_Mar_Band.jpg",
+        //     link: "https://baily.com/music",
+        // },
+        // {
+        //     type: "nightclub",
+        //     url: "/assets/clubFlyers/4x6_Mar_Latin.jpg",
+        //     link: "https://baily.com/nightclub",
+        // },
+        // {
+        //     type: "nightclub",
+        //     url: "/assets/clubFlyers/4x6_Mar_Top.jpg",
+        //     link: "https://baily.com/nightclub",
+        // },
+        // {
+        //     type: "nightclub",
+        //     url: "/assets/clubFlyers/4x6_4_14.jpg",
+        //     link: "https://baily.com/nightclub",
+        // },
         {
             type: "nightclub",
             url: "/assets/clubFlyers/4x6_New_Latin.jpg",

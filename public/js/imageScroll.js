@@ -96,6 +96,21 @@ const imgArrDef = () => {
             url: "/assets/brunch/buffet 16.jpg",
             link: ""
         },
+        {
+            type: "new-menu",
+            url: "/assets/menu/Takeout Menu-001-001.jpg",
+            link: "/assets/menu/Takeout Menu-001-001.jpg"
+        },
+        {
+            type: "new-menu",
+            url: "/assets/menu/Takeout Menu-002-002.jpg",
+            link: "/assets/menu/Takeout Menu-002-002.jpg"
+        },
+        {
+            type: "new-menu",
+            url: "/assets/menu/Takeout Menu-003-003.jpg",
+            link: "/assets/menu/Takeout Menu-003-003.jpg"
+        },
     ];
 };
 

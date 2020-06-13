@@ -21,27 +21,39 @@ block diningContent
     br
     br
     
-    each val in viewBag.menu.Menu.Sections.Section
-        h3= val.SectionTitle
-        // each item in val.MenuItems.MenuItem
-        //     table.MenuItem2
-        //         tr
-        //             td.MenuName2= item.MenuLName
-        //             td.MenuItemPrice2= utils.getPriceNoCents(item.MenuPrice,true)
-        //         tr
-        //             td.MenuItemDescription2(colspan="2")= item.MenuDescription
-        //             td
-        each item in val.MenuItems.MenuItem
-            table.MenuItem
-                tr
-                    td.MenuName
-                        span= item.MenuLName + '  '
-                    td.Leader 
-                        div.Leader &nbsp;
-                    td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true,{replaceZero:'$Market'})
-                tr
-                    td.Description(colspan="3")= item.MenuDescription
-    p= viewBag.menu.Menu.Footer
+    #menuScroll.col-sm-12.text-center.radiusBorder5px.border
+    br
+    br
+    br
+
+
+block scripts
+    //code for image scroller.
+    script(type="text/javascript", src="/vendor/jsonHTML/jsonHTML.min.js")
+    script(type="text/javascript", src="/js/imageScroll.js")
+
+    script start("menuScroll", ["new-menu"])
+    //- each val in viewBag.menu.Menu.Sections.Section
+    //-     h3= val.SectionTitle
+    //-     // each item in val.MenuItems.MenuItem
+    //-     //     table.MenuItem2
+    //-     //         tr
+    //-     //             td.MenuName2= item.MenuLName
+    //-     //             td.MenuItemPrice2= utils.getPriceNoCents(item.MenuPrice,true)
+    //-     //         tr
+    //-     //             td.MenuItemDescription2(colspan="2")= item.MenuDescription
+    //-     //             td
+    //-     each item in val.MenuItems.MenuItem
+    //-         table.MenuItem
+    //-             tr
+    //-                 td.MenuName
+    //-                     span= item.MenuLName + '  '
+    //-                 td.Leader 
+    //-                     div.Leader &nbsp;
+    //-                 td.MenuItemPrice= ' ' + utils.getPriceNoCents(item.MenuPrice,true,{replaceZero:'$Market'})
+    //-             tr
+    //-                 td.Description(colspan="3")= item.MenuDescription
+    //- p= viewBag.menu.Menu.Footer
     
    
 

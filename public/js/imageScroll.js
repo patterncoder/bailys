@@ -98,18 +98,18 @@ const imgArrDef = () => {
         },
         {
             type: "new-menu",
-            url: "/assets/menu/Takeout Menu-001-001.jpg",
-            link: "/assets/menu/Takeout Menu-001-001.jpg"
+            url: "/assets/menu/Takeout Menu 20.07.06-001-001.jpg",
+            link: "/assets/menu/Takeout Menu 20.07.06-001-001.jpg"
         },
         {
             type: "new-menu",
-            url: "/assets/menu/Takeout Menu-002-002.jpg",
-            link: "/assets/menu/Takeout Menu-002-002.jpg"
+            url: "/assets/menu/Takeout Menu 20.07.06-002-002.jpg",
+            link: "/assets/menu/Takeout Menu 20.07.06-002-002.jpg"
         },
         {
             type: "new-menu",
-            url: "/assets/menu/Takeout Menu-003-003.jpg",
-            link: "/assets/menu/Takeout Menu-003-003.jpg"
+            url: "/assets/menu/Takeout Menu 20.07.06-003-003.jpg",
+            link: "/assets/menu/Takeout Menu 20.07.06-003-003.jpg"
         },
     ];
 };

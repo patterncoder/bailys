@@ -22,8 +22,8 @@ siteSettings.menus = {
     beersAndMore: 5764,
     wineList: 5763,
     spirits: 601,
-    cocktails: 3722,
-    wineByGlass: 5737,
+    cocktails: 5766,
+    wineByGlass: 5763,
     newYear: 5742,
     valentines: 5744,
 

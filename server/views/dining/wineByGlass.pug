@@ -16,11 +16,13 @@ block diningContent
                         if(!Array.isArray(val.MenuItems.MenuItem))
                             - var singleItem = val.MenuItems.MenuItem
                             li= singleItem.WineVintage + '  ' + singleItem.WineryName + ' - ' + singleItem.WineName + '  ' 
-                                    strong= utils.getPriceNoCents(singleItem.MenuPrice,false)
+                                if((parseInt(singleItem.MenuPrice2, 10) > 0) && singleItem.MenuPricefor2 == "Glass")
+                                    strong= utils.getPriceNoCents(singleItem.MenuPrice2,false)
                         else
                             each item in val.MenuItems.MenuItem
                                 li= (item.WineVintage ? item.WineVintage : '') + '  ' + item.WineryName + ' - ' + item.WineName + '  ' 
-                                    strong= utils.getPriceNoCents(item.MenuPrice,false)
+                                    if((parseInt(item.MenuPrice2, 10) > 0) && item.MenuPricefor2 == "Glass")
+                                        strong= utils.getPriceNoCents(item.MenuPrice2,false)
 
     //br            
     //br

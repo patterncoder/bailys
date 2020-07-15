@@ -15,13 +15,13 @@ block diningContent
                     if(val.hasOwnProperty("MenuItems"))
                         if(!Array.isArray(val.MenuItems.MenuItem))
                             - var singleItem = val.MenuItems.MenuItem
-                            li= singleItem.WineVintage + '  ' + singleItem.WineryName + ' - ' + singleItem.WineName + '  ' 
-                                if((parseInt(singleItem.MenuPrice2, 10) > 0) && singleItem.MenuPricefor2 == "Glass")
+                            if((parseInt(singleItem.MenuPrice2, 10) > 0) && (["Glass", "Split"].indexOf(singleItem.MenuPricefor2) > -1))
+                                li= singleItem.WineVintage + '  ' + singleItem.WineryName + ' - ' + singleItem.WineName + '  ' 
                                     strong= utils.getPriceNoCents(singleItem.MenuPrice2,false)
                         else
                             each item in val.MenuItems.MenuItem
-                                li= (item.WineVintage ? item.WineVintage : '') + '  ' + item.WineryName + ' - ' + item.WineName + '  ' 
-                                    if((parseInt(item.MenuPrice2, 10) > 0) && item.MenuPricefor2 == "Glass")
+                                if((parseInt(item.MenuPrice2, 10) > 0) && (["Glass", "Split"].indexOf(item.MenuPricefor2) > -1))
+                                    li= (item.WineVintage ? item.WineVintage : '') + '  ' + item.WineryName + ' - ' + item.WineName + '  ' 
                                         strong= utils.getPriceNoCents(item.MenuPrice2,false)
 
     //br            

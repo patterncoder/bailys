@@ -27,8 +27,8 @@ siteSettings.menus = {
     newYear: 5742,
     valentines: 5744,
 
-    banqBreakPreComp: 2706,
-    banqBreakCustom: 2705,
+    banqBreakPreComp: 5767,
+    banqBreakCustom: 5768,
     banqLunchPreComp: 2702,
     banqLunchCustom: 5727,
     banqDinnerPreComp: 2704,

@@ -16,14 +16,14 @@ siteSettings.apis = {
 }
 siteSettings.menus = {
     main: 2686,
-    partyHors: 2707,
+    partyHors: 5775,
     partyDessert: 373,
     partyRental: 375,
-    beersAndMore: 5769,
-    wineList: 5770,
+    beersAndMore: 5773,
+    wineList: 5771,
     spirits: 601,
     cocktails: 5766,
-    wineByGlass: 5763,
+    wineByGlass: 5772,
     newYear: 5742,
     valentines: 5744,
 
@@ -31,7 +31,7 @@ siteSettings.menus = {
     banqBreakCustom: 5768,
     banqLunchPreComp: 2702,
     banqLunchCustom: 5727,
-    banqDinnerPreComp: 2704,
+    banqDinnerPreComp: 5774,
     banqDinnerCustom: 2703,
     bottles: 5745
 }

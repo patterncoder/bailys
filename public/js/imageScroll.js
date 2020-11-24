@@ -111,6 +111,11 @@ const imgArrDef = () => {
             url: "/assets/menu/Takeout Menu 20.07.06-003-003.jpg",
             link: "/assets/menu/Takeout Menu 20.07.06-003-003.jpg"
         },
+        {
+            type: "new-menu",
+            url: "/assets/menu/Takeout Menu 20.07.06-004-004.jpg",
+            link: "/assets/menu/Takeout Menu 20.07.06-004-004.jpg"
+        },
     ];
 };
 
